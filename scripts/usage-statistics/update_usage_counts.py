@@ -20,11 +20,15 @@ from usage_core import (RULE, blobs, blocks, canonical, compile_patterns, count_
 
 ROOT = Path(__file__).resolve().parents[2]
 SCHEMA = 2
-ADAPTERS = {'paired-markdown': 1, 'krew-blog': 1, 'paired-sphinx': 1}
-SUFFIXES = {'paired-markdown': ('.md',), 'krew-blog': ('.md',), 'paired-sphinx': ('.rst', '.py')}
+ADAPTERS = {'paired-markdown': 1, 'krew-blog': 1, 'paired-sphinx': 1, 'pytorch-blog': 1}
+SUFFIXES = {'paired-markdown': ('.md',), 'krew-blog': ('.md',), 'paired-sphinx': ('.rst', '.py'), 'pytorch-blog': ('.md',)}
 # Markdown keeps the shared extractor; Sphinx sources pick one per file format.
 BLOCKS = {'paired-markdown': lambda document: blocks, 'krew-blog': lambda document: blocks,
-          'paired-sphinx': lambda document: extractor_for(document['path'])}
+          'paired-sphinx': lambda document: extractor_for(document['path']), 'pytorch-blog': lambda document: blocks}
+PAIRED = ('paired-markdown', 'paired-sphinx')
+FROM_FRONTMATTER = ('krew-blog', 'pytorch-blog')
+# A post whose original is only on the web is still a translation; the reason says which evidence was used.
+INCLUDED = ('paired-translation', 'linked-translation')
 
 
 def candidate_set(root):
@@ -124,20 +128,35 @@ def source_inventory(source, sources_dir):
     if not paths:
         raise ValueError(f'No {"/".join(suffixes)} translations in {source["id"]}; check root/format before removing its snapshot')
     # Only formats whose eligibility depends on the body are read here.
-    needed = [sha for path, sha in paths.items() if source['adapter'] == 'krew-blog' or path.endswith('.py')]
+    needed = [sha for path, sha in paths.items() if source['adapter'] in FROM_FRONTMATTER or path.endswith('.py')]
     texts = blobs(sources_dir / source['checkout'], needed) if needed else {}
+    # Blog posts pair by URL slug because Korean and English date prefixes differ.
+    en_posts = {re.sub(r'^\d{4}-\d{2}-\d{2}-', '', p.rsplit('/', 1)[-1])[:-3]: p for p in sorted(en_tree) if p.endswith('.md')}
     documents = {}
     for path, sha in sorted(paths.items()):
         reason, en_path = 'paired-translation', None
         extra = {}
-        if source['adapter'] != 'krew-blog':  # paired-markdown and paired-sphinx share the path mapping
+        if source['adapter'] in PAIRED:  # paired-markdown and paired-sphinx share the path mapping
             prefix = next(p for p in originals if path.startswith(p))
             en_path = originals[prefix] + path[len(prefix):]
             if en_path not in en_tree:
                 reason, en_path = 'english-missing', None
             elif path.endswith('.py') and not is_gallery_document(texts[sha]):
                 reason = 'not-a-gallery-document'
-        else:
+        elif source['adapter'] == 'pytorch-blog':
+            # pytorch.kr posts declare their original in frontmatter and quote it paragraph by paragraph.
+            fm, _ = frontmatter(texts[sha])
+            link = fm.get('org_link', '')
+            categories = [value.strip(' "\'') for value in fm.get('category', '').strip('[]').split(',')]
+            slug = link.rstrip('/').rsplit('/', 1)[-1] if link.startswith('https://pytorch.org/blog/') else ''
+            extra = {'originalLink': link}
+            if not slug or 'translation' not in categories:
+                reason = 'english-missing'
+            else:
+                en_path = en_posts.get(slug)
+                # The English Markdown left pytorch.github.io in 2025-08; the published original did not.
+                reason = 'paired-translation' if en_path else 'linked-translation'
+        elif source['adapter'] == 'krew-blog':
             text = texts[sha]
             fm, _ = frontmatter(text)
             source_url = fm.get('source_url', '')
@@ -154,10 +173,12 @@ def source_inventory(source, sources_dir):
                 reason = 'english-missing'
             elif '번역한 글입니다' not in text[:3500]:
                 reason = 'translation-notice-missing'
+        else:
+            raise ValueError(f'No inventory rule for adapter: {source["adapter"]}')
         if any(fnmatchcase(path, pattern) for pattern in source['exclude']):
             reason = 'excluded-by-config'
         documents[f'{source["id"]}:{path}'] = {
-            'source': source['id'], 'path': path, 'blobSha': sha, 'eligible': reason == 'paired-translation',
+            'source': source['id'], 'path': path, 'blobSha': sha, 'eligible': reason in INCLUDED,
             'reason': reason, 'enPath': en_path, **extra,
         }
     return commits, documents

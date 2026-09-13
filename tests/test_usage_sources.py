@@ -214,6 +214,48 @@ class SourceTests(unittest.TestCase):
         self.assertEqual(self.run_update(selected=['sphinx-docs'])['filesChanged'], 0)
         self.assertEqual(self.run_update(selected=['sphinx-docs'], check_full=True)['fullCheck'], 'passed')
 
+    def add_blog_source(self):
+        """Korean posts declare the original with org_link; its Markdown may no longer be public."""
+        posts = {
+            '2026-01-02-translated.md': '---\nlayout: blog_detail\ncategory: ["pytorch.org", "translation"]\norg_link: https://pytorch.org/blog/kept-post/\n---\n\n기울기 문단입니다.\n\n> The English paragraph.\n',
+            '2026-01-03-web-only.md': '---\ncategory: ["pytorch.org", "translation"]\norg_link: https://pytorch.org/blog/removed-post/\n---\n\n기울기 그리고 기울기.\n',
+            '2026-01-04-korean-original.md': '---\ncategory: ["community"]\n---\n\n기울기 창작 글.\n',
+            '2026-01-05-other-site.md': '---\ncategory: ["pytorch.org", "translation"]\norg_link: https://example.com/blog/kept-post/\n---\n\n기울기 다른 링크.\n',
+            '2026-01-06-reference-only.md': '---\ncategory: ["community"]\norg_link: https://pytorch.org/blog/kept-post/\n---\n\n기울기 참고 링크.\n',
+        }
+        for name, files in (('blog-ko', {f'_posts/{k}': v for k, v in posts.items()}),
+                            ('blog-en', {'_posts/2025-12-31-kept-post.md': 'The original post.\n'})):
+            repo = self.sources / name
+            for path, text in files.items():
+                (repo / path).parent.mkdir(parents=True, exist_ok=True)
+                (repo / path).write_text(text, encoding='utf8')
+            self.git(repo, 'init', '-q')
+            revision = self.commit(repo)
+            if name == 'blog-ko':
+                translation = revision
+        self.config['sources'].append({
+            'id': 'blog', 'label': 'Blog', 'community': 'PyTorch', 'repository': 'https://github.com/example/blog-ko',
+            'checkout': 'blog-ko', 'ref': translation, 'adapter': 'pytorch-blog', 'root': '_posts', 'exclude': [],
+            'original': {'repository': 'https://github.com/example/blog-en', 'checkout': 'blog-en', 'ref': revision, 'root': '_posts'},
+        })
+        self.save_config()
+
+    def test_blog_posts_pair_by_slug_and_keep_link_only_translations(self):
+        self.add_blog_source()
+        self.run_update(selected=['blog'])
+        documents = usage.read_json(self.root / 'usage/state/blog.json')['documents']
+        self.assertEqual({doc['path'].replace('_posts/', ''): doc['reason'] for doc in documents.values()}, {
+            '2026-01-02-translated.md': 'paired-translation', '2026-01-03-web-only.md': 'linked-translation',
+            '2026-01-04-korean-original.md': 'english-missing', '2026-01-05-other-site.md': 'english-missing',
+            '2026-01-06-reference-only.md': 'english-missing'})
+        # Date prefixes differ between the two repositories, so posts pair by URL slug.
+        self.assertEqual(documents['blog:_posts/2026-01-02-translated.md']['enPath'], '_posts/2025-12-31-kept-post.md')
+        self.assertIsNone(documents['blog:_posts/2026-01-03-web-only.md']['enPath'])
+        self.assertEqual(documents['blog:_posts/2026-01-03-web-only.md']['originalLink'], 'https://pytorch.org/blog/removed-post/')
+        self.assertEqual(self.summary()['corpus']['blog'], {'scanned': 5, 'included': 2})
+        self.assertEqual(self.summary()['terms']['gradient']['bySource']['blog'], {'occurrences': 3, 'documentCount': 2})
+        self.assertEqual(self.run_update(selected=['blog'], check_full=True)['fullCheck'], 'passed')
+
     def test_repository_root_scope_pairs_and_excludes(self):
         """Documents that live at the repository root are configured with '.'."""
         for name, files in (('root-ko', {'model.md': '기울기 기울기', 'README.md': '기울기', 'docs/template.md': '기울기', 'only-ko.md': '기울기'}),
