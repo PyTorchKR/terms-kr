@@ -214,6 +214,33 @@ class SourceTests(unittest.TestCase):
         self.assertEqual(self.run_update(selected=['sphinx-docs'])['filesChanged'], 0)
         self.assertEqual(self.run_update(selected=['sphinx-docs'], check_full=True)['fullCheck'], 'passed')
 
+    def test_repository_root_scope_pairs_and_excludes(self):
+        """Documents that live at the repository root are configured with '.'."""
+        for name, files in (('root-ko', {'model.md': '기울기 기울기', 'README.md': '기울기', 'docs/template.md': '기울기', 'only-ko.md': '기울기'}),
+                            ('root-en', {'model.md': 'gradient', 'README.md': 'readme', 'docs/template.md': 'template'})):
+            repo = self.sources / name
+            for path, text in files.items():
+                (repo / path).parent.mkdir(parents=True, exist_ok=True)
+                (repo / path).write_text(text, encoding='utf8')
+            self.git(repo, 'init', '-q')
+            revision = self.commit(repo)
+            if name == 'root-ko':
+                translation = revision
+        self.config['sources'].append({
+            'id': 'root-docs', 'label': 'Root docs', 'community': 'Root', 'repository': 'https://github.com/example/root-ko',
+            'checkout': 'root-ko', 'ref': translation, 'adapter': 'paired-markdown', 'root': '.',
+            'exclude': ['README.md', 'docs/*'],
+            'original': {'repository': 'https://github.com/example/root-en', 'checkout': 'root-en', 'ref': revision, 'root': '.'},
+        })
+        self.save_config()
+        self.run_update(selected=['root-docs'])
+        state = usage.read_json(self.root / 'usage/state/root-docs.json')
+        self.assertEqual({doc['path']: doc['reason'] for doc in state['documents'].values()}, {
+            'README.md': 'excluded-by-config', 'docs/template.md': 'excluded-by-config',
+            'model.md': 'paired-translation', 'only-ko.md': 'english-missing'})
+        self.assertEqual(state['documents']['root-docs:model.md']['enPath'], 'model.md')
+        self.assertEqual(self.summary()['terms']['gradient']['bySource']['root-docs'], {'occurrences': 2, 'documentCount': 1})
+
     def test_sphinx_roots_must_pair_and_stay_inside_the_repository(self):
         self.add_sphinx_source()
         source = self.config['sources'][-1]
