@@ -35,7 +35,8 @@ PyTorch라고 해서 저장소 이름, 한국어 폴더 이름, 영문 대응 �
 
 - `.md`이며 한국어 root와 영문 root 아래 **상대 경로가 같으면** `paired-markdown`을 사용한다. 원문과 번역이 다른 저장소여도 지원한다.
 - `.rst`와 sphinx-gallery `.py`이며 경로 대응이 같으면 `paired-sphinx`를 사용한다. 문서 디렉터리가 여러 개면 `root`를 배열로 적고 같은 순서의 영문 root와 짝짓는다.
-- `krew-blog`는 KREW 블로그 전용이다. 다른 블로그에 이름만 바꿔 재사용하지 않는다.
+- `krew-blog`는 KREW 블로그, `pytorch-blog`는 pytorch.kr 블로그 전용이다. 블로그마다 원문 연결·번역 표기 규칙이 다르므로 이름만 바꿔 재사용하지 않는다.
+- 문서가 저장소 루트에 있으면 `root`를 `.`으로 적고, 문서가 아닌 루트 파일을 `exclude`로 함께 지정한다.
 - `.mdx`, `.ipynb`, 별도 번역 매핑 규칙이라면 현재 지원하지 않는다. 먼저 해당 형식을 읽는 작은 어댑터와 테스트를 추가한다. 지원되지 않는 본문을 Markdown으로 처리하거나 전체 텍스트를 단순 grep하는 우회는 하지 않는다.
 
 새 어댑터는 문서 목록, 포함/제외 사유, 원문 연결, 본문과 출처 행 정보를 공통 집계 단계에 전달해야 한다. 한국어 매칭 로직을 출처별로 복사하지 않는다. 본문 추출 방식이 바뀌면 규칙 버전을 올리고 모든 수집 출처를 재집계해야 할 수 있다. 이 PR은 범용 플러그인 시스템을 만들지 않는다.
@@ -123,11 +124,15 @@ npm run test:usage
 npm run build
 ```
 
-등록된 `pytorch-tutorials`를 그대로 재현하려면 두 저장소를 각각 `tutorials-kr`, `pytorch-tutorials` 디렉터리로 clone한 뒤 같은 명령을 `--source pytorch-tutorials`로 실행한다. 영문 저장소는 본문을 읽지 않고 파일 목록만 사용하므로 `--filter=blob:none` clone으로 충분하다.
+등록된 PyTorch 출처를 그대로 재현하려면 아래 디렉터리 이름으로 clone한 뒤 `--source`에 해당 ID를 적는다. 영문 저장소는 본문을 읽지 않고 파일 목록만 사용하므로 `--filter=blob:none` clone으로 충분하다.
 
 ```bash
 git clone https://github.com/PyTorchKR/tutorials-kr /path/to/document-checkouts/tutorials-kr
 git clone --filter=blob:none https://github.com/pytorch/tutorials /path/to/document-checkouts/pytorch-tutorials
+git clone https://github.com/PyTorchKR/hub-kr /path/to/document-checkouts/hub-kr
+git clone --filter=blob:none https://github.com/pytorch/hub /path/to/document-checkouts/pytorch-hub
+git clone https://github.com/PyTorchKR/pytorch.kr /path/to/document-checkouts/pytorch.kr
+git clone --filter=blob:none https://github.com/pytorch/pytorch.github.io /path/to/document-checkouts/pytorch-github-io
 ```
 
 이 실행에 HF 문서 체크아웃은 필요 없다. 커밋된 HF 상태가 현재 후보·규칙과 호환되어야 한다. 설정만 먼저 등록하려면 `--aggregate-only`를 사용해 미수집으로 표시할 수 있다. 이때 0회로 채우지 않는다.
@@ -151,6 +156,7 @@ git diff -- usage/state/transformers.json usage/state/smolagents.json usage/stat
 - [ ] 스캔·포함 문서 수가 사전에 확인한 범위와 맞고, 예상하지 못한 전체 제외·급감이 없다. `english-missing`·`excluded-by-config` 등 사유별 목록을 확인했다.
 - [ ] 코드·주석·이미지·URL은 제외되고 문단·제목·목록·표의 본문은 포함된다.
 - [ ] 형식별 본문 경계를 대표 문서로 대조했다. reST는 지시문 본문·리터럴 블록·역할, sphinx-gallery `.py`는 구분선 없는 코드 주석과 함수 독스트링의 처리 결과를 확인한다.
+- [ ] 포함 사유(`paired-translation`/`linked-translation`)와 `enPath`가 실제 원문 연결 방식과 맞는다. 원문이 저장소에 없는 글을 `paired-translation`으로 적지 않는다.
 - [ ] 겹치는 표기, 조사가 붙은 표기, 띄어쓰기 차이에 대한 공통 규칙을 유지한다.
 - [ ] 대표 문서의 횟수와 첫 발췌문을 사람이 원문과 대조했다. 링크는 실제 집계한 커밋·행으로 연결된다.
 - [ ] 문서 추가·수정·삭제·이동·제외·재포함 시 결과가 맞다. 포함 원문이 사라진 경우도 확인한다.
