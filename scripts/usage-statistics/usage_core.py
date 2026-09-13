@@ -118,9 +118,10 @@ def compile_patterns(candidates):
     return result
 
 
-def count_document(text, patterns):
+def count_document(text, patterns, extract=blocks):
+    """Matching is shared by every source format; only block extraction differs."""
     counts, evidence = {}, {}
-    for block in blocks(text):
+    for block in extract(text):
         for term, (pattern, mapping) in patterns.items():
             for match in pattern.finditer(block['text']):
                 label = mapping[match[0]]
@@ -132,8 +133,9 @@ def count_document(text, patterns):
     return counts, evidence
 
 
-def update_records(documents, previous, compatible, read_texts, candidates, counted_at):
+def update_records(documents, previous, compatible, read_texts, candidates, counted_at, extract_for=None):
     records, metrics = {}, Counter()
+    extract_for = extract_for or (lambda document: blocks)
     patterns = compile_patterns(candidates)
     pending = {}
     for key, doc in documents.items():
@@ -148,7 +150,7 @@ def update_records(documents, previous, compatible, read_texts, candidates, coun
             pending[key] = doc
     texts = read_texts(pending)
     for key, doc in pending.items():
-        counts, evidence = count_document(texts[key], patterns)
+        counts, evidence = count_document(texts[key], patterns, extract_for(doc))
         records[key] = {**doc, 'counts': counts, 'evidence': evidence, 'countedAt': counted_at}
         metrics['recounted'] += 1
     metrics['deleted'] = len(set(previous) - set(documents))
