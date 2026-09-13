@@ -165,6 +165,72 @@ class SourceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Corrupt state'):
             self.run_update(aggregate_only=True)
 
+    def add_sphinx_source(self, roots=('ko/guide', 'ko/recipe')):
+        """Two translation roots of .rst and sphinx-gallery .py paired with one original root each."""
+        repo = self.sources / 'sphinx-docs'
+        files = {
+            'ko/guide/intro.rst': '제목\n====\n\n기울기 문단의 기울기.\n\n.. code-block:: python\n\n   기울기 = 1\n',
+            'ko/guide/example.py': '"""제목\n====\n\n독스트링의 기울기.\n"""\nimport torch\n\n# 코드 주석의 기울기\n\n' + '#' * 30 + '\n# 주석 블록의 기울기.\n',
+            'ko/guide/helper.py': '# 독스트링 없는 기울기 코드\nimport torch\n',
+            'ko/recipe/only-ko.rst': '번역만 있는 기울기.\n',
+            'en/guide/intro.rst': 'Title\n=====\n',
+            'en/guide/example.py': '"""Title"""\n',
+            'en/guide/helper.py': 'import torch\n',
+            'en/recipe/other.rst': 'Other\n=====\n',
+        }
+        for name, text in files.items():
+            path = repo / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(text, encoding='utf8')
+        self.git(repo, 'init', '-q')
+        revision = self.commit(repo)
+        self.config['sources'].append({
+            'id': 'sphinx-docs', 'label': 'Sphinx docs', 'community': 'PyTorch',
+            'repository': 'https://github.com/example/sphinx-docs', 'checkout': 'sphinx-docs',
+            'ref': revision, 'root': list(roots), 'adapter': 'paired-sphinx', 'exclude': [],
+            'original': {'repository': 'https://github.com/example/sphinx-docs', 'checkout': 'sphinx-docs',
+                         'ref': revision, 'root': ['en/guide', 'en/recipe']},
+        })
+        self.save_config()
+
+    def test_sphinx_source_scope_counts_and_evidence(self):
+        self.run_update()
+        preserved = {sid: (self.root / f'usage/state/{sid}.json').read_bytes() for sid in ('community-a', 'community-b')}
+        self.add_sphinx_source()
+        self.run_update(selected=['sphinx-docs'])
+        state = usage.read_json(self.root / 'usage/state/sphinx-docs.json')
+        reasons = sorted(doc['reason'] for doc in state['documents'].values())
+        self.assertEqual(reasons, ['english-missing', 'not-a-gallery-document', 'paired-translation', 'paired-translation'])
+        self.assertEqual(self.summary()['corpus']['sphinx-docs'], {'scanned': 4, 'included': 2})
+        self.assertEqual(state['documents']['sphinx-docs:ko/guide/intro.rst']['enPath'], 'en/guide/intro.rst')
+        # Prose only: reST code blocks, plain code comments and code-only files are not counted.
+        usage_by_source = self.summary()['terms']['gradient']['bySource']['sphinx-docs']
+        self.assertEqual(usage_by_source, {'occurrences': 4, 'documentCount': 2})
+        self.assertEqual(self.summary()['terms']['gradient']['occurrences'], 8)
+        evidence = state['documents']['sphinx-docs:ko/guide/example.py']['evidence']['gradient']['기울기']
+        self.assertEqual((evidence['line'], evidence['endLine']), (4, 4))
+        for sid, before in preserved.items():
+            self.assertEqual((self.root / f'usage/state/{sid}.json').read_bytes(), before)
+        self.assertEqual(self.run_update(selected=['sphinx-docs'])['filesChanged'], 0)
+        self.assertEqual(self.run_update(selected=['sphinx-docs'], check_full=True)['fullCheck'], 'passed')
+
+    def test_sphinx_roots_must_pair_and_stay_inside_the_repository(self):
+        self.add_sphinx_source()
+        source = self.config['sources'][-1]
+        source['original']['root'] = ['en/guide', 'en/recipe', 'en/extra']
+        self.save_config()
+        with self.assertRaisesRegex(ValueError, 'Pair every translation root'):
+            self.run_update(selected=['sphinx-docs'])
+        source['original']['root'] = ['en/guide', 'en/recipe']
+        source['root'] = ['ko/guide', '../outside']
+        self.save_config()
+        with self.assertRaisesRegex(ValueError, 'Unsafe relative root'):
+            self.run_update(selected=['sphinx-docs'])
+        source['root'] = []
+        self.save_config()
+        with self.assertRaisesRegex(ValueError, 'Translation root must be explicit'):
+            self.run_update(selected=['sphinx-docs'])
+
     def test_config_exclusion_and_reinclude(self):
         self.run_update()
         self.config['sources'][0]['exclude'] = ['ko/*.md']

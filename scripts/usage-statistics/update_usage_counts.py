@@ -14,12 +14,17 @@ from urllib.parse import quote
 
 # Also supports importlib-based tests without installing a Python package.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from usage_core import (RULE, blobs, canonical, compile_patterns, count_document,
+from rst_source import extractor_for, is_gallery_document
+from usage_core import (RULE, blobs, blocks, canonical, compile_patterns, count_document,
                         digest, frontmatter, git, read_json, tree, update_records)
 
 ROOT = Path(__file__).resolve().parents[2]
 SCHEMA = 2
-ADAPTERS = {'paired-markdown': 1, 'krew-blog': 1}
+ADAPTERS = {'paired-markdown': 1, 'krew-blog': 1, 'paired-sphinx': 1}
+SUFFIXES = {'paired-markdown': ('.md',), 'krew-blog': ('.md',), 'paired-sphinx': ('.rst', '.py')}
+# Markdown keeps the shared extractor; Sphinx sources pick one per file format.
+BLOCKS = {'paired-markdown': lambda document: blocks, 'krew-blog': lambda document: blocks,
+          'paired-sphinx': lambda document: extractor_for(document['path'])}
 
 
 def candidate_set(root):
@@ -47,6 +52,17 @@ def candidate_set(root):
     return result
 
 
+def roots(spec):
+    """One document root, or several; single-root configs stay plain strings."""
+    return spec['root'] if isinstance(spec['root'], list) else [spec['root']]
+
+
+def paired_roots(source):
+    """Each translation root prefix with the original root it maps to."""
+    originals = roots(source['original'])
+    return {root.rstrip('/') + '/': originals[index if len(originals) > 1 else 0] for index, root in enumerate(roots(source))}
+
+
 def load_config(root):
     config = read_json(root / 'usage/sources.json')
     if config['schemaVersion'] != 1:
@@ -63,14 +79,15 @@ def load_config(root):
                 raise ValueError('Only public GitHub source URLs are supported')
             if not re.fullmatch(r'[0-9a-f]{40}', repository['ref']):
                 raise ValueError('Pin each source ref to a full Git commit SHA')
-            for field in ('root', 'checkout'):
-                path = repository[field]
+            for field, path in [('checkout', repository['checkout']), *(('root', value) for value in roots(repository))]:
                 if not isinstance(path, str) or path.startswith(('/', '-')) or '..' in path.split('/') or '\\' in path:
                     raise ValueError(f'Unsafe relative {field}: {path}')
             if not repository['checkout']:
                 raise ValueError('checkout must be a relative directory')
-        if not source['root']:
+        if not roots(source) or not all(roots(source)):
             raise ValueError('Translation root must be explicit')
+        if len(roots(source['original'])) not in (1, len(roots(source))):
+            raise ValueError('Pair every translation root with one original root')
         if not isinstance(source['exclude'], list) or not all(isinstance(p, str) for p in source['exclude']):
             raise ValueError('exclude must be a list of path globs')
         if not source['label'] or not source['community']:
@@ -92,23 +109,29 @@ def source_inventory(source, sources_dir):
     for spec in (source, source['original']):
         repo = sources_dir / spec['checkout']
         commit = git(repo, 'rev-parse', '--verify', spec['ref'] + '^{commit}').decode().strip()
-        inventories.append(tree(repo, commit, spec['root'] or '.'))
+        inventories.append(tree(repo, commit, *[root or '.' for root in roots(spec)]))
         commits.append(commit)
     ko_tree, en_tree = inventories
-    prefix = source['root'].rstrip('/') + '/'
-    paths = {p: sha for p, sha in ko_tree.items() if p.startswith(prefix) and p.endswith('.md')}
+    originals = paired_roots(source)
+    suffixes = SUFFIXES[source['adapter']]
+    paths = {p: sha for p, sha in ko_tree.items() if p.endswith(suffixes) and any(p.startswith(prefix) for prefix in originals)}
     # Empty/mistyped roots and unsupported-only corpora fail instead of replacing old data with zeros.
     if not paths:
-        raise ValueError(f'No Markdown translations in {source["id"]}; check root/format before removing its snapshot')
-    texts = blobs(sources_dir / source['checkout'], paths.values()) if source['adapter'] == 'krew-blog' else {}
+        raise ValueError(f'No {"/".join(suffixes)} translations in {source["id"]}; check root/format before removing its snapshot')
+    # Only formats whose eligibility depends on the body are read here.
+    needed = [sha for path, sha in paths.items() if source['adapter'] == 'krew-blog' or path.endswith('.py')]
+    texts = blobs(sources_dir / source['checkout'], needed) if needed else {}
     documents = {}
     for path, sha in sorted(paths.items()):
         reason, en_path = 'paired-translation', None
         extra = {}
-        if source['adapter'] == 'paired-markdown':
-            en_path = '/'.join(p for p in (source['original']['root'].strip('/'), path[len(prefix):]) if p)
+        if source['adapter'] != 'krew-blog':  # paired-markdown and paired-sphinx share the path mapping
+            prefix = next(p for p in originals if path.startswith(p))
+            en_path = '/'.join(p for p in (originals[prefix].strip('/'), path[len(prefix):]) if p)
             if en_path not in en_tree:
                 reason, en_path = 'english-missing', None
+            elif path.endswith('.py') and not is_gallery_document(texts[sha]):
+                reason = 'not-a-gallery-document'
         else:
             text = texts[sha]
             fm, _ = frontmatter(text)
@@ -143,7 +166,7 @@ def update_source(source, previous, candidates, sources_dir, now, full=False):
     def read_pending(pending):
         contents = blobs(sources_dir / source['checkout'], (d['blobSha'] for d in pending.values()))
         return {key: contents[d['blobSha']] for key, d in pending.items()}
-    documents, metrics = update_records(inventory, previous.get('documents', {}), compatible and not full, read_pending, candidates, now)
+    documents, metrics = update_records(inventory, previous.get('documents', {}), compatible and not full, read_pending, candidates, now, BLOCKS[source['adapter']])
     input_hash = digest({'config': source, 'commits': commits, 'inventory': inventory, 'candidates': candidates, 'policy': policy})
     if full:
         if previous.get('inputHash') != input_hash:
