@@ -31,10 +31,10 @@ export function TermTrendsContent({ spellings }: { spellings: string[] }): React
         <Typography sx={{ color: 'var(--fg-3)', fontSize: 14 }}>Google Trends · 대한민국 · 최근 5년</Typography>
       </Box>
       <Typography sx={{ color: 'var(--fg-2)', fontSize: 14, mb: 2, maxWidth: 850 }}>
-        문서 집계에 사용한 한국어 표기를 Google Trends에서 비교합니다. 검색 관심도는 번역의 정확성이나 표준 표기를 뜻하지 않으며, 일상적인 다른 의미의 검색도 함께 집계됩니다.
+        사전에 등록된 한국어 표기(문서 집계에 사용하는 후보)를 Google Trends에서 비교합니다. 검색 관심도는 번역의 정확성이나 표준 표기를 뜻하지 않으며, 일상적인 다른 의미의 검색도 함께 집계됩니다.
       </Typography>
 
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
+      <Box role="group" aria-labelledby="trends-heading" aria-describedby="trends-limit" sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
         {spellings.map(spelling => (
           <FormControlLabel
             key={spelling}
@@ -49,8 +49,8 @@ export function TermTrendsContent({ spellings }: { spellings: string[] }): React
           />
         ))}
       </Box>
-      <Typography sx={{ color: 'var(--fg-3)', fontSize: 13, mb: 2 }}>
-        한 차트에서 최대 {TRENDS_LIMIT}개까지 비교합니다. 0~100은 선택한 표기끼리의 상대 관심도이며, 다른 차트의 값과는 비교할 수 없습니다.
+      <Typography id="trends-limit" aria-live="polite" sx={{ color: 'var(--fg-3)', fontSize: 13, mb: 2 }}>
+        {selected.length}개 선택 · 한 차트에서 최대 {TRENDS_LIMIT}개까지 비교합니다. 0~100은 선택한 표기끼리의 상대 관심도이며, 다른 차트의 값과는 비교할 수 없습니다.
       </Typography>
 
       {selected.length === 0 ? (
@@ -62,6 +62,7 @@ export function TermTrendsContent({ spellings }: { spellings: string[] }): React
           src={trendsEmbedUrl(query)}
           title={`${selected.join(', ')} 검색 관심도 비교`}
           loading="lazy"
+          referrerPolicy="no-referrer"
           sx={{ width: '100%', height: 445, border: '1px solid var(--ptk-line-soft)', display: 'block', bgcolor: '#fff' }}
         />
       )}
@@ -72,9 +73,11 @@ export function TermTrendsContent({ spellings }: { spellings: string[] }): React
         </Typography>
         <Box sx={{ display: 'flex', gap: 1 }}>
           <Button variant="text" onClick={() => setReloads(value => value + 1)} disabled={!selected.length}>차트 다시 불러오기</Button>
-          <Link href={trendsExploreUrl(query)} target="_blank" rel="noopener noreferrer" sx={{ fontSize: 14, alignSelf: 'center' }}>
-            Google Trends에서 비교 ↗
-          </Link>
+          {selected.length > 0 && (
+            <Link href={trendsExploreUrl(query)} target="_blank" rel="noopener noreferrer" sx={{ fontSize: 14, alignSelf: 'center' }}>
+              Google Trends에서 비교 ↗
+            </Link>
+          )}
         </Box>
       </Box>
     </Box>
