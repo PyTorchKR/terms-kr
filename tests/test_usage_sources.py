@@ -7,7 +7,7 @@ import subprocess
 import tempfile
 import unittest
 
-spec = importlib.util.spec_from_file_location('usage_sources', Path(__file__).resolve().parents[1] / 'scripts/update_usage_counts.py')
+spec = importlib.util.spec_from_file_location('usage_sources', Path(__file__).resolve().parents[1] / 'scripts/usage-statistics/update_usage_counts.py')
 usage = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(usage)
 

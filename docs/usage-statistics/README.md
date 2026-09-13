@@ -27,12 +27,12 @@ DB, 백엔드, 큐, 예약 실행, 크롤러는 없다. 집계 도구는 원격 
 | `data/*.json` | 기존 사전; 모든 의미의 한국어 번역·동의어가 기본 검색 후보 | 기존 사전 기여 절차 사용 |
 | `usage/sources.json` | 출처 ID·커뮤니티·저장소·커밋·경로·어댑터·제외 조건 | 가능 |
 | `usage/variants.json` | 추가 검색 표기, 미출현이어도 확인할 후보 목록 | 검토 후 가능 |
-| `scripts/usage_core.py` | 공통 Markdown 정제, 표기 매칭, 문서 캐시 갱신 | 규칙 변경 시 버전 관리 |
-| `scripts/update_usage_counts.py` | 출처 목록 확인, 선택 집계, 합산·출력 | 새 형식이 필요할 때만 확장 |
+| `scripts/usage-statistics/usage_core.py` | 공통 Markdown 정제, 표기 매칭, 문서 캐시 갱신 | 규칙 변경 시 버전 관리 |
+| `scripts/usage-statistics/update_usage_counts.py` | 출처 목록 확인, 선택 집계, 합산·출력 | 새 형식이 필요할 때만 확장 |
 | `usage/state/<source-id>.json` | 출처별 문서 횟수·첫 근거·해시·커밋 | 생성 파일; 숫자 수기 수정 금지 |
 | `public/usage/term-usage.json` | 상세 페이지용 합산 결과 | 생성 파일 |
 | `public/usage/scanned.md` | 포함·제외 문서, 사유, 커밋, 집계 시각 | 생성 파일 |
-| `scripts/validate-usage-data.mjs` | Python/원문 저장소 없이 빌드 결과의 정합성 검사 | 스키마 변경 시 함께 수정 |
+| `scripts/usage-statistics/validate-usage-data.mjs` | Python/원문 저장소 없이 빌드 결과의 정합성 검사 | 스키마 변경 시 함께 수정 |
 
 상태 파일을 출처별로 나눈 이유는 다른 커뮤니티의 원문 저장소 없이 자신의 출처만 갱신하고 검토하기 위해서다. 공개 합산 파일은 하나로 유지한다. 용량이 실제 문제가 되기 전에는 DB나 별도 배포 서비스로 확장하지 않는다.
 
@@ -99,10 +99,10 @@ DB, 백엔드, 큐, 예약 실행, 크롤러는 없다. 집계 도구는 원격 
 기본 사이트 빌드에는 Node 의존성과 커밋된 상태·공개 JSON만 필요하다. Python과 문서 체크아웃은 재집계할 때만 필요하다.
 
 ```bash
-python3 -m pip install -r scripts/requirements-usage.txt
+python3 -m pip install -r scripts/usage-statistics/requirements.txt
 npm run update:usage -- --sources-dir /path/to/document-checkouts
 npm run test:usage
-python3 scripts/update_usage_counts.py --check-full --sources-dir /path/to/document-checkouts
+python3 scripts/usage-statistics/update_usage_counts.py --check-full --sources-dir /path/to/document-checkouts
 npm run build
 ```
 
@@ -110,7 +110,7 @@ npm run build
 
 ```bash
 npm run update:usage -- --source transformers --sources-dir /path/to/document-checkouts
-python3 scripts/update_usage_counts.py --source transformers --check-full --sources-dir /path/to/document-checkouts
+python3 scripts/usage-statistics/update_usage_counts.py --source transformers --check-full --sources-dir /path/to/document-checkouts
 ```
 
 `--source`는 여러 번 지정할 수 있다. 설정한 커밋이 로컬 저장소에 있어야 한다. 스크립트가 최신 main을 가져오거나 임의로 추적하지 않으므로, 최신화는 작성자가 커밋을 선택하고 `sources.json`의 `ref`를 변경하는 별도 단계다.
