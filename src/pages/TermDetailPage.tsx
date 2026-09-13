@@ -27,6 +27,7 @@ import type { TermMeaning, TermExample } from '../types/term'
 import { getFeedbackUrl, getIssueUrl, getNewTermUrl } from '../data/const'
 import { getReadableSourceUrl } from '../utils/sourceLinks'
 import { TermUsageSection } from '../components/TermUsageSection'
+import { TermTrendsSection } from '../components/TermTrendsSection'
 
 function isTermExample(example: string | TermExample): example is TermExample {
   return typeof example === 'object' && 'en' in example && 'ko' in example
@@ -449,6 +450,8 @@ export function TermDetailPage(): React.ReactNode {
       </Box>
 
       <TermUsageSection term={term.term} />
+
+      <TermTrendsSection term={term.term} />
 
       <Box
         sx={{

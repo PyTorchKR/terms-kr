@@ -23,7 +23,7 @@
     "audit:security": "npm audit --audit-level=moderate && npm audit signatures",
     "validate:data": "node scripts/validate-term-data.mjs",
     "validate:usage": "node scripts/usage-statistics/validate-usage-data.mjs",
-    "test:usage": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/source-links.test.mjs tests/usage-communities.test.mjs && npm run validate:usage",
+    "test:usage": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/source-links.test.mjs tests/usage-communities.test.mjs tests/trends-embed.test.mjs && npm run validate:usage",
     "update:usage": "python3 scripts/usage-statistics/update_usage_counts.py",
     "preview": "vite preview"
   },
