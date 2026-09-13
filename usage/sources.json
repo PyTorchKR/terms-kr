@@ -51,6 +51,35 @@
         "ref": "074777edcae899141d17cceb8440885d02dd394a",
         "root": ""
       }
+    },
+    {
+      "id": "pytorch-tutorials",
+      "label": "PyTorch Tutorials",
+      "community": "PyTorch",
+      "repository": "https://github.com/PyTorchKR/tutorials-kr",
+      "checkout": "tutorials-kr",
+      "ref": "84b7db6e020c098cf38a0dfaf036007c24057bb1",
+      "adapter": "paired-sphinx",
+      "root": [
+        "beginner_source",
+        "intermediate_source",
+        "advanced_source",
+        "recipes_source",
+        "unstable_source"
+      ],
+      "exclude": [],
+      "original": {
+        "repository": "https://github.com/pytorch/tutorials",
+        "checkout": "pytorch-tutorials",
+        "ref": "c4d9d935655cf754c90d5ce7f37024afc015f054",
+        "root": [
+          "beginner_source",
+          "intermediate_source",
+          "advanced_source",
+          "recipes_source",
+          "unstable_source"
+        ]
+      }
     }
   ]
 }
