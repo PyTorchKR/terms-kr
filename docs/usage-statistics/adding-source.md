@@ -34,21 +34,22 @@ PyTorch라고 해서 저장소 이름, 한국어 폴더 이름, 영문 대응 �
 ## 2. 기존 어댑터로 충분한지 결정하기
 
 - `.md`이며 한국어 root와 영문 root 아래 **상대 경로가 같으면** `paired-markdown`을 사용한다. 원문과 번역이 다른 저장소여도 지원한다.
+- `.rst`와 sphinx-gallery `.py`이며 경로 대응이 같으면 `paired-sphinx`를 사용한다. 문서 디렉터리가 여러 개면 `root`를 배열로 적고 같은 순서의 영문 root와 짝짓는다.
 - `krew-blog`는 KREW 블로그 전용이다. 다른 블로그에 이름만 바꿔 재사용하지 않는다.
-- `.rst`, `.mdx`, `.ipynb`, 별도 번역 매핑 규칙이라면 현재 지원하지 않는다. 먼저 해당 형식을 읽는 작은 어댑터와 테스트를 추가한다. 지원되지 않는 본문을 Markdown으로 처리하거나 전체 텍스트를 단순 grep하는 우회는 하지 않는다.
+- `.mdx`, `.ipynb`, 별도 번역 매핑 규칙이라면 현재 지원하지 않는다. 먼저 해당 형식을 읽는 작은 어댑터와 테스트를 추가한다. 지원되지 않는 본문을 Markdown으로 처리하거나 전체 텍스트를 단순 grep하는 우회는 하지 않는다.
 
 새 어댑터는 문서 목록, 포함/제외 사유, 원문 연결, 본문과 출처 행 정보를 공통 집계 단계에 전달해야 한다. 한국어 매칭 로직을 출처별로 복사하지 않는다. 본문 추출 방식이 바뀌면 규칙 버전을 올리고 모든 수집 출처를 재집계해야 할 수 있다. 이 PR은 범용 플러그인 시스템을 만들지 않는다.
 
 ### 지원하지 않는 형식의 구현 지점
 
-현재는 교체 가능한 파서 인터페이스가 없다. 설정의 `adapter` 이름만 추가해서 RST 등을 지원할 수는 없다. 필요한 최소 수정 범위는 다음과 같다.
+설정의 `adapter` 이름만 추가해서 새 형식을 지원할 수는 없다. `paired-sphinx`가 이 절차로 추가된 예시이며(`scripts/usage-statistics/rst_source.py`, `tests/test_usage_rst.py`), 다음 형식도 같은 범위를 수정한다.
 
 | 위치 | 해야 할 일 |
 | --- | --- |
-| `update_usage_counts.py`의 `ADAPTERS`, `source_inventory()` | 어댑터 버전 등록, 현재 `.md` 필터 확장, 명시적인 어댑터 분기 추가. 현재 `else`는 KREW 전용이므로 새 형식을 그 분기로 보내면 안 된다. |
-| 같은 파일의 `update_source()` 및 `usage_core.py`의 `update_records()` | 현재 Git blob 텍스트가 바로 `count_document()`로 전달된다. 새 형식의 본문 추출기를 선택하는 경로를 명시적으로 연결한다. |
-| `usage_core.py`의 `blocks()`, `count_document()` | 현재 Markdown 파싱과 매칭이 연결되어 있다. 필요할 때만 본문 블록 추출과 공통 매칭을 분리한다. `canonical()`·`compile_patterns()`의 검색 규칙을 복제하지 않는다. |
-| `tests/test_usage_counts.py`, `tests/test_usage_sources.py` | 새 형식과 원문 매핑의 작은 임시 Git fixture, 캐시·전체 재집계 일치, 다른 출처 보존을 검증한다. |
+| `update_usage_counts.py`의 `ADAPTERS`, `SUFFIXES`, `source_inventory()` | 어댑터 버전과 파일 확장자 등록, 명시적인 어댑터 분기 추가. `krew-blog` 분기에 새 형식을 보내면 안 된다. |
+| 같은 파일의 `BLOCKS`, `update_source()` 및 `usage_core.py`의 `update_records()` | 문서별 본문 추출기는 `BLOCKS[adapter]`가 고르고 `update_records(..., extract_for)`로 전달된다. 새 형식의 추출기를 여기에 연결한다. |
+| `usage_core.py`의 `count_document()` | 매칭은 공통이고 `extract` 인자만 형식마다 다르다. `canonical()`·`compile_patterns()`의 검색 규칙을 복제하지 않는다. |
+| `tests/test_usage_counts.py`, `tests/test_usage_rst.py`, `tests/test_usage_sources.py` | 새 형식의 본문·행 범위 단위 테스트와, 원문 매핑의 작은 임시 Git fixture로 캐시·전체 재집계 일치, 다른 출처 보존을 검증한다. |
 
 유지할 데이터 계약:
 
@@ -61,22 +62,22 @@ PyTorch라고 해서 저장소 이름, 한국어 폴더 이름, 영문 대응 �
 
 ## 3. 출처 설정 추가하기
 
-`usage/sources.json`의 `sources` 배열에 새 객체 하나를 추가한다. 아래는 **설명용 가상 예시**다. URL·경로·커밋을 실제 확인한 값으로 교체해야 하며 실제 PyTorch 경로를 뜻하지 않는다.
+`usage/sources.json`의 `sources` 배열에 새 객체 하나를 추가한다. 아래는 **설명용 가상 예시**다. URL·경로·커밋을 실제 확인한 값으로 교체한다. 등록된 실제 값은 `usage/sources.json`에서 확인한다.
 
 ```json
 {
-  "id": "pytorch-tutorials",
-  "label": "PyTorch Tutorials",
-  "community": "PyTorch",
+  "id": "example-docs",
+  "label": "Example Docs",
+  "community": "Example Community",
   "repository": "https://github.com/OWNER/TRANSLATIONS",
-  "checkout": "pytorch-translations",
+  "checkout": "example-translations",
   "ref": "<한국어 저장소의 40자리 커밋 SHA>",
   "adapter": "paired-markdown",
   "root": "docs/ko",
   "exclude": ["docs/ko/drafts/*"],
   "original": {
     "repository": "https://github.com/OWNER/ORIGINAL",
-    "checkout": "pytorch-original",
+    "checkout": "example-original",
     "ref": "<영문 저장소의 40자리 커밋 SHA>",
     "root": "docs/en"
   }
@@ -87,6 +88,7 @@ PyTorch라고 해서 저장소 이름, 한국어 폴더 이름, 영문 대응 �
 - `checkout`은 `--sources-dir` 기준의 상대 디렉터리다. 개인 컴퓨터의 절대 경로·토큰·인증 URL을 커밋하지 않는다.
 - `ref`는 브랜치 이름이나 `HEAD`가 아니라 40자리 SHA다. 수정 시 어떤 커밋으로 왜 갱신했는지 리뷰한다.
 - `root`와 `exclude`는 Git 저장소 기준 경로다. `exclude`는 `fnmatchcase` 방식이며 Gitignore 문법과 다르다.
+- 문서가 형제 디렉터리 여러 개에 나뉘어 있으면 `root`를 배열로 적는다(`paired-sphinx`의 `pytorch-tutorials` 참고). 영문 `root`는 같은 개수로 순서를 맞추거나 하나만 적어 모든 번역 root에 공통으로 적용한다. 생성된 문서 사본·빌드 산출물 디렉터리는 중복 코퍼스이므로 root에 넣지 않는다.
 - UI의 출처 열·이름·커뮤니티 표시는 이 설정에서 나온다. React 파일에 PyTorch 분기나 새로운 소스 배열을 하드코딩하지 않는다.
 - `community`는 커뮤니티 이름, `label`은 개별 문서 출처의 컬럼 이름이다. 같은 커뮤니티의 출처에는 동일한 `community` 문자열을 사용한다. 예를 들어 PyTorch Tutorials와 PyTorch Docs는 서로 다른 ID·label을 가지되 `community: "PyTorch"`를 공유한다. HF 출처는 `Hugging Face KREW`를 사용한다.
 - 표를 커뮤니티별로 분리하거나 커뮤니티 합계 컬럼을 추가하는 방식이 아니다. 한 표의 기존 HF 출처 컬럼 옆에 새 출처 컬럼이 추가된다. 자세한 표시 정책은 [설계 문서](README.md#커뮤니티와-출처의-화면-표시)를 참고한다.
@@ -101,12 +103,12 @@ PyTorch라고 해서 저장소 이름, 한국어 폴더 이름, 영문 대응 �
 아래 URL·경로·SHA는 설명용이다. 확인한 실제 값으로 교체한다. 기존 체크아웃이 있으면 다시 clone하지 않는다. 필요한 커밋이 없을 때만 해당 저장소에서 허용된 fetch를 수행한다.
 
 ```bash
-git clone https://github.com/OWNER/TRANSLATIONS /path/to/document-checkouts/pytorch-translations
-git clone https://github.com/OWNER/ORIGINAL /path/to/document-checkouts/pytorch-original
-git -C /path/to/document-checkouts/pytorch-translations rev-parse --verify '<한국어 SHA>^{commit}'
-git -C /path/to/document-checkouts/pytorch-original rev-parse --verify '<영문 SHA>^{commit}'
-git -C /path/to/document-checkouts/pytorch-translations ls-tree -r --name-only '<한국어 SHA>' -- docs/ko
-git -C /path/to/document-checkouts/pytorch-original ls-tree -r --name-only '<영문 SHA>' -- docs/en
+git clone https://github.com/OWNER/TRANSLATIONS /path/to/document-checkouts/example-translations
+git clone https://github.com/OWNER/ORIGINAL /path/to/document-checkouts/example-original
+git -C /path/to/document-checkouts/example-translations rev-parse --verify '<한국어 SHA>^{commit}'
+git -C /path/to/document-checkouts/example-original rev-parse --verify '<영문 SHA>^{commit}'
+git -C /path/to/document-checkouts/example-translations ls-tree -r --name-only '<한국어 SHA>' -- docs/ko
+git -C /path/to/document-checkouts/example-original ls-tree -r --name-only '<영문 SHA>' -- docs/en
 ```
 
 출력한 파일 목록으로 같은 상대 경로가 실제 대응하는지 먼저 확인한다. 같은 저장소 안의 번역과 원문이면 하나만 clone하고 두 `checkout` 값을 같게 쓴다. `ref`는 각각 선택한 SHA를 기록한다.
@@ -115,10 +117,17 @@ git -C /path/to/document-checkouts/pytorch-original ls-tree -r --name-only '<영
 python3 -m venv /path/to/usage-venv
 source /path/to/usage-venv/bin/activate
 python3 -m pip install -r scripts/usage-statistics/requirements.txt
-npm run update:usage -- --source pytorch-tutorials --sources-dir /path/to/document-checkouts
-python3 scripts/usage-statistics/update_usage_counts.py --source pytorch-tutorials --check-full --sources-dir /path/to/document-checkouts
+npm run update:usage -- --source example-docs --sources-dir /path/to/document-checkouts
+python3 scripts/usage-statistics/update_usage_counts.py --source example-docs --check-full --sources-dir /path/to/document-checkouts
 npm run test:usage
 npm run build
+```
+
+등록된 `pytorch-tutorials`를 그대로 재현하려면 두 저장소를 각각 `tutorials-kr`, `pytorch-tutorials` 디렉터리로 clone한 뒤 같은 명령을 `--source pytorch-tutorials`로 실행한다. 영문 저장소는 본문을 읽지 않고 파일 목록만 사용하므로 `--filter=blob:none` clone으로 충분하다.
+
+```bash
+git clone https://github.com/PyTorchKR/tutorials-kr /path/to/document-checkouts/tutorials-kr
+git clone --filter=blob:none https://github.com/pytorch/tutorials /path/to/document-checkouts/pytorch-tutorials
 ```
 
 이 실행에 HF 문서 체크아웃은 필요 없다. 커밋된 HF 상태가 현재 후보·규칙과 호환되어야 한다. 설정만 먼저 등록하려면 `--aggregate-only`를 사용해 미수집으로 표시할 수 있다. 이때 0회로 채우지 않는다.
@@ -141,6 +150,7 @@ git diff -- usage/state/transformers.json usage/state/smolagents.json usage/stat
 
 - [ ] 스캔·포함 문서 수가 사전에 확인한 범위와 맞고, 예상하지 못한 전체 제외·급감이 없다. `english-missing`·`excluded-by-config` 등 사유별 목록을 확인했다.
 - [ ] 코드·주석·이미지·URL은 제외되고 문단·제목·목록·표의 본문은 포함된다.
+- [ ] 형식별 본문 경계를 대표 문서로 대조했다. reST는 지시문 본문·리터럴 블록·역할, sphinx-gallery `.py`는 구분선 없는 코드 주석과 함수 독스트링의 처리 결과를 확인한다.
 - [ ] 겹치는 표기, 조사가 붙은 표기, 띄어쓰기 차이에 대한 공통 규칙을 유지한다.
 - [ ] 대표 문서의 횟수와 첫 발췌문을 사람이 원문과 대조했다. 링크는 실제 집계한 커밋·행으로 연결된다.
 - [ ] 문서 추가·수정·삭제·이동·제외·재포함 시 결과가 맞다. 포함 원문이 사라진 경우도 확인한다.
