@@ -105,6 +105,23 @@
         "ref": "c7895df70c7767403e36f82786d6b611b7984557",
         "root": "."
       }
+    },
+    {
+      "id": "pytorch-blog",
+      "label": "PyTorch Blog",
+      "community": "PyTorch",
+      "repository": "https://github.com/PyTorchKR/pytorch.kr",
+      "checkout": "pytorch.kr",
+      "ref": "dbc281dc498500109db8598180d5c3dcdaf43674",
+      "adapter": "pytorch-blog",
+      "root": "_posts",
+      "exclude": [],
+      "original": {
+        "repository": "https://github.com/pytorch/pytorch.github.io",
+        "checkout": "pytorch-github-io",
+        "ref": "9104164e5c459899b49f2ef269cb2c0143e0f703",
+        "root": "_posts"
+      }
     }
   ]
 }
