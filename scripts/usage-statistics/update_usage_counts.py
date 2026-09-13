@@ -57,10 +57,15 @@ def roots(spec):
     return spec['root'] if isinstance(spec['root'], list) else [spec['root']]
 
 
+def root_prefix(root):
+    """Whole-repository scope is written as '.'; any other root is a directory prefix."""
+    return '' if root in ('', '.') else root.rstrip('/') + '/'
+
+
 def paired_roots(source):
-    """Each translation root prefix with the original root it maps to."""
-    originals = roots(source['original'])
-    return {root.rstrip('/') + '/': originals[index if len(originals) > 1 else 0] for index, root in enumerate(roots(source))}
+    """Each translation root prefix with the original root prefix it maps to."""
+    originals = [root_prefix(root) for root in roots(source['original'])]
+    return {root_prefix(root): originals[index if len(originals) > 1 else 0] for index, root in enumerate(roots(source))}
 
 
 def load_config(root):
@@ -127,7 +132,7 @@ def source_inventory(source, sources_dir):
         extra = {}
         if source['adapter'] != 'krew-blog':  # paired-markdown and paired-sphinx share the path mapping
             prefix = next(p for p in originals if path.startswith(p))
-            en_path = '/'.join(p for p in (originals[prefix].strip('/'), path[len(prefix):]) if p)
+            en_path = originals[prefix] + path[len(prefix):]
             if en_path not in en_tree:
                 reason, en_path = 'english-missing', None
             elif path.endswith('.py') and not is_gallery_document(texts[sha]):

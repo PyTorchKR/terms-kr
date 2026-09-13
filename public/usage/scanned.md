@@ -1,6 +1,6 @@
 # 번역 표기 통계 — 스캔 기록
 
-스냅샷: b540a7d4a3eee74fb9759e3b27e1fe32e473db76d360e1106a7035616fe12b6a
+스냅샷: 0da9b8e18d0d0727b265eea2c13daaece22f7f067340319bcb304c1521794556
 집계 규칙: ko-surface-v2.1
 
 한국어 문자열의 단순 출현 수이며 영문 용어와의 번역 대응·선호도를 뜻하지 않는다.
@@ -17,6 +17,8 @@
   - 영문 대응: [074777edcae899141d17cceb8440885d02dd394a](https://github.com/huggingface/blog/tree/074777edcae899141d17cceb8440885d02dd394a)
 - PyTorch Tutorials: [84b7db6e020c098cf38a0dfaf036007c24057bb1](https://github.com/PyTorchKR/tutorials-kr/tree/84b7db6e020c098cf38a0dfaf036007c24057bb1), 집계 2026-09-13T13:07:27+00:00
   - 영문 대응: [c4d9d935655cf754c90d5ce7f37024afc015f054](https://github.com/pytorch/tutorials/tree/c4d9d935655cf754c90d5ce7f37024afc015f054)
+- PyTorch Hub: [39749bdf8fe853e1a74ab1b3a03332168d31eb3f](https://github.com/PyTorchKR/hub-kr/tree/39749bdf8fe853e1a74ab1b3a03332168d31eb3f), 집계 2026-09-13T13:23:03+00:00
+  - 영문 대응: [c7895df70c7767403e36f82786d6b611b7984557](https://github.com/pytorch/hub/tree/c7895df70c7767403e36f82786d6b611b7984557)
 
 ## 문서 목록
 
@@ -545,3 +547,61 @@
 | pytorch-tutorials | [unstable_source/skip_param_init.rst](https://github.com/PyTorchKR/tutorials-kr/blob/84b7db6e020c098cf38a0dfaf036007c24057bb1/unstable_source/skip_param_init.rst) | 포함 | paired-translation | 2026-09-13T13:07:27+00:00 |
 | pytorch-tutorials | [unstable_source/tracing_based_selective_build.rst](https://github.com/PyTorchKR/tutorials-kr/blob/84b7db6e020c098cf38a0dfaf036007c24057bb1/unstable_source/tracing_based_selective_build.rst) | 포함 | paired-translation | 2026-09-13T13:07:27+00:00 |
 | pytorch-tutorials | [unstable_source/vmap_recipe.py](https://github.com/PyTorchKR/tutorials-kr/blob/84b7db6e020c098cf38a0dfaf036007c24057bb1/unstable_source/vmap_recipe.py) | 포함 | paired-translation | 2026-09-13T13:07:27+00:00 |
+| pytorch-hub | [.github/ISSUE_TEMPLATE/0_FIX_REQUEST.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/.github/ISSUE_TEMPLATE/0_FIX_REQUEST.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [.github/ISSUE_TEMPLATE/1_TRANSLATE_REQUEST.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/.github/ISSUE_TEMPLATE/1_TRANSLATE_REQUEST.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [.github/ISSUE_TEMPLATE/9_OTHER_ISSUE.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/.github/ISSUE_TEMPLATE/9_OTHER_ISSUE.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/.github/PULL_REQUEST_TEMPLATE.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [CONTRIBUTING.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/CONTRIBUTING.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [CONTRIBUTING_MODELS.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/CONTRIBUTING_MODELS.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [README.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/README.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [TRANSLATION_GUIDE.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/TRANSLATION_GUIDE.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [Window_build.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/Window_build.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [datvuthanh_hybridnets.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/datvuthanh_hybridnets.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [docs/template.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/docs/template.md) | 제외 | excluded-by-config | — |
+| pytorch-hub | [facebookresearch_WSL-Images_resnext.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/facebookresearch_WSL-Images_resnext.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [facebookresearch_pytorch-gan-zoo_dcgan.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/facebookresearch_pytorch-gan-zoo_dcgan.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [facebookresearch_pytorch-gan-zoo_pgan.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/facebookresearch_pytorch-gan-zoo_pgan.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [facebookresearch_pytorchvideo_resnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/facebookresearch_pytorchvideo_resnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [facebookresearch_pytorchvideo_slowfast.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/facebookresearch_pytorchvideo_slowfast.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [facebookresearch_pytorchvideo_x3d.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/facebookresearch_pytorchvideo_x3d.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [facebookresearch_semi-supervised-ImageNet1K-models_resnext.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/facebookresearch_semi-supervised-ImageNet1K-models_resnext.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [huggingface_pytorch-transformers.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/huggingface_pytorch-transformers.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [hustvl_yolop.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/hustvl_yolop.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [intelisl_midas_v2.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/intelisl_midas_v2.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [mateuszbuda_brain-segmentation-pytorch_unet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/mateuszbuda_brain-segmentation-pytorch_unet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [nicolalandro_ntsnet-cub200_ntsnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/nicolalandro_ntsnet-cub200_ntsnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [nvidia_deeplearningexamples_efficientnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/nvidia_deeplearningexamples_efficientnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [nvidia_deeplearningexamples_resnet50.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/nvidia_deeplearningexamples_resnet50.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [nvidia_deeplearningexamples_resnext.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/nvidia_deeplearningexamples_resnext.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [nvidia_deeplearningexamples_se-resnext.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/nvidia_deeplearningexamples_se-resnext.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [nvidia_deeplearningexamples_ssd.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/nvidia_deeplearningexamples_ssd.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [nvidia_deeplearningexamples_tacotron2.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/nvidia_deeplearningexamples_tacotron2.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [nvidia_deeplearningexamples_waveglow.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/nvidia_deeplearningexamples_waveglow.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_fairseq_roberta.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_fairseq_roberta.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_fairseq_translation.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_fairseq_translation.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_alexnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_alexnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_deeplabv3_resnet101.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_deeplabv3_resnet101.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_densenet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_densenet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_fcn_resnet101.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_fcn_resnet101.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_ghostnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_ghostnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_googlenet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_googlenet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_hardnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_hardnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_ibnnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_ibnnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_inception_v3.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_inception_v3.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_meal_v2.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_meal_v2.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_mobilenet_v2.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_mobilenet_v2.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_proxylessnas.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_proxylessnas.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_resnest.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_resnest.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_resnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_resnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_resnext.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_resnext.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_shufflenet_v2.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_shufflenet_v2.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_squeezenet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_squeezenet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_vgg.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_vgg.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [pytorch_vision_wide_resnet.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/pytorch_vision_wide_resnet.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [sigsep_open-unmix-pytorch_umx.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/sigsep_open-unmix-pytorch_umx.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [snakers4_silero-models_stt.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/snakers4_silero-models_stt.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [snakers4_silero-models_tts.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/snakers4_silero-models_tts.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [snakers4_silero-vad_language.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/snakers4_silero-vad_language.md) | 제외 | english-missing | — |
+| pytorch-hub | [snakers4_silero-vad_number.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/snakers4_silero-vad_number.md) | 제외 | english-missing | — |
+| pytorch-hub | [snakers4_silero-vad_vad.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/snakers4_silero-vad_vad.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |
+| pytorch-hub | [ultralytics_yolov5.md](https://github.com/PyTorchKR/hub-kr/blob/39749bdf8fe853e1a74ab1b3a03332168d31eb3f/ultralytics_yolov5.md) | 포함 | paired-translation | 2026-09-13T13:23:03+00:00 |

@@ -1,0 +1,5633 @@
+{
+  "schemaVersion": 2,
+  "configHash": "ec6ba6edb950c7ff767147a557cd8d4bac73182fd2ba85407bf5cd1a22a2cc0b",
+  "candidateHash": "ff50a3083165c0ba3d8360cad1d8188304877e749eb311754fa717fbacf043ce",
+  "countingRuleVersion": "ko-surface-v2.1",
+  "policyHash": "c08886d7dcfa302ea38d26e74b17eb8d6b7c84a7daee9d2a39aa787fc534588d",
+  "inputHash": "2455a1dbed20e9ac77db9d8bc528fd39196f177049aded599af9ad99e318f7f4",
+  "generatedAt": "2026-09-13T13:23:03+00:00",
+  "source": {
+    "id": "pytorch-hub",
+    "label": "PyTorch Hub",
+    "community": "PyTorch",
+    "repository": "https://github.com/PyTorchKR/hub-kr",
+    "checkout": "hub-kr",
+    "ref": "39749bdf8fe853e1a74ab1b3a03332168d31eb3f",
+    "adapter": "paired-markdown",
+    "root": ".",
+    "exclude": [
+      ".github/*",
+      "docs/*",
+      "CONTRIBUTING.md",
+      "CONTRIBUTING_MODELS.md",
+      "README.md",
+      "TRANSLATION_GUIDE.md",
+      "Window_build.md"
+    ],
+    "original": {
+      "repository": "https://github.com/pytorch/hub",
+      "checkout": "pytorch-hub",
+      "ref": "c7895df70c7767403e36f82786d6b611b7984557",
+      "root": ".",
+      "commit": "c7895df70c7767403e36f82786d6b611b7984557"
+    },
+    "commit": "39749bdf8fe853e1a74ab1b3a03332168d31eb3f"
+  },
+  "documents": {
+    "pytorch-hub:.github/ISSUE_TEMPLATE/0_FIX_REQUEST.md": {
+      "source": "pytorch-hub",
+      "path": ".github/ISSUE_TEMPLATE/0_FIX_REQUEST.md",
+      "blobSha": "c63fba16ee05d4c0fa12814cf68b850b8733d284",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:.github/ISSUE_TEMPLATE/1_TRANSLATE_REQUEST.md": {
+      "source": "pytorch-hub",
+      "path": ".github/ISSUE_TEMPLATE/1_TRANSLATE_REQUEST.md",
+      "blobSha": "08f86e37a75260b516ddfe355dd4593f3194125d",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:.github/ISSUE_TEMPLATE/9_OTHER_ISSUE.md": {
+      "source": "pytorch-hub",
+      "path": ".github/ISSUE_TEMPLATE/9_OTHER_ISSUE.md",
+      "blobSha": "6aaaecf249a625c6faea165f6c7502bafe801613",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:.github/PULL_REQUEST_TEMPLATE.md": {
+      "source": "pytorch-hub",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "blobSha": "5bcaea42689498276293da1a30332107c662ff27",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:CONTRIBUTING.md": {
+      "source": "pytorch-hub",
+      "path": "CONTRIBUTING.md",
+      "blobSha": "17de6abeee4180c5fbedd53925378283db418fa5",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": "CONTRIBUTING.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:CONTRIBUTING_MODELS.md": {
+      "source": "pytorch-hub",
+      "path": "CONTRIBUTING_MODELS.md",
+      "blobSha": "63484de610ab1ad155dbeacdb908abcd56a85fa3",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:README.md": {
+      "source": "pytorch-hub",
+      "path": "README.md",
+      "blobSha": "162d286efc1762c942a41d5140205c8aac14f47e",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": "README.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:TRANSLATION_GUIDE.md": {
+      "source": "pytorch-hub",
+      "path": "TRANSLATION_GUIDE.md",
+      "blobSha": "c73969c2dbe43327760f4fc2af07455bee650093",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:Window_build.md": {
+      "source": "pytorch-hub",
+      "path": "Window_build.md",
+      "blobSha": "c2880bcbbea1cd65e4f3af01b5107dc19edb7f91",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:datvuthanh_hybridnets.md": {
+      "source": "pytorch-hub",
+      "path": "datvuthanh_hybridnets.md",
+      "blobSha": "ef989d8d99f816831c7cb89503ff605dcdc4d928",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "datvuthanh_hybridnets.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:docs/template.md": {
+      "source": "pytorch-hub",
+      "path": "docs/template.md",
+      "blobSha": "6130d7a2d1f1ade10c1f03ae347b76a2e88f261a",
+      "eligible": false,
+      "reason": "excluded-by-config",
+      "enPath": "docs/template.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:facebookresearch_WSL-Images_resnext.md": {
+      "source": "pytorch-hub",
+      "path": "facebookresearch_WSL-Images_resnext.md",
+      "blobSha": "b9a63b4ecb9dda25dc519d43824537d3fa3f234f",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "facebookresearch_WSL-Images_resnext.md",
+      "counts": {
+        "model": {
+          "모델": 8
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "학습": 6
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "dataset": {
+          "데이터셋": 3
+        },
+        "fine-tuning": {
+          "미세 조정": 1
+        },
+        "precision": {
+          "정확도": 2
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "모든 사전 학습된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "모든 사전 학습된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "모든 사전 학습된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "모든 사전 학습된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지는 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지는 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지는 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "를 이용하여 정규화해야 합니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 75,
+            "endLine": 75,
+            "excerpt": "만개의 공공 이미지를 weakly-supervised 방식으로 사전 학습한 후 imagenet1k 데이터셋을 사용해 미세 조정(fine-tuning)합니다. 여기서 사용되는 공공 이미지들은 1000개의 imagenet1k 동의어 집합(synset)에 해당하는"
+          }
+        },
+        "fine-tuning": {
+          "미세 조정": {
+            "line": 75,
+            "endLine": 75,
+            "excerpt": "를 weakly-supervised 방식으로 사전 학습한 후 imagenet1k 데이터셋을 사용해 미세 조정(fine-tuning)합니다. 여기서 사용되는 공공 이미지들은 1000개의 imagenet1k 동의어 집합(synset)에 해당하는 1500개의 해시태"
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 86,
+            "endLine": 86,
+            "excerpt": "전 학습된 모델을 사용하지 않고 처음부터 학습하는 경우에 비해 imagenet 데이터셋에서의 학습 정확도가 크게 향상됩니다. resnext-101 32x48d 모델은 imagenet 데이터셋을 사용했을 때 85.4%에 달하는 최고 수준의 정확도를 달성했습니"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:facebookresearch_pytorch-gan-zoo_dcgan.md": {
+      "source": "pytorch-hub",
+      "path": "facebookresearch_pytorch-gan-zoo_dcgan.md",
+      "blobSha": "3f37e0fd52019ceb5c1519d5d6226f0fe7ea2545",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "facebookresearch_pytorch-gan-zoo_dcgan.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "feature": {
+          "함수": 2
+        },
+        "training": {
+          "학습": 1,
+          "훈련": 1
+        },
+        "computer vision": {
+          "컴퓨터 비전": 1
+        },
+        "generative model": {
+          "생성 모델": 1
+        },
+        "architecture": {
+          "구조": 2
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": "모델에 입력하는 잡음(noise) 벡터의 크기는"
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": "함수를 사용하여 데이터를 생성할 수 있습니다. 모델의"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 44,
+            "endLine": 44,
+            "excerpt": "만약 자기만의 dcgan과 다른 gan을 처음부터 학습시키고 싶다면, pytorch gan zoo 를 참고하시기 바랍니다."
+          },
+          "훈련": {
+            "line": 48,
+            "endLine": 48,
+            "excerpt": "컴퓨터 비전 분야에서 생성 모델은 주어진 입력에 대한 이미지를 생성하도록 훈련된 네트워크(networks)입니다. 본 예제에서는 무작위 벡터와 실제 이미지 생성 간의 연결하는 방법을 배우는 gans (generative adver"
+          }
+        },
+        "computer vision": {
+          "컴퓨터 비전": {
+            "line": 48,
+            "endLine": 48,
+            "excerpt": "컴퓨터 비전 분야에서 생성 모델은 주어진 입력에 대한 이미지를 생성하도록 훈련된 네트워크(networks)입니다. 본 예제에서는 무작위 벡터와 실제 이미지 생성 간"
+          }
+        },
+        "generative model": {
+          "생성 모델": {
+            "line": 48,
+            "endLine": 48,
+            "excerpt": "컴퓨터 비전 분야에서 생성 모델은 주어진 입력에 대한 이미지를 생성하도록 훈련된 네트워크(networks)입니다. 본 예제에서는 무작위 벡터와 실제 이미지 생성 간의 연결하는 방법을 "
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 50,
+            "endLine": 50,
+            "excerpt": "dcgan은 2015년 radford 등이 설계한 모델 구조입니다. 상세한 내용은 unsupervised representation learning with deep convolutional generative "
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:facebookresearch_pytorch-gan-zoo_pgan.md": {
+      "source": "pytorch-hub",
+      "path": "facebookresearch_pytorch-gan-zoo_pgan.md",
+      "blobSha": "4e0abf557ca2f5c3dae32e79e9fc3781b5e0a7de",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "facebookresearch_pytorch-gan-zoo_pgan.md",
+      "counts": {
+        "model": {
+          "모델": 12
+        },
+        "feature": {
+          "함수": 2
+        },
+        "training": {
+          "학습": 5
+        },
+        "computer vision": {
+          "컴퓨터 비전": 1
+        },
+        "generative model": {
+          "생성 모델": 3
+        },
+        "neural network": {
+          "신경망": 1
+        },
+        "convergence": {
+          "수렴": 1
+        },
+        "iteration": {
+          "반복": 1
+        },
+        "layer": {
+          "계층": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 36,
+            "endLine": 38,
+            "excerpt": "모델의 입력은"
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 36,
+            "endLine": 38,
+            "excerpt": "은 생성하고자 하는 이미지의 개수를 뜻합니다. 이 노이즈 벡터들은 함수"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 56,
+            "endLine": 56,
+            "excerpt": "만약 자신만의 progressive gan 이나 다른 gan 모델들을 직접 학습해 보고 싶다면 pytorch gan zoo를 참고해 보시기 바랍니다."
+          }
+        },
+        "computer vision": {
+          "컴퓨터 비전": {
+            "line": 60,
+            "endLine": 60,
+            "excerpt": "컴퓨터 비전(computer vision)분야에서 생성 모델은 주어진 입력값으로 부터 이미지를 생성해 내도록 학습된 신경망입니다. 현재 다루는 모델은 생성 모델의 "
+          }
+        },
+        "generative model": {
+          "생성 모델": {
+            "line": 60,
+            "endLine": 60,
+            "excerpt": "컴퓨터 비전(computer vision)분야에서 생성 모델은 주어진 입력값으로 부터 이미지를 생성해 내도록 학습된 신경망입니다. 현재 다루는 모델은 생성 모델의 특정한 종류로서 무작위의 벡터에서 사실적인 이미지"
+          }
+        },
+        "neural network": {
+          "신경망": {
+            "line": 60,
+            "endLine": 60,
+            "excerpt": "puter vision)분야에서 생성 모델은 주어진 입력값으로 부터 이미지를 생성해 내도록 학습된 신경망입니다. 현재 다루는 모델은 생성 모델의 특정한 종류로서 무작위의 벡터에서 사실적인 이미지를 생성하는 법을 학습하는 gan 모델입니다."
+          }
+        },
+        "convergence": {
+          "수렴": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "습됩니다. 제일 먼저 모델은 아주 낮은 해상도의 이미지를 생성하도록 학습이 되고, 어느정도 모델이 수렴하면 새로운 계층이 모델에 더해지고 출력 해상도는 2배가 됩니다. 이 과정을 원하는 해상도에 도달 할 때 까지 반복합니다."
+          }
+        },
+        "iteration": {
+          "반복": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "계층이 모델에 더해지고 출력 해상도는 2배가 됩니다. 이 과정을 원하는 해상도에 도달 할 때 까지 반복합니다."
+          }
+        },
+        "layer": {
+          "계층": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "먼저 모델은 아주 낮은 해상도의 이미지를 생성하도록 학습이 되고, 어느정도 모델이 수렴하면 새로운 계층이 모델에 더해지고 출력 해상도는 2배가 됩니다. 이 과정을 원하는 해상도에 도달 할 때 까지 반복합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:facebookresearch_pytorchvideo_resnet.md": {
+      "source": "pytorch-hub",
+      "path": "facebookresearch_pytorchvideo_resnet.md",
+      "blobSha": "46b24a25f09d746c4c85ad174e5a0e5874c5917f",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "facebookresearch_pytorchvideo_resnet.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "feature": {
+          "함수": 1
+        },
+        "environment": {
+          "환경": 1
+        },
+        "evaluation mode": {
+          "평가 모드": 1
+        },
+        "dataset": {
+          "데이터셋": 2
+        },
+        "inference": {
+          "예측": 2,
+          "추론": 1
+        },
+        "label": {
+          "레이블": 2
+        },
+        "training": {
+          "훈련": 2
+        },
+        "architecture": {
+          "아키텍처": 1
+        },
+        "pre-training": {
+          "사전 훈련": 1
+        },
+        "weight": {
+          "가중치": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "모델 불러오기:"
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "나머지 함수들 불러오기:"
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 50,
+            "endLine": 50,
+            "excerpt": "환경설정"
+          }
+        },
+        "evaluation mode": {
+          "평가 모드": {
+            "line": 52,
+            "endLine": 52,
+            "excerpt": "모델을 평가 모드로 설정하고 원하는 디바이스 방식을 선택합니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 61,
+            "endLine": 61,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋에 대해 id에서의 레이블과 맞는 정보를 다운로드합니다. 이는 예측된 클래스 id에서 카테고리 레이블 이름을 가져오는데 사용됩니다."
+          }
+        },
+        "inference": {
+          "예측": {
+            "line": 61,
+            "endLine": 61,
+            "excerpt": "련된 kinetics 400 데이터셋에 대해 id에서의 레이블과 맞는 정보를 다운로드합니다. 이는 예측된 클래스 id에서 카테고리 레이블 이름을 가져오는데 사용됩니다."
+          },
+          "추론": {
+            "line": 111,
+            "endLine": 111,
+            "excerpt": "추론 실행"
+          }
+        },
+        "label": {
+          "레이블": {
+            "line": 61,
+            "endLine": 61,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋에 대해 id에서의 레이블과 맞는 정보를 다운로드합니다. 이는 예측된 클래스 id에서 카테고리 레이블 이름을 가져오는데 사용됩니다."
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 61,
+            "endLine": 61,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋에 대해 id에서의 레이블과 맞는 정보를 다운로드합니다. 이는 예측된 클래스 id에서 카테고리 레이블 이름을 가져오는데"
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 161,
+            "endLine": 161,
+            "excerpt": "모델 아키텍처는 kinetics 데이터셋의 8x8 설정을 사용하여 사전 훈련된 가중치가 있는 참고문헌 [1]을 기반으로 합니다."
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 161,
+            "endLine": 161,
+            "excerpt": "모델 아키텍처는 kinetics 데이터셋의 8x8 설정을 사용하여 사전 훈련된 가중치가 있는 참고문헌 [1]을 기반으로 합니다."
+          }
+        },
+        "weight": {
+          "가중치": {
+            "line": 161,
+            "endLine": 161,
+            "excerpt": "모델 아키텍처는 kinetics 데이터셋의 8x8 설정을 사용하여 사전 훈련된 가중치가 있는 참고문헌 [1]을 기반으로 합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:facebookresearch_pytorchvideo_slowfast.md": {
+      "source": "pytorch-hub",
+      "path": "facebookresearch_pytorchvideo_slowfast.md",
+      "blobSha": "e97199394404013cb70aaade4882c32c554af927",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "facebookresearch_pytorchvideo_slowfast.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "feature": {
+          "함수": 1
+        },
+        "evaluation mode": {
+          "평가 모드": 1
+        },
+        "dataset": {
+          "데이터셋": 2
+        },
+        "inference": {
+          "예측": 2,
+          "추론": 1
+        },
+        "label": {
+          "레이블": 2
+        },
+        "training": {
+          "훈련": 2
+        },
+        "architecture": {
+          "아키텍처": 1
+        },
+        "pre-training": {
+          "사전 훈련": 1
+        },
+        "weight": {
+          "가중치": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "모델 불러오기:"
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "나머지 함수들 불러오기:"
+          }
+        },
+        "evaluation mode": {
+          "평가 모드": {
+            "line": 53,
+            "endLine": 53,
+            "excerpt": "모델을 평가 모드로 설정하고 원하는 디바이스 방식을 선택합니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋을 위한 id-레이블 매핑 정보를 다운로드합니다. 이는 예측된 클래스 id에 카테고리 레이블 이름을 붙이는 데 사용됩니다."
+          }
+        },
+        "inference": {
+          "예측": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "델이 훈련된 kinetics 400 데이터셋을 위한 id-레이블 매핑 정보를 다운로드합니다. 이는 예측된 클래스 id에 카테고리 레이블 이름을 붙이는 데 사용됩니다."
+          },
+          "추론": {
+            "line": 135,
+            "endLine": 135,
+            "excerpt": "추론 실행"
+          }
+        },
+        "label": {
+          "레이블": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋을 위한 id-레이블 매핑 정보를 다운로드합니다. 이는 예측된 클래스 id에 카테고리 레이블 이름을 붙이는 데 사용됩니다."
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋을 위한 id-레이블 매핑 정보를 다운로드합니다. 이는 예측된 클래스 id에 카테고리 레이블 이름을 붙이는 데 사용됩니"
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 185,
+            "endLine": 185,
+            "excerpt": "slowfast 모델 아키텍처는 kinetics 데이터셋의 8x8 설정을 사용하여 사전 훈련된 가중치가 있는 [1]을 기반으로 합니다."
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 185,
+            "endLine": 185,
+            "excerpt": "slowfast 모델 아키텍처는 kinetics 데이터셋의 8x8 설정을 사용하여 사전 훈련된 가중치가 있는 [1]을 기반으로 합니다."
+          }
+        },
+        "weight": {
+          "가중치": {
+            "line": 185,
+            "endLine": 185,
+            "excerpt": "slowfast 모델 아키텍처는 kinetics 데이터셋의 8x8 설정을 사용하여 사전 훈련된 가중치가 있는 [1]을 기반으로 합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:facebookresearch_pytorchvideo_x3d.md": {
+      "source": "pytorch-hub",
+      "path": "facebookresearch_pytorchvideo_x3d.md",
+      "blobSha": "cc43463edc9c27f8f187e151eabb716571d65057",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "facebookresearch_pytorchvideo_x3d.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "feature": {
+          "함수": 1
+        },
+        "evaluation mode": {
+          "평가 모드": 1
+        },
+        "dataset": {
+          "데이터셋": 2
+        },
+        "inference": {
+          "예측": 2,
+          "추론": 1
+        },
+        "label": {
+          "레이블": 2
+        },
+        "training": {
+          "훈련": 2
+        },
+        "architecture": {
+          "아키텍처": 1
+        },
+        "pre-training": {
+          "사전 훈련": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "모델 불러오기:"
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 32,
+            "endLine": 32,
+            "excerpt": "나머지 함수들 불러오기:"
+          }
+        },
+        "evaluation mode": {
+          "평가 모드": {
+            "line": 53,
+            "endLine": 53,
+            "excerpt": "모델을 평가 모드로 설정하고 원하는 디바이스 방식을 선택합니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋에 대해 id에서의 레이블 매핑 정보를 다운로드합니다. 이는 예측된 클래스 id에서 카테고리 레이블 이름을 가져오는데 사용됩니다."
+          }
+        },
+        "inference": {
+          "예측": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "훈련된 kinetics 400 데이터셋에 대해 id에서의 레이블 매핑 정보를 다운로드합니다. 이는 예측된 클래스 id에서 카테고리 레이블 이름을 가져오는데 사용됩니다."
+          },
+          "추론": {
+            "line": 131,
+            "endLine": 131,
+            "excerpt": "추론 실행"
+          }
+        },
+        "label": {
+          "레이블": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋에 대해 id에서의 레이블 매핑 정보를 다운로드합니다. 이는 예측된 클래스 id에서 카테고리 레이블 이름을 가져오는데 사용됩니다."
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 62,
+            "endLine": 62,
+            "excerpt": "토치 허브 모델이 훈련된 kinetics 400 데이터셋에 대해 id에서의 레이블 매핑 정보를 다운로드합니다. 이는 예측된 클래스 id에서 카테고리 레이블 이름을 가져오는데 "
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 181,
+            "endLine": 181,
+            "excerpt": "x3d 모델 아키텍처는 kinetics 데이터셋에 대해 사전 훈련된 [1]을 기반으로 합니다."
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 181,
+            "endLine": 181,
+            "excerpt": "x3d 모델 아키텍처는 kinetics 데이터셋에 대해 사전 훈련된 [1]을 기반으로 합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:facebookresearch_semi-supervised-ImageNet1K-models_resnext.md": {
+      "source": "pytorch-hub",
+      "path": "facebookresearch_semi-supervised-ImageNet1K-models_resnext.md",
+      "blobSha": "2966b11b4e9456245aa37f2e975021a7ed1dc209",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "facebookresearch_semi-supervised-ImageNet1K-models_resnext.md",
+      "counts": {
+        "model": {
+          "모델": 11
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "학습": 6,
+          "훈련": 4
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "classification": {
+          "분류": 1
+        },
+        "exploitation": {
+          "활용": 5
+        },
+        "label": {
+          "레이블": 4
+        },
+        "architecture": {
+          "구조": 1
+        },
+        "precision": {
+          "정확도": 2
+        },
+        "validation": {
+          "검증": 2
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 40,
+            "endLine": 40,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 40,
+            "endLine": 40,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 40,
+            "endLine": 40,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 40,
+            "endLine": 40,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          },
+          "훈련": {
+            "line": 83,
+            "endLine": 83,
+            "excerpt": "ised\" 방식에서 대용량(hight-capacity)의 teacher 모델은 imagenet1k 훈련 데이터로 학습됩니다. student 모델은 레이블이 없는 yfcc100m의 일부 이미지를 활용해 사전 학습하며, 이후 imagenet1k의 훈련 데이터"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 40,
+            "endLine": 40,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 40,
+            "endLine": 40,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 40,
+            "endLine": 40,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "classification": {
+          "분류": {
+            "line": 81,
+            "endLine": 81,
+            "excerpt": "된 semi-supervised, semi-weakly supervised 방식의 imagenet 분류 모델을 다룹니다."
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 83,
+            "endLine": 83,
+            "excerpt": "k 훈련 데이터로 학습됩니다. student 모델은 레이블이 없는 yfcc100m의 일부 이미지를 활용해 사전 학습하며, 이후 imagenet1k의 훈련 데이터를 통해서 파인 튜닝합니다. 자세한 사항은 앞서 언급한 논문에서 확인할 수 있습니다."
+          }
+        },
+        "label": {
+          "레이블": {
+            "line": 83,
+            "endLine": 83,
+            "excerpt": "ty)의 teacher 모델은 imagenet1k 훈련 데이터로 학습됩니다. student 모델은 레이블이 없는 yfcc100m의 일부 이미지를 활용해 사전 학습하며, 이후 imagenet1k의 훈련 데이터를 통해서 파인 튜닝합니다. 자세한 사항은 앞서 언"
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": "xt 모델의 imagenet top-1 검증 정확도를 크게 개선했습니다. 예시, resnet-50 구조로 imagenet 검증 정확도를 81.2% 기록했습니다.."
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": "y-supervised 방식은 resnet, resnext 모델의 imagenet top-1 검증 정확도를 크게 개선했습니다. 예시, resnet-50 구조로 imagenet 검증 정확도를 81.2% 기록했습니다.."
+          }
+        },
+        "validation": {
+          "검증": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": "akly-supervised 방식은 resnet, resnext 모델의 imagenet top-1 검증 정확도를 크게 개선했습니다. 예시, resnet-50 구조로 imagenet 검증 정확도를 81.2% 기록했습니다.."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:huggingface_pytorch-transformers.md": {
+      "source": "pytorch-hub",
+      "path": "huggingface_pytorch-transformers.md",
+      "blobSha": "d338bf60d1a0dc0f2f936f438d6843679f69f915",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "huggingface_pytorch-transformers.md",
+      "counts": {
+        "model": {
+          "모델": 38
+        },
+        "natural language processing": {
+          "자연어 처리": 1
+        },
+        "training": {
+          "학습": 4
+        },
+        "weight": {
+          "가중치": 1
+        },
+        "tokenizer": {
+          "토크나이저": 5
+        },
+        "head": {
+          "헤드": 7
+        },
+        "language model": {
+          "언어 모델": 4
+        },
+        "classification": {
+          "분류": 4
+        },
+        "sequence classification": {
+          "시퀀스 분류": 3
+        },
+        "query": {
+          "질의": 4
+        },
+        "question answering": {
+          "질의 응답": 4
+        },
+        "checkpoint": {
+          "체크포인트": 1
+        },
+        "token": {
+          "토큰": 6
+        },
+        "tokenization": {
+          "토큰화": 3
+        },
+        "attention": {
+          "어텐션": 1
+        },
+        "feature": {
+          "변수": 1
+        },
+        "hidden state": {
+          "은닉 상태": 3
+        },
+        "layer": {
+          "레이어": 2
+        },
+        "parameter": {
+          "매개변수": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "inference": {
+          "예측": 2
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 20,
+            "endLine": 20,
+            "excerpt": "모델 설명"
+          }
+        },
+        "natural language processing": {
+          "자연어 처리": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "으로 알려짐) 는 자연어 처리(nlp)를 위한 최신식 사전 학습된 모델들을 모아놓은 라이브러리입니다."
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "으로 알려짐) 는 자연어 처리(nlp)를 위한 최신식 사전 학습된 모델들을 모아놓은 라이브러리입니다."
+          }
+        },
+        "weight": {
+          "가중치": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "라이브러리는 현재 다음 모델들에 대한 파이토치 구현과 사전 학습된 가중치, 사용 스크립트, 변환 유틸리티를 포함하고 있습니다."
+          }
+        },
+        "tokenizer": {
+          "토크나이저": {
+            "line": 50,
+            "endLine": 50,
+            "excerpt": ": 지정한 모델 또는 경로에 해당하는 토크나이저(tokenizer)를 반환합니다."
+          }
+        },
+        "head": {
+          "헤드": {
+            "line": 52,
+            "endLine": 52,
+            "excerpt": ": 지정한 모델 또는 경로에 해당하는, 언어 모델링 헤드(language modeling head)가 추가된 모델을 반환합니다."
+          }
+        },
+        "language model": {
+          "언어 모델": {
+            "line": 52,
+            "endLine": 52,
+            "excerpt": ": 지정한 모델 또는 경로에 해당하는, 언어 모델링 헤드(language modeling head)가 추가된 모델을 반환합니다."
+          }
+        },
+        "classification": {
+          "분류": {
+            "line": 53,
+            "endLine": 53,
+            "excerpt": ": 지정한 모델 또는 경로에 해당하는, 시퀀스 분류기(sequence classifier)가 추가된 모델을 반환합니다."
+          }
+        },
+        "sequence classification": {
+          "시퀀스 분류": {
+            "line": 53,
+            "endLine": 53,
+            "excerpt": ": 지정한 모델 또는 경로에 해당하는, 시퀀스 분류기(sequence classifier)가 추가된 모델을 반환합니다."
+          }
+        },
+        "query": {
+          "질의": {
+            "line": 54,
+            "endLine": 54,
+            "excerpt": ": 지정한 모델 또는 경로에 해당하는, 질의 응답 헤드(question answering head)가 추가된 모델을 반환합니다."
+          }
+        },
+        "question answering": {
+          "질의 응답": {
+            "line": 54,
+            "endLine": 54,
+            "excerpt": ": 지정한 모델 또는 경로에 해당하는, 질의 응답 헤드(question answering head)가 추가된 모델을 반환합니다."
+          }
+        },
+        "checkpoint": {
+          "체크포인트": {
+            "line": 56,
+            "endLine": 56,
+            "excerpt": "대한 사전 학습된 모델 또는 경로를 나타내는 문자열입니다. 각 모델에 대해 사용할 수 있는 다양한 체크포인트(checkpoint)가 있고, 자세한 내용은 아래에서 확인하실 수 있습니다:"
+          }
+        },
+        "token": {
+          "토큰": {
+            "line": 70,
+            "endLine": 70,
+            "excerpt": "토크나이저 객체로 문자열을 모델에서 사용할 수 있는 토큰으로 변환할 수 있습니다. 각 모델마다 고유한 토크나이저가 있고, 일부 토큰화 메소드는 토크나이저에 따라 다릅니다. 전체 문서는 여기에서 확인해보실 수 "
+          }
+        },
+        "tokenization": {
+          "토큰화": {
+            "line": 70,
+            "endLine": 70,
+            "excerpt": "델에서 사용할 수 있는 토큰으로 변환할 수 있습니다. 각 모델마다 고유한 토크나이저가 있고, 일부 토큰화 메소드는 토크나이저에 따라 다릅니다. 전체 문서는 여기에서 확인해보실 수 있습니다."
+          }
+        },
+        "attention": {
+          "어텐션": {
+            "line": 140,
+            "endLine": 140,
+            "excerpt": "값은 선택 사항입니다. 설정값 객체는 모델에 관한 정보, 예를 들어 헤드나 레이어의 개수, 모델이 어텐션(attentions) 또는 은닉 상태(hidden states)를 출력해야 하는지, 또는 모델이 torchscript에 맞게 조정되어야 하는지 여부에 "
+          }
+        },
+        "feature": {
+          "변수": {
+            "line": 140,
+            "endLine": 140,
+            "excerpt": "ript에 맞게 조정되어야 하는지 여부에 대한 정보를 가지고 있습니다. 각 모델에 따라 다양한 매개변수를 사용할 수 있습니다. 전체 문서는 여기에서 확인해보실 수 있습니다."
+          }
+        },
+        "hidden state": {
+          "은닉 상태": {
+            "line": 140,
+            "endLine": 140,
+            "excerpt": "는 모델에 관한 정보, 예를 들어 헤드나 레이어의 개수, 모델이 어텐션(attentions) 또는 은닉 상태(hidden states)를 출력해야 하는지, 또는 모델이 torchscript에 맞게 조정되어야 하는지 여부에 대한 정보를 가지고 있습니다. 각 모델"
+          }
+        },
+        "layer": {
+          "레이어": {
+            "line": 140,
+            "endLine": 140,
+            "excerpt": "설정값은 선택 사항입니다. 설정값 객체는 모델에 관한 정보, 예를 들어 헤드나 레이어의 개수, 모델이 어텐션(attentions) 또는 은닉 상태(hidden states)를 출력해야 하는지, 또는 모델이 torchscript에 맞게 조"
+          }
+        },
+        "parameter": {
+          "매개변수": {
+            "line": 140,
+            "endLine": 140,
+            "excerpt": "script에 맞게 조정되어야 하는지 여부에 대한 정보를 가지고 있습니다. 각 모델에 따라 다양한 매개변수를 사용할 수 있습니다. 전체 문서는 여기에서 확인해보실 수 있습니다."
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 164,
+            "endLine": 164,
+            "excerpt": " 후 bert 모델에 입력으로 넣어서 계산된 은닉 상태를 가져오거나, 언어 모델링 bert 모델을 이용하여 마스킹된 토큰들을 예측하는 방법에 대한 예시입니다."
+          }
+        },
+        "inference": {
+          "예측": {
+            "line": 164,
+            "endLine": 164,
+            "excerpt": "로 넣어서 계산된 은닉 상태를 가져오거나, 언어 모델링 bert 모델을 이용하여 마스킹된 토큰들을 예측하는 방법에 대한 예시입니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:hustvl_yolop.md": {
+      "source": "pytorch-hub",
+      "path": "hustvl_yolop.md",
+      "blobSha": "7d677d0fba649c20ef14faa77b50ee7f296986e7",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "hustvl_yolop.md",
+      "counts": {
+        "model": {
+          "모델": 9
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "segmentation": {
+          "분할": 2
+        },
+        "head": {
+          "헤드": 5
+        },
+        "training": {
+          "학습": 4
+        },
+        "feature": {
+          "함수": 1
+        },
+        "inference": {
+          "추론": 3
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 28,
+            "endLine": 28,
+            "excerpt": "모델 설명"
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 33,
+            "endLine": 33,
+            "excerpt": "tion), 차선 인식(lane detection)을 수행합니다. 또한 yolop는 bdd100k 데이터셋에서 최신 기술(state-of-the-art)의 수준을 유지하면서 임베디드 기기에서 실시간성에 도달한 최초의 모델입니다."
+          }
+        },
+        "segmentation": {
+          "분할": {
+            "line": 33,
+            "endLine": 33,
+            "excerpt": "작업 네트워크 입니다. 이 다중 네트워크는 물체 감지(object detection), 주행 영역 분할(drivable area segmentation), 차선 인식(lane detection)을 수행합니다. 또한 yolop는 bdd100k 데이터셋에서 "
+          }
+        },
+        "head": {
+          "헤드": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": "표 4에서 e, d, s, w는 인코더(encoder), 검출 헤드(detect head), 2개의 세그먼트 헤드(segment heads) 와 전체 네트워크를 의미합니다. 그래서 이 알고리즘(이 알고리즘은 첫째, 인코"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": " 와 전체 네트워크를 의미합니다. 그래서 이 알고리즘(이 알고리즘은 첫째, 인코더 및 검출 헤드만 학습합니다. 그 후, 인코더 및 검출 헤드를 고정하고 두 개의 분할(segmentation) 헤드를 학습합니다. 마지막으로, 전체 네트워크는 세 가지 작업 "
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 108,
+            "endLine": 108,
+            "excerpt": "차선 인식의 시각화 결과는 이차함수 형태로 근사하는 과정(quadratic fitting)을 통해 후처리(post processed) 되었습니다."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 112,
+            "endLine": 112,
+            "excerpt": "yolop 모델은 이미지 캡쳐를 zed camera가 장착된 jetson tx2에서 실시간으로 추론할 수 있습니다. 속도 향상을 위해 tensorrt를 사용합니다. 모델의 배포와 추론을 위해 github code 에서 코드를 제공합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:intelisl_midas_v2.md": {
+      "source": "pytorch-hub",
+      "path": "intelisl_midas_v2.md",
+      "blobSha": "dbc2fde421274f04de54f9bd740bb35037fcb207",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "intelisl_midas_v2.md",
+      "counts": {
+        "model": {
+          "모델": 10
+        },
+        "precision": {
+          "정확도": 1
+        },
+        "training": {
+          "훈련": 1
+        },
+        "environment": {
+          "환경": 1
+        },
+        "normalization": {
+          "정규화": 1
+        },
+        "regularization": {
+          "정규화": 1
+        },
+        "inference": {
+          "예측": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 19,
+            "endLine": 19,
+            "excerpt": "모델 설명"
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "ative inverse depth)를 계산합니다. 본 저장소는 작지만 고속의 모델부터 가장 높은 정확도를 제공하는 매우 큰 모델까지 다양한 사례를 다루는 여러 모델을 제공합니다. 또한 모델은 광범위한 입력에서 높은 품질을 보장하기 위해 다목적(multi-"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "장하기 위해 다목적(multi-objective) 최적화를 사용해 10개의 개별 데이터 셋에 대해 훈련되었습니다."
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 52,
+            "endLine": 52,
+            "excerpt": "gpu 사용이 가능한 환경이라면, 모델에 gpu를 사용합니다."
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 60,
+            "endLine": 60,
+            "excerpt": "여러가지 모델에 입력할 이미지를 크기 변경(resize)이나 정규화(normalize)하기 위한 변환(transform)을 불러옵니다."
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 60,
+            "endLine": 60,
+            "excerpt": "여러가지 모델에 입력할 이미지를 크기 변경(resize)이나 정규화(normalize)하기 위한 변환(transform)을 불러옵니다."
+          }
+        },
+        "inference": {
+          "예측": {
+            "line": 79,
+            "endLine": 79,
+            "excerpt": "기존 해상도로 예측 및 크기 변경합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:mateuszbuda_brain-segmentation-pytorch_unet.md": {
+      "source": "pytorch-hub",
+      "path": "mateuszbuda_brain-segmentation-pytorch_unet.md",
+      "blobSha": "9442b86472be6803c5a68083b029e7737a790a20",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "mateuszbuda_brain-segmentation-pytorch_unet.md",
+      "counts": {
+        "channel": {
+          "채널": 5
+        },
+        "feature": {
+          "특징": 2,
+          "함수": 1
+        },
+        "layer": {
+          "계층": 7
+        },
+        "model": {
+          "모델": 5
+        },
+        "training": {
+          "학습": 3
+        },
+        "activation function": {
+          "활성 함수": 1
+        },
+        "batch": {
+          "배치": 1
+        },
+        "batch normalization": {
+          "배치 정규화": 1
+        },
+        "convolution": {
+          "합성곱": 3
+        },
+        "kernel": {
+          "필터": 2
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pooling": {
+          "풀링": 1
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "segmentation": {
+          "분할": 1
+        }
+      },
+      "evidence": {
+        "channel": {
+          "채널": {
+            "line": 26,
+            "endLine": 27,
+            "excerpt": "위해 사전 학습된 u-net 모델을 불러옵니다. 사전 학습된 모델은 첫 번째 계층에서 3개의 입력 채널, 1개의 출력 채널 그리고 32개의 특징을 가집니다."
+          }
+        },
+        "feature": {
+          "특징": {
+            "line": 26,
+            "endLine": 27,
+            "excerpt": "니다. 사전 학습된 모델은 첫 번째 계층에서 3개의 입력 채널, 1개의 출력 채널 그리고 32개의 특징을 가집니다."
+          },
+          "함수": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "u-net 모델은 배치 정규화 및 relu 활성 함수를 가진 두 개의 합성곱 계층, 인코딩 과정의 맥스 풀링(max-pooling) 계층 그리고 디코딩 과정의 업 컨볼루셔널(up-convolutional)"
+          }
+        },
+        "layer": {
+          "계층": {
+            "line": 26,
+            "endLine": 27,
+            "excerpt": "ion의 이상 탐지를 위해 사전 학습된 u-net 모델을 불러옵니다. 사전 학습된 모델은 첫 번째 계층에서 3개의 입력 채널, 1개의 출력 채널 그리고 32개의 특징을 가집니다."
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 26,
+            "endLine": 27,
+            "excerpt": "teuszbuda/lgg-mri-segmentation의 이상 탐지를 위해 사전 학습된 u-net 모델을 불러옵니다. 사전 학습된 모델은 첫 번째 계층에서 3개의 입력 채널, 1개의 출력 채널 그리고 32개의 특징을 가집니다."
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 26,
+            "endLine": 27,
+            "excerpt": "gle.com/mateuszbuda/lgg-mri-segmentation의 이상 탐지를 위해 사전 학습된 u-net 모델을 불러옵니다. 사전 학습된 모델은 첫 번째 계층에서 3개의 입력 채널, 1개의 출력 채널 그리고 32개의 특징을 가집니다."
+          }
+        },
+        "activation function": {
+          "활성 함수": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "u-net 모델은 배치 정규화 및 relu 활성 함수를 가진 두 개의 합성곱 계층, 인코딩 과정의 맥스 풀링(max-pooling) 계층 그리고 디코딩 과정의 업 컨볼루셔널(up-convolutional)"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "u-net 모델은 배치 정규화 및 relu 활성 함수를 가진 두 개의 합성곱 계층, 인코딩 과정의 맥스 풀링(max-pooling) 계층 그리고 디코딩 과정의 업 컨볼루셔널("
+          }
+        },
+        "batch normalization": {
+          "배치 정규화": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "u-net 모델은 배치 정규화 및 relu 활성 함수를 가진 두 개의 합성곱 계층, 인코딩 과정의 맥스 풀링(max-pooling) 계층 그리고 디코딩 과정의 업 컨볼루셔널(up-c"
+          }
+        },
+        "convolution": {
+          "합성곱": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "u-net 모델은 배치 정규화 및 relu 활성 함수를 가진 두 개의 합성곱 계층, 인코딩 과정의 맥스 풀링(max-pooling) 계층 그리고 디코딩 과정의 업 컨볼루셔널(up-convolutional) 계층을 포함한 네 가지"
+          }
+        },
+        "kernel": {
+          "필터": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "-convolutional) 계층을 포함한 네 가지 단계의 블록으로 구성됩니다. 각 블록의 합성곱 필터 수는 32, 64, 128, 256개입니다. 병목 계층(bottleneck layer)은 512개의 합성곱 필터를 가집니다. 인코딩 과정의 계층에서 얻"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "u-net 모델은 배치 정규화 및 relu 활성 함수를 가진 두 개의 합성곱 계층, 인코딩 과정의 맥스 풀링(max-pooling) 계층 그리고 디코딩 과정의 업 컨볼루셔널(up-c"
+          }
+        },
+        "pooling": {
+          "풀링": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "et 모델은 배치 정규화 및 relu 활성 함수를 가진 두 개의 합성곱 계층, 인코딩 과정의 맥스 풀링(max-pooling) 계층 그리고 디코딩 과정의 업 컨볼루셔널(up-convolutional) 계층을 포함한 네 가지 단계의 블록으로 구성됩니다. 각"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": "u-net 모델은 배치 정규화 및 relu 활성 함수를 가진 두 개의 합성곱 계층, 인코딩 과정의 맥스 풀링(max-pooling) 계층 그리고 디코딩 과정의 업 컨볼루셔널(up-c"
+          }
+        },
+        "segmentation": {
+          "분할": {
+            "line": 31,
+            "endLine": 37,
+            "excerpt": " 이상 탐지 영역을 확률적으로 나타냅니다. 아래의 예시처럼 임계 값을 설정하면 출력 이미지를 이진 분할 마스크로 변환할 수 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:nicolalandro_ntsnet-cub200_ntsnet.md": {
+      "source": "pytorch-hub",
+      "path": "nicolalandro_ntsnet-cub200_ntsnet.md",
+      "blobSha": "98fce0d3427d89d8f50d50d313fb1957719e9931",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "nicolalandro_ntsnet-cub200_ntsnet.md",
+      "counts": {
+        "model": {
+          "모델": 2
+        },
+        "dataset": {
+          "데이터셋": 2
+        },
+        "training": {
+          "학습": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 58,
+            "endLine": 58,
+            "excerpt": "모델 설명"
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 59,
+            "endLine": 59,
+            "excerpt": "이 모델은 세분화된 조류 데이터셋인 cub200 2011 데이터셋으로 사전 학습된 nts-net입니다."
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 59,
+            "endLine": 59,
+            "excerpt": "이 모델은 세분화된 조류 데이터셋인 cub200 2011 데이터셋으로 사전 학습된 nts-net입니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:nvidia_deeplearningexamples_efficientnet.md": {
+      "source": "pytorch-hub",
+      "path": "nvidia_deeplearningexamples_efficientnet.md",
+      "blobSha": "c306b34374993f996b33ee933147d9ba3ccad6e6",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "nvidia_deeplearningexamples_efficientnet.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:nvidia_deeplearningexamples_resnet50.md": {
+      "source": "pytorch-hub",
+      "path": "nvidia_deeplearningexamples_resnet50.md",
+      "blobSha": "66b0651756200839e37cd0f2759fd7a8a3f60107",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "nvidia_deeplearningexamples_resnet50.md",
+      "counts": {
+        "model": {
+          "모델": 10
+        },
+        "convolution": {
+          "컨볼루션": 2
+        },
+        "pooling": {
+          "다운샘플링": 1
+        },
+        "stride": {
+          "스트라이드": 2
+        },
+        "initialization": {
+          "초기화": 1
+        },
+        "architecture": {
+          "아키텍처": 1
+        },
+        "mixed precision": {
+          "혼합 정밀도": 1
+        },
+        "precision": {
+          "정밀도": 1
+        },
+        "training": {
+          "학습": 3,
+          "훈련": 2
+        },
+        "batch": {
+          "배치": 1
+        },
+        "inference": {
+          "추론": 4
+        },
+        "pre-training": {
+          "사전 훈련": 2
+        },
+        "preprocessing": {
+          "전처리": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 1
+        },
+        "feature": {
+          "함수": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "모델 설명"
+          }
+        },
+        "convolution": {
+          "컨볼루션": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "v1과 v1.5의 차이점은 다운샘플링이 필요한 병목 블록에서 v1은 첫 번째 1x1 컨볼루션에서 스트라이드 = 2를 갖는 반면 v1.5는 3x3 컨볼루션에서 스트라이드 = 2를 갖는다는 것입니다."
+          }
+        },
+        "pooling": {
+          "다운샘플링": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "v1과 v1.5의 차이점은 다운샘플링이 필요한 병목 블록에서 v1은 첫 번째 1x1 컨볼루션에서 스트라이드 = 2를 갖는 반면 v1.5는 3x3 컨볼루션에서 스트라이드 = 2를 갖는다는 것"
+          }
+        },
+        "stride": {
+          "스트라이드": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "v1과 v1.5의 차이점은 다운샘플링이 필요한 병목 블록에서 v1은 첫 번째 1x1 컨볼루션에서 스트라이드 = 2를 갖는 반면 v1.5는 3x3 컨볼루션에서 스트라이드 = 2를 갖는다는 것입니다."
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 29,
+            "endLine": 29,
+            "excerpt": "n-level performance on imagenet classification에 설명된 대로 초기화됩니다."
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "이 모델은 volta, turing 및 nvidia ampere gpu 아키텍처의 tensor 코어를 사용하여 혼합 정밀도(mixed precision)로 학습됩니다. 따라서 연구자들은 혼합 정밀 교육의 이점을 경험하면서 tenso"
+          }
+        },
+        "mixed precision": {
+          "혼합 정밀도": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "olta, turing 및 nvidia ampere gpu 아키텍처의 tensor 코어를 사용하여 혼합 정밀도(mixed precision)로 학습됩니다. 따라서 연구자들은 혼합 정밀 교육의 이점을 경험하면서 tensor core 없이 학습하는 것보다 2배 이상"
+          }
+        },
+        "precision": {
+          "정밀도": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "a, turing 및 nvidia ampere gpu 아키텍처의 tensor 코어를 사용하여 혼합 정밀도(mixed precision)로 학습됩니다. 따라서 연구자들은 혼합 정밀 교육의 이점을 경험하면서 tensor core 없이 학습하는 것보다 2배 이상"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "ere gpu 아키텍처의 tensor 코어를 사용하여 혼합 정밀도(mixed precision)로 학습됩니다. 따라서 연구자들은 혼합 정밀 교육의 이점을 경험하면서 tensor core 없이 학습하는 것보다 2배 이상 빠른 결과를 얻을 수 있습니다. 이 "
+          },
+          "훈련": {
+            "line": 37,
+            "endLine": 37,
+            "excerpt": "아래 예제에서는 사전 훈련된 resnet50 v1.5 모델을 사용하여 이미지에 대한 추론을 수행 하고 결과를 제시할 것입니다."
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 33,
+            "endLine": 33,
+            "excerpt": "를 실행 백엔드로 사용하여 nvidia triton inference server에서 추론을 위해 배치될 수 있습니다. 자세한 내용은 ngc를 확인하십시오."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 33,
+            "endLine": 33,
+            "excerpt": "ensorrt를 실행 백엔드로 사용하여 nvidia triton inference server에서 추론을 위해 배치될 수 있습니다. 자세한 내용은 ngc를 확인하십시오."
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 37,
+            "endLine": 37,
+            "excerpt": "아래 예제에서는 사전 훈련된 resnet50 v1.5 모델을 사용하여 이미지에 대한 추론을 수행 하고 결과를 제시할 것입니다."
+          }
+        },
+        "preprocessing": {
+          "전처리": {
+            "line": 39,
+            "endLine": 39,
+            "excerpt": "예제를 실행하려면 몇 가지 추가 파이썬 패키지가 설치되어 있어야 합니다. 이는 이미지를 전처리하고 시각화하는 데 필요합니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 60,
+            "endLine": 60,
+            "excerpt": "imagenet 데이터셋에서 사전 훈련된 모델을 로드합니다."
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 60,
+            "endLine": 60,
+            "excerpt": "imagenet 데이터셋에서 사전 훈련된 모델을 로드합니다."
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 82,
+            "endLine": 82,
+            "excerpt": "helper 함수를 사용하여 모델에 따라 가장 가능성이 높은 가설을 n개 선택합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:nvidia_deeplearningexamples_resnext.md": {
+      "source": "pytorch-hub",
+      "path": "nvidia_deeplearningexamples_resnext.md",
+      "blobSha": "ea8d6f8d9d84a11b06d13e2e2125f635e111b2f5",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "nvidia_deeplearningexamples_resnext.md",
+      "counts": {
+        "model": {
+          "모델": 15
+        },
+        "convolution": {
+          "합성곱": 2
+        },
+        "layer": {
+          "계층": 2
+        },
+        "architecture": {
+          "아키텍처": 1,
+          "구조": 1
+        },
+        "mixed precision": {
+          "혼합 정밀도": 1,
+          "혼합 정밀도 학습": 2
+        },
+        "precision": {
+          "정밀도": 3,
+          "정확도": 1
+        },
+        "training": {
+          "학습": 7
+        },
+        "inference": {
+          "추론": 4
+        },
+        "preprocessing": {
+          "전처리": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "feature": {
+          "함수": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "모델 설명"
+          }
+        },
+        "convolution": {
+          "합성곱": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "이 모델은 일반적인 resnet 모델에 기반을 두고 있으며 resnet의 3x3 그룹 합성곱(grouped convolution) 계층을 병목 블록(bottleneck block) 내부의 3x3 합성곱 계층으로 대체합니다."
+          }
+        },
+        "layer": {
+          "계층": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "모델에 기반을 두고 있으며 resnet의 3x3 그룹 합성곱(grouped convolution) 계층을 병목 블록(bottleneck block) 내부의 3x3 합성곱 계층으로 대체합니다."
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": "resnext101 모델은 volta, turing 및 nvidia ampere 아키텍처에서 tensor core를 사용하여 혼합 정밀도(mixed precision) 방식"
+          },
+          "구조": {
+            "line": 33,
+            "endLine": 33,
+            "excerpt": "모델 구조"
+          }
+        },
+        "mixed precision": {
+          "혼합 정밀도": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": "volta, turing 및 nvidia ampere 아키텍처에서 tensor core를 사용하여 혼합 정밀도(mixed precision) 방식"
+          },
+          "혼합 정밀도 학습": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": "으로 학습됩니다. 따라서 연구자들은 혼합 정밀도 학습의 장점을 경험하는 동시에 tensor cores를 사용하지 않을 때보다 결과를 3배 빠르게 얻을 수 있습니다. 이 모델은 시간이 지남에도 지속적인 정확"
+          }
+        },
+        "precision": {
+          "정밀도": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": "ta, turing 및 nvidia ampere 아키텍처에서 tensor core를 사용하여 혼합 정밀도(mixed precision) 방식"
+          },
+          "정확도": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": " 사용하지 않을 때보다 결과를 3배 빠르게 얻을 수 있습니다. 이 모델은 시간이 지남에도 지속적인 정확도와 성능을 유지하기 위해 월별 ngc 컨테이너 출시에 대해 테스트되고 있습니다."
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": "으로 학습됩니다. 따라서 연구자들은 혼합 정밀도 학습의 장점을 경험하는 동시에 tensor cores를 사용하지 않을 때보다 결과를 3배 빠르게 얻을 수 있습니다"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "resnext101-32x4d 모델은 추론을 위해 torchscript, onnx runtime 또는 tensorrt를 실행 백엔드로 사용하고 nvidia triton inference serv"
+          }
+        },
+        "preprocessing": {
+          "전처리": {
+            "line": 46,
+            "endLine": 46,
+            "excerpt": "예시를 실행하려면 추가적인 파이썬 패키지들이 설치되어야 합니다. 이 패키지들은 이미지 전처리 및 시각화에 필요합니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 67,
+            "endLine": 67,
+            "excerpt": "imagenet 데이터셋으로 사전 학습된 모델을 불러옵니다."
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "추론을 시작합니다. 헬퍼 함수"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:nvidia_deeplearningexamples_se-resnext.md": {
+      "source": "pytorch-hub",
+      "path": "nvidia_deeplearningexamples_se-resnext.md",
+      "blobSha": "27bc1f743cd1198d82a3590c26df819eb861a525",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "nvidia_deeplearningexamples_se-resnext.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:nvidia_deeplearningexamples_ssd.md": {
+      "source": "pytorch-hub",
+      "path": "nvidia_deeplearningexamples_ssd.md",
+      "blobSha": "aa6dc8b5b9748aad377f931e1e5c6e4aaaf09034",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "nvidia_deeplearningexamples_ssd.md",
+      "counts": {
+        "deep neural network": {
+          "심층 신경망": 1
+        },
+        "layer": {
+          "층": 1,
+          "레이어": 7
+        },
+        "model": {
+          "모델": 12
+        },
+        "neural network": {
+          "신경망": 1
+        },
+        "backbone": {
+          "백본": 3
+        },
+        "classification": {
+          "분류": 1
+        },
+        "convolution": {
+          "합성곱": 4
+        },
+        "training": {
+          "학습": 4
+        },
+        "preprocessing": {
+          "전처리": 1
+        },
+        "dataset": {
+          "데이터셋": 4
+        },
+        "inference": {
+          "추론": 2
+        },
+        "object detection": {
+          "객체 탐지": 1
+        },
+        "tensor": {
+          "텐서": 1
+        },
+        "kernel": {
+          "필터": 1
+        }
+      },
+      "evidence": {
+        "deep neural network": {
+          "심층 신경망": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "ssd300 모델은 \"단일 심층 신경망을 사용하여 이미지에서 물체를 감지하는 방법\"을 설명하는 ssd: single shot multibox detector 논문을 기반으로 합니다. 입력 크"
+          }
+        },
+        "layer": {
+          "층": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "ssd300 모델은 \"단일 심층 신경망을 사용하여 이미지에서 물체를 감지하는 방법\"을 설명하는 ssd: single shot multibox detector 논문을 기반으로 합니다. "
+          },
+          "레이어": {
+            "line": 29,
+            "endLine": 29,
+            "excerpt": "conv5_x, avgpool, fc 및 softmax 레이어는 기존의 분류 모델에서 제거되었습니다."
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "ssd300 모델은 \"단일 심층 신경망을 사용하여 이미지에서 물체를 감지하는 방법\"을 설명하는 ssd: single shot multibox detector 논문을 기반"
+          }
+        },
+        "neural network": {
+          "신경망": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "ssd300 모델은 \"단일 심층 신경망을 사용하여 이미지에서 물체를 감지하는 방법\"을 설명하는 ssd: single shot multibox detector 논문을 기반으로 합니다. 입력 크"
+          }
+        },
+        "backbone": {
+          "백본": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "이 모델과 논문에 설명된 모델의 큰 차이점은 백본(backbone)에 있습니다. 특히, 논문에서 사용한 vgg 모델은 더 이상 사용되지 않으며 resnet-50 모델로 대체되었습니다."
+          }
+        },
+        "classification": {
+          "분류": {
+            "line": 29,
+            "endLine": 29,
+            "excerpt": "conv5_x, avgpool, fc 및 softmax 레이어는 기존의 분류 모델에서 제거되었습니다."
+          }
+        },
+        "convolution": {
+          "합성곱": {
+            "line": 32,
+            "endLine": 34,
+            "excerpt": "백본 뒤에는 5개의 합성곱 레이어가 추가됩니다. 또한 합성곱 레이어 외에도 6개의 detection heads를 추가했습니다. the backbone is followed by "
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 42,
+            "endLine": 42,
+            "excerpt": "아래 예에서는 사전에 학습된 ssd 모델을 사용하여 샘플 이미지에서 객체를 탐지하고 결과를 시각화합니다."
+          }
+        },
+        "preprocessing": {
+          "전처리": {
+            "line": 44,
+            "endLine": 44,
+            "excerpt": "예제를 실행하려면 몇 가지 추가적인 파이썬 패키지가 설치되어 있어야 합니다. 이는 이미지 전처리 및 시각화에 필요합니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 49,
+            "endLine": 49,
+            "excerpt": "coco 데이터셋에 대해 사전에 학습된 ssd 모델과, 모델의 입력 및 출력에 대한 편리하고 포괄적인 형식 지정을 위한 유틸리티를 불러옵니다."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 56,
+            "endLine": 56,
+            "excerpt": "추론을 위해 불러온 모델을 준비합니다."
+          }
+        },
+        "object detection": {
+          "객체 탐지": {
+            "line": 62,
+            "endLine": 63,
+            "excerpt": "객체 탐지를 위한 입력 이미지를 준비합니다. (아래 예제 링크는 coco 데이터셋의 처음 몇 개의 테스트 이미지에 해당하지만, 로컬 이미지에 대한 경로를 지정할 "
+          }
+        },
+        "tensor": {
+          "텐서": {
+            "line": 72,
+            "endLine": 72,
+            "excerpt": "네트워크 입력에 맞게 이미지를 포맷하고 텐서로 변환합니다."
+          }
+        },
+        "kernel": {
+          "필터": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": "는 8732개의 box와 클래스 확률 분포를 담고 있습니다. 보다 의미있는 결과(신뢰도>40%)만 필터링 해 보겠습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:nvidia_deeplearningexamples_tacotron2.md": {
+      "source": "pytorch-hub",
+      "path": "nvidia_deeplearningexamples_tacotron2.md",
+      "blobSha": "6f26a8448ddfc834a92e6f2ad9ca4ef35907f7ce",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "nvidia_deeplearningexamples_tacotron2.md",
+      "counts": {
+        "model": {
+          "모델": 12
+        },
+        "architecture": {
+          "아키텍처": 1
+        },
+        "sequence-to-sequence": {
+          "인코더-디코더": 1
+        },
+        "spectrogram": {
+          "스펙트로그램": 4
+        },
+        "text-to-speech": {
+          "텍스트 음성 변환": 1
+        },
+        "layer": {
+          "레이어": 1
+        },
+        "normalization": {
+          "정규화": 1
+        },
+        "pre-training": {
+          "사전 훈련": 4
+        },
+        "regularization": {
+          "정규화": 1
+        },
+        "training": {
+          "훈련": 4,
+          "학습": 1
+        },
+        "tensor": {
+          "텐서": 1
+        },
+        "preprocessing": {
+          "전처리": 2
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "inference": {
+          "추론": 2
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "모델 설명"
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "을 합성할 수 있는 텍스트 음성 변환 시스템을 만듭니다. tacotron 2 모델은 인코더-디코더 아키텍처를 사용하여 입력 텍스트에서 멜 스펙트로그램(mel spectrogram)을 생성합니다. waveglow (torch.hub를 통해서도 사용 가능)는 멜"
+          }
+        },
+        "sequence-to-sequence": {
+          "인코더-디코더": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "자연스러운 음성을 합성할 수 있는 텍스트 음성 변환 시스템을 만듭니다. tacotron 2 모델은 인코더-디코더 아키텍처를 사용하여 입력 텍스트에서 멜 스펙트로그램(mel spectrogram)을 생성합니다. waveglow (torch.hub를 통해서도 사용 가"
+          }
+        },
+        "spectrogram": {
+          "스펙트로그램": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "스템을 만듭니다. tacotron 2 모델은 인코더-디코더 아키텍처를 사용하여 입력 텍스트에서 멜 스펙트로그램(mel spectrogram)을 생성합니다. waveglow (torch.hub를 통해서도 사용 가능)는 멜 스펙트로그램을 사용하여 음성을 생성하는 흐"
+          }
+        },
+        "text-to-speech": {
+          "텍스트 음성 변환": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "및 waveglow 모델은 추가 운율 정보 없이 원본 텍스트에서 자연스러운 음성을 합성할 수 있는 텍스트 음성 변환 시스템을 만듭니다. tacotron 2 모델은 인코더-디코더 아키텍처를 사용하여 입력 텍스트에서 멜 스펙트로그램(mel spectrogram)을 생성합"
+          }
+        },
+        "layer": {
+          "레이어": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "련된 tacotron 2 모델은 논문과 다르게 구현되었습니다. 여기서 제공하는 모델에서는 lstm 레이어를 정규화하기 위해 zoneout 대신 dropout을 사용합니다."
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "cotron 2 모델은 논문과 다르게 구현되었습니다. 여기서 제공하는 모델에서는 lstm 레이어를 정규화하기 위해 zoneout 대신 dropout을 사용합니다."
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "사전 훈련된 tacotron 2 모델은 논문과 다르게 구현되었습니다. 여기서 제공하는 모델에서는 lstm 레이어를 정규화하기 위해 zoneout 대신 dropou"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "cotron 2 모델은 논문과 다르게 구현되었습니다. 여기서 제공하는 모델에서는 lstm 레이어를 정규화하기 위해 zoneout 대신 dropout을 사용합니다."
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "사전 훈련된 tacotron 2 모델은 논문과 다르게 구현되었습니다. 여기서 제공하는 모델에서는 lstm 레이어를 정규화하기 위해 zoneout 대신 dropou"
+          },
+          "학습": {
+            "line": 92,
+            "endLine": 92,
+            "excerpt": "모델 입력 및 출력, 학습 방법, 추론 및 성능 등에 대한 더 자세한 정보는 github 및 and/or ngc에서 볼 수 있습니다."
+          }
+        },
+        "tensor": {
+          "텐서": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "tron2는 (\"hello world, i miss you so much\")와 같은 입력 텍스트의 텐서 표현이 주어지면 그림과 같은 멜 스펙트로그램을 생성합니다."
+          }
+        },
+        "preprocessing": {
+          "전처리": {
+            "line": 35,
+            "endLine": 36,
+            "excerpt": "예제를 실행하려면 몇 가지 추가 파이썬 패키지가 설치되어 있어야 합니다. 이는 텍스트 및 오디오를 전처리하는 것은 물론 디스플레이 및 입출력 전처리에도 필요합니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 43,
+            "endLine": 43,
+            "excerpt": "lj speech dataset 데이터셋에서 사전 훈련된 tacotron2 모델을 불러오고 추론을 준비합니다."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 43,
+            "endLine": 43,
+            "excerpt": "lj speech dataset 데이터셋에서 사전 훈련된 tacotron2 모델을 불러오고 추론을 준비합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:nvidia_deeplearningexamples_waveglow.md": {
+      "source": "pytorch-hub",
+      "path": "nvidia_deeplearningexamples_waveglow.md",
+      "blobSha": "65d3bf047d4cddc77d44ad909bfc081458d70d4f",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "nvidia_deeplearningexamples_waveglow.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_fairseq_roberta.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_fairseq_roberta.md",
+      "blobSha": "79a7c90ce0b914a068b1112f11b41a11eaaf40f8",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_fairseq_roberta.md",
+      "counts": {
+        "model": {
+          "모델": 1
+        },
+        "benchmark": {
+          "벤치마크": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "inference": {
+          "예측": 1
+        },
+        "natural language processing": {
+          "자연어처리": 1
+        },
+        "training": {
+          "학습": 5,
+          "훈련": 1
+        },
+        "batch": {
+          "배치": 1
+        },
+        "hyperparameter": {
+          "하이퍼파라미터": 1
+        },
+        "learning rate": {
+          "학습 속도": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "parameter": {
+          "파라미터": 1
+        },
+        "feature": {
+          "특징": 1
+        },
+        "classification": {
+          "분류": 2
+        },
+        "layer": {
+          "층": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 19,
+            "endLine": 19,
+            "excerpt": "모델 설명"
+          }
+        },
+        "benchmark": {
+          "벤치마크": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "sks)에 잘 일반화되는 것으로 나타났으며, bert가 처음 공개된 2018년에 수많은 자연어처리 벤치마크 데이터셋에 대해 가장 좋은 성능을 기록했습니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": " 잘 일반화되는 것으로 나타났으며, bert가 처음 공개된 2018년에 수많은 자연어처리 벤치마크 데이터셋에 대해 가장 좋은 성능을 기록했습니다."
+          }
+        },
+        "inference": {
+          "예측": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "entations from transformers, bert는 텍스트에서 의도적으로 숨겨진 부분을 예측하는 뛰어난 자기지도 사전 학습(self-supervised pretraining) 기술입니다. 특히 bert가 학습한 표현은 다운스트림 태스크(down"
+          }
+        },
+        "natural language processing": {
+          "자연어처리": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "eam tasks)에 잘 일반화되는 것으로 나타났으며, bert가 처음 공개된 2018년에 수많은 자연어처리 벤치마크 데이터셋에 대해 가장 좋은 성능을 기록했습니다."
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "ansformers, bert는 텍스트에서 의도적으로 숨겨진 부분을 예측하는 뛰어난 자기지도 사전 학습(self-supervised pretraining) 기술입니다. 특히 bert가 학습한 표현은 다운스트림 태스크(downstream tasks)에 잘 "
+          },
+          "훈련": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "ence pretraining objective)을 제거하고 훨씬 더 큰 미니 배치와 학습 속도로 훈련하는 등 주요 하이퍼파라미터를 수정합니다. 또한 roberta는 더 오랜 시간 동안 bert보다 훨씬 많은 데이터에 대해 학습되었습니다. 이를 통해 ro"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "습(next-sentence pretraining objective)을 제거하고 훨씬 더 큰 미니 배치와 학습 속도로 훈련하는 등 주요 하이퍼파라미터를 수정합니다. 또한 roberta는 더 오랜 시간 동안 bert보다 훨씬 많은 데이터에 대해 학습되었습니"
+          }
+        },
+        "hyperparameter": {
+          "하이퍼파라미터": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "aining objective)을 제거하고 훨씬 더 큰 미니 배치와 학습 속도로 훈련하는 등 주요 하이퍼파라미터를 수정합니다. 또한 roberta는 더 오랜 시간 동안 bert보다 훨씬 많은 데이터에 대해 학습되었습니다. 이를 통해 roberta의 표현은 bert"
+          }
+        },
+        "learning rate": {
+          "학습 속도": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "xt-sentence pretraining objective)을 제거하고 훨씬 더 큰 미니 배치와 학습 속도로 훈련하는 등 주요 하이퍼파라미터를 수정합니다. 또한 roberta는 더 오랜 시간 동안 bert보다 훨씬 많은 데이터에 대해 학습되었습니다. 이를 통"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "전 학습(next-sentence pretraining objective)을 제거하고 훨씬 더 큰 미니 배치와 학습 속도로 훈련하는 등 주요 하이퍼파라미터를 수정합니다. 또한 roberta는 더 오랜 시간 동안 bert보다 훨씬 많은 데이터에 대해 학습되었습니"
+          }
+        },
+        "parameter": {
+          "파라미터": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "ing objective)을 제거하고 훨씬 더 큰 미니 배치와 학습 속도로 훈련하는 등 주요 하이퍼파라미터를 수정합니다. 또한 roberta는 더 오랜 시간 동안 bert보다 훨씬 많은 데이터에 대해 학습되었습니다. 이를 통해 roberta의 표현은 bert"
+          }
+        },
+        "feature": {
+          "특징": {
+            "line": 51,
+            "endLine": 51,
+            "excerpt": "roberta에서 특징(feature) 추출"
+          }
+        },
+        "classification": {
+          "분류": {
+            "line": 63,
+            "endLine": 63,
+            "excerpt": "문장 관계 분류(sentence-pair classification) 태스크에 roberta 사용하기"
+          }
+        },
+        "layer": {
+          "층": {
+            "line": 81,
+            "endLine": 81,
+            "excerpt": "새로운 분류층 적용하기"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_fairseq_translation.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_fairseq_translation.md",
+      "blobSha": "bf22e4c1ab2171fd5e296fe3b8674ff4e33ed5a4",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_fairseq_translation.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "architecture": {
+          "아키텍처": 1
+        },
+        "neural network": {
+          "신경망": 1
+        },
+        "sequence-to-sequence": {
+          "시퀀스-투-시퀀스": 1
+        },
+        "transformer": {
+          "트랜스포머": 2
+        },
+        "exploitation": {
+          "활용": 2
+        },
+        "supervised learning": {
+          "지도 학습": 1,
+          "지도학습": 1
+        },
+        "training": {
+          "학습": 4
+        },
+        "preprocessing": {
+          "전처리": 1
+        },
+        "dataset": {
+          "학습 데이터": 1
+        },
+        "ensemble": {
+          "앙상블": 2
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "모델 설명"
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 23,
+            "endLine": 24,
+            "excerpt": " you need에 소개되었던 트랜스포머(transformer)는 강력한 시퀀스-투-시퀀스 모델링 아키텍처로 최신 기계 신경망 번역 시스템을 가능하게 합니다."
+          }
+        },
+        "neural network": {
+          "신경망": {
+            "line": 23,
+            "endLine": 24,
+            "excerpt": "개되었던 트랜스포머(transformer)는 강력한 시퀀스-투-시퀀스 모델링 아키텍처로 최신 기계 신경망 번역 시스템을 가능하게 합니다."
+          }
+        },
+        "sequence-to-sequence": {
+          "시퀀스-투-시퀀스": {
+            "line": 23,
+            "endLine": 24,
+            "excerpt": "tention is all you need에 소개되었던 트랜스포머(transformer)는 강력한 시퀀스-투-시퀀스 모델링 아키텍처로 최신 기계 신경망 번역 시스템을 가능하게 합니다."
+          }
+        },
+        "transformer": {
+          "트랜스포머": {
+            "line": 23,
+            "endLine": 24,
+            "excerpt": "논문 attention is all you need에 소개되었던 트랜스포머(transformer)는 강력한 시퀀스-투-시퀀스 모델링 아키텍처로 최신 기계 신경망 번역 시스템을 가능하게 합니다."
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "팀은 역번역된 데이터를 활용한 트랜스포머의 대규모 준지도 학습을 통해 번역 수준을 기존보다 향상시켰습니다. 더 자세한 내용은 블로그 포스트를 통해 찾으실 수 있습니다."
+          }
+        },
+        "supervised learning": {
+          "지도 학습": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "팀은 역번역된 데이터를 활용한 트랜스포머의 대규모 준지도 학습을 통해 번역 수준을 기존보다 향상시켰습니다. 더 자세한 내용은 블로그 포스트를 통해 찾으실 수 있습니다."
+          },
+          "지도학습": {
+            "line": 85,
+            "endLine": 87,
+            "excerpt": "역번역에 대한 준지도학습은 번역 시스템을 향상시키는데 효율적인 방법입니다. 논문 understanding back-translation at scale에서, 추가적인 학습 데이"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "팀은 역번역된 데이터를 활용한 트랜스포머의 대규모 준지도 학습을 통해 번역 수준을 기존보다 향상시켰습니다. 더 자세한 내용은 블로그 포스트를 통해 찾으실 수 있습니다."
+          }
+        },
+        "preprocessing": {
+          "전처리": {
+            "line": 33,
+            "endLine": 33,
+            "excerpt": "전처리 과정을 위해 몇 가지 python 라이브러리가 필요합니다:"
+          }
+        },
+        "dataset": {
+          "학습 데이터": {
+            "line": 85,
+            "endLine": 87,
+            "excerpt": "니다. 논문 understanding back-translation at scale에서, 추가적인 학습 데이터로 사용하기 위해 2억개 이상의 독일어 문장을 역번역합니다. 이 다섯 모델들의 앙상블은 wmt'18 english-german news translati"
+          }
+        },
+        "ensemble": {
+          "앙상블": {
+            "line": 85,
+            "endLine": 87,
+            "excerpt": "추가적인 학습 데이터로 사용하기 위해 2억개 이상의 독일어 문장을 역번역합니다. 이 다섯 모델들의 앙상블은 wmt'18 english-german news translation competition의 수상작입니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_alexnet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_alexnet.md",
+      "blobSha": "05e0fc1c82aee827e56083bbce0438b808d78dcf",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_alexnet.md",
+      "counts": {
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "model": {
+          "모델": 6
+        },
+        "normalization": {
+          "정규화": 3
+        },
+        "pre-training": {
+          "사전 훈련": 2
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 2
+        },
+        "regularization": {
+          "정규화": 3
+        },
+        "training": {
+          "훈련": 2,
+          "학습": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "architecture": {
+          "구조": 1
+        }
+      },
+      "evidence": {
+        "batch": {
+          "배치": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를 [0, 1] 범위로 로드한 다음 mean = [0.485, 0.456, 0.406] 및 std = [0.229, 0.224, 0"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "입력 이미지, 즉 n이 이미지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를 [0, 1] 범위로 로드한 다음 mean = [0.485, 0.456, 0.406] 및 std = ["
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": " 이미지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를 [0, 1] 범위로 로드한 다음 mean = [0.485, 0.456, 0.406] 및 std = [0.229, 0.224, 0"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉 n이 이미지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지의 미니"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉 n이 이미지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지의 미니 배치를 요구합니다. 이미"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉 n이 이미지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉 n이 이미지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지의 미니"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉 n이 이미지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지의 미니 배치를 요구합니다. 이미"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉 n이 이미지 수이고, h와 w는 최소 224픽셀인 (n, 3, h, w)형태의 3채널 rgb 이미지"
+          },
+          "학습": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": "결론은 높은 성능을 위해 모델의 깊이가 필수적이라는 것이었습니다. 이는 계산 비용이 많이 들지만, 학습 과정에서 gpu의 사용으로 가능해졌습니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "사전 훈련된 모델이 있는 imagenet 데이터셋의 1-crop 에러율은 다음 표와 같습니다."
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 91,
+            "endLine": 91,
+            "excerpt": "모델 구조"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_deeplabv3_resnet101.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_deeplabv3_resnet101.md",
+      "blobSha": "4cffbb313d82e42866f1d75338f1a6b30b408f3c",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_deeplabv3_resnet101.md",
+      "counts": {
+        "model": {
+          "모델": 7
+        },
+        "normalization": {
+          "정규화": 3
+        },
+        "pre-training": {
+          "사전 훈련": 3
+        },
+        "regularization": {
+          "정규화": 3
+        },
+        "training": {
+          "훈련": 4
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "tensor": {
+          "텐서": 1
+        },
+        "evaluation mode": {
+          "추론 모드": 1
+        },
+        "inference": {
+          "추론": 1,
+          "예측": 3
+        },
+        "loss": {
+          "손실": 1
+        },
+        "chunk": {
+          "조각": 1
+        },
+        "backbone": {
+          "백본": 2
+        },
+        "dataset": {
+          "데이터 세트": 1
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 2
+        },
+        "precision": {
+          "정확도": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 29,
+            "endLine": 32,
+            "excerpt": "사전 훈련된 모든 모델들은 동일한 방식으로 정규화된 입력 이미지를 기대합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 29,
+            "endLine": 32,
+            "excerpt": "사전 훈련된 모든 모델들은 동일한 방식으로 정규화된 입력 이미지를 기대합니다. 즉,"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 29,
+            "endLine": 32,
+            "excerpt": "사전 훈련된 모든 모델들은 동일한 방식으로 정규화된 입력 이미지를 기대합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 29,
+            "endLine": 32,
+            "excerpt": "사전 훈련된 모든 모델들은 동일한 방식으로 정규화된 입력 이미지를 기대합니다. 즉,"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 29,
+            "endLine": 32,
+            "excerpt": "사전 훈련된 모든 모델들은 동일한 방식으로 정규화된 입력 이미지를 기대합니다. 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 29,
+            "endLine": 32,
+            "excerpt": "모양의 3채널 rgb 이미지의 미니 배치, 여기서"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 29,
+            "endLine": 32,
+            "excerpt": "모양의 3채널 rgb 이미지의 미니 배치, 여기서"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 29,
+            "endLine": 32,
+            "excerpt": "모양의 3채널 rgb 이미지의 미니 배치, 여기서"
+          }
+        },
+        "tensor": {
+          "텐서": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모델은 입력 tensor와 높이와 너비가 같지만 21개의 클래스가 있는 두 개의 텐서가 있는"
+          }
+        },
+        "evaluation mode": {
+          "추론 모드": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "에는 픽셀 당 보조 손실(auxiliary loss) 값을 포함하고 있습니다. 추론 모드에서는,"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "에는 픽셀 당 보조 손실(auxiliary loss) 값을 포함하고 있습니다. 추론 모드에서는,"
+          },
+          "예측": {
+            "line": 71,
+            "endLine": 72,
+            "excerpt": "형태이며, 각 위치에서는 클래스마다 예측에 해당하는 정규화되지 않은 확률이 있습니다. 각 클래스의 최대 예측값을 얻은 다음 다운스트림 작업에 사용하려면,"
+          }
+        },
+        "loss": {
+          "손실": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "에는 픽셀 당 보조 손실(auxiliary loss) 값을 포함하고 있습니다. 추론 모드에서는,"
+          }
+        },
+        "chunk": {
+          "조각": {
+            "line": 74,
+            "endLine": 74,
+            "excerpt": "다음은 각각 클래스마다 색상이 할당된 예측을 나타내는 작은 조각입니다."
+          }
+        },
+        "backbone": {
+          "백본": {
+            "line": 94,
+            "endLine": 96,
+            "excerpt": "deeplabv3-resnet은 resnet-50 또는 resnet-101 백본이 있는 deeplabv3 모델로 구성되어 있습니다. deeplabv3-mobilenetv3-large는 mobilenetv3 large 백본이 있는 d"
+          }
+        },
+        "dataset": {
+          "데이터 세트": {
+            "line": 94,
+            "endLine": 96,
+            "excerpt": " 백본이 있는 deeplabv3 모델로 구성되어 있습니다. 사전 훈련된 모델은 pascal voc 데이터 세트에 있는 20개 카테고리에 대해 coco train2017의 일부분 데이터 셋에 대해 훈련되었습니다."
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 94,
+            "endLine": 96,
+            "excerpt": "rge는 mobilenetv3 large 백본이 있는 deeplabv3 모델로 구성되어 있습니다. 사전 훈련된 모델은 pascal voc 데이터 세트에 있는 20개 카테고리에 대해 coco train2017의 일부분 데이터 셋에 대해 훈련되었습니다."
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 98,
+            "endLine": 98,
+            "excerpt": "coco val2017 데이터 셋에서 평가된 사전 훈련된 모델의 정확도는 다음과 같습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_densenet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_densenet.md",
+      "blobSha": "22cdc50ea39246c90777526b495851e3ae032132",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_densenet.md",
+      "counts": {
+        "model": {
+          "모델": 3
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "학습": 2
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "convolution": {
+          "합성곱": 1
+        },
+        "convolutional neural network": {
+          "합성곱 신경망": 1
+        },
+        "feature": {
+          "특징": 2,
+          "변수": 1
+        },
+        "forward pass": {
+          "순전파": 1
+        },
+        "layer": {
+          "레이어": 2,
+          "계층": 4,
+          "층": 2
+        },
+        "neural network": {
+          "신경망": 2
+        },
+        "dataset": {
+          "데이터셋": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 30,
+            "endLine": 33,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 30,
+            "endLine": 33,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 30,
+            "endLine": 33,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 30,
+            "endLine": 33,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 30,
+            "endLine": 33,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 30,
+            "endLine": 33,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 30,
+            "endLine": 33,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "convolution": {
+          "합성곱": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "파(feed-forward) 방식으로 각 레이어를 다른 모든 레이어과 연결합니다. l 계층의 기존 합성곱 신경망이 l개의 연결 - 각 층과 다음 층 사이의 하나 - 인 반면 우리의 신경망은 l(l+1)/2 직접 연결을 가집니다. 각 계층에, 모든 선행 계층"
+          }
+        },
+        "convolutional neural network": {
+          "합성곱 신경망": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "파(feed-forward) 방식으로 각 레이어를 다른 모든 레이어과 연결합니다. l 계층의 기존 합성곱 신경망이 l개의 연결 - 각 층과 다음 층 사이의 하나 - 인 반면 우리의 신경망은 l(l+1)/2 직접 연결을 가집니다. 각 계층에, 모든 선행 계층의 (f"
+          }
+        },
+        "feature": {
+          "특징": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": ". densenets는 몇 가지 강력한 장점을 가집니다: 그레디언트가 사라지는 문제를 완화시키고, 특징 전파를 강화하며, 특징 재사용을 권장하며, 매개 변수의 수를 크게 줄입니다."
+          },
+          "변수": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": ": 그레디언트가 사라지는 문제를 완화시키고, 특징 전파를 강화하며, 특징 재사용을 권장하며, 매개 변수의 수를 크게 줄입니다."
+          }
+        },
+        "forward pass": {
+          "순전파": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "dense convolutional network (densenet)는 순전파(feed-forward) 방식으로 각 레이어를 다른 모든 레이어과 연결합니다. l 계층의 기존 합성곱 신경망이 l개의 연결 - 각 층과 다음 층 사이의"
+          }
+        },
+        "layer": {
+          "레이어": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "olutional network (densenet)는 순전파(feed-forward) 방식으로 각 레이어를 다른 모든 레이어과 연결합니다. l 계층의 기존 합성곱 신경망이 l개의 연결 - 각 층과 다음 층 사이의 하나 - 인 반면 우리의 신경망은 l(l+1"
+          },
+          "계층": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "et)는 순전파(feed-forward) 방식으로 각 레이어를 다른 모든 레이어과 연결합니다. l 계층의 기존 합성곱 신경망이 l개의 연결 - 각 층과 다음 층 사이의 하나 - 인 반면 우리의 신경망은 l(l+1)/2 직접 연결을 가집니다. 각 계층에, "
+          },
+          "층": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": " 각 레이어를 다른 모든 레이어과 연결합니다. l 계층의 기존 합성곱 신경망이 l개의 연결 - 각 층과 다음 층 사이의 하나 - 인 반면 우리의 신경망은 l(l+1)/2 직접 연결을 가집니다. 각 계층에, 모든 선행 계층의 (feature-map)형상 "
+          }
+        },
+        "neural network": {
+          "신경망": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "ed-forward) 방식으로 각 레이어를 다른 모든 레이어과 연결합니다. l 계층의 기존 합성곱 신경망이 l개의 연결 - 각 층과 다음 층 사이의 하나 - 인 반면 우리의 신경망은 l(l+1)/2 직접 연결을 가집니다. 각 계층에, 모든 선행 계층의 (f"
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 91,
+            "endLine": 91,
+            "excerpt": "사전 학습된 모델을 사용한 imagenet 데이터셋의 1-crop 오류율은 다음 표와 같습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_fcn_resnet101.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_fcn_resnet101.md",
+      "blobSha": "9aeedeedd8eac0c32f59755d51bfa52c92ec4a48",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_fcn_resnet101.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "normalization": {
+          "정규화": 3
+        },
+        "pre-training": {
+          "사전 훈련": 3
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 3
+        },
+        "regularization": {
+          "정규화": 3
+        },
+        "training": {
+          "훈련": 4
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "tensor": {
+          "텐서": 2
+        },
+        "evaluation mode": {
+          "추론 모드": 1
+        },
+        "inference": {
+          "추론": 1,
+          "예측": 3
+        },
+        "loss": {
+          "손실": 1
+        },
+        "backbone": {
+          "백본": 1
+        },
+        "convolution": {
+          "컨볼루션": 1
+        },
+        "dataset": {
+          "데이터 세트": 1,
+          "데이터셋": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지, 즉"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "tensor": {
+          "텐서": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "를 사용하여 정규화해야 합니다. 모델은 입력 텐서와 높이와 너비는 같지만 클래스가 21개인 텐서를 가진"
+          }
+        },
+        "evaluation mode": {
+          "추론 모드": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "에는 픽셀당 보조 손실 값이 포함됩니다. 추론 모드에서는"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "에는 픽셀당 보조 손실 값이 포함됩니다. 추론 모드에서는"
+          },
+          "예측": {
+            "line": 66,
+            "endLine": 66,
+            "excerpt": "이며, 각 위치에는 각 클래스의 예측에 해당하는 정규화되지 않은 확률이 있습니다. 각 클래스의 최대 예측을 가져온 다음 이를 다운스트림 작업에 사용하려면"
+          }
+        },
+        "loss": {
+          "손실": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "에는 픽셀당 보조 손실 값이 포함됩니다. 추론 모드에서는"
+          }
+        },
+        "backbone": {
+          "백본": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "fcn-resnet은 resnet-50 또는 resnet-101 백본을 사용하여 완전 컨볼루션 네트워크 모델로 구성됩니다. 사전 훈련된 모델은 pascal voc 데이터 세트에 존재하는 20개 범주에 대한 coco 201"
+          }
+        },
+        "convolution": {
+          "컨볼루션": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "fcn-resnet은 resnet-50 또는 resnet-101 백본을 사용하여 완전 컨볼루션 네트워크 모델로 구성됩니다. 사전 훈련된 모델은 pascal voc 데이터 세트에 존재하는 20개 범주에 대한 coco 2017의 하위 집합에 대해 훈"
+          }
+        },
+        "dataset": {
+          "데이터 세트": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "백본을 사용하여 완전 컨볼루션 네트워크 모델로 구성됩니다. 사전 훈련된 모델은 pascal voc 데이터 세트에 존재하는 20개 범주에 대한 coco 2017의 하위 집합에 대해 훈련 되었습니다."
+          },
+          "데이터셋": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": "coco val 2017 데이터셋에서 평가된 사전 훈련된 모델의 정확성은 아래에 나열되어 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_ghostnet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_ghostnet.md",
+      "blobSha": "06223f646f1d94b4bdc1e7a96d1253de61604f70",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_ghostnet.md",
+      "counts": {
+        "model": {
+          "모델": 3
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "학습": 3
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "architecture": {
+          "아키텍처": 1,
+          "구조": 1
+        },
+        "benchmark": {
+          "벤치마크": 1
+        },
+        "convolution": {
+          "합성곱": 1
+        },
+        "convolutional neural network": {
+          "합성곱 신경망": 1
+        },
+        "feature": {
+          "특징": 2
+        },
+        "feature map": {
+          "특징 맵": 1
+        },
+        "inference": {
+          "추론": 1
+        },
+        "neural network": {
+          "신경망": 1
+        },
+        "precision": {
+          "정확도": 2
+        },
+        "dataset": {
+          "데이터셋": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "모든 사전 학습된 모델들은 입력 이미지가 동일한 방식으로 정규화 되는 것을 요구합니다. 다시 말해"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "모든 사전 학습된 모델들은 입력 이미지가 동일한 방식으로 정규화 되는 것을 요구합니다. 다시 말해"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "모든 사전 학습된 모델들은 입력 이미지가 동일한 방식으로 정규화 되는 것을 요구합니다. 다시 말해"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "모든 사전 학습된 모델들은 입력 이미지가 동일한 방식으로 정규화 되는 것을 요구합니다. 다시 말해"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "의 shape를 가지는 3채널 rgb 이미지들의 미니배치를 말합니다. 이 이미지들은"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "의 shape를 가지는 3채널 rgb 이미지들의 미니배치를 말합니다. 이 이미지들은"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "의 shape를 가지는 3채널 rgb 이미지들의 미니배치를 말합니다. 이 이미지들은"
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": "고스트넷 아키텍처는 다양한 특징 맵을 효율적인 연산으로 생성하는 고스트 모듈 구조로 이루어집니다. 합성곱 신경망에서의 학습 과정에서 추론에 중요한 중복되는 고유 특징맵("
+          },
+          "구조": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": "고스트넷 아키텍처는 다양한 특징 맵을 효율적인 연산으로 생성하는 고스트 모듈 구조로 이루어집니다. 합성곱 신경망에서의 학습 과정에서 추론에 중요한 중복되는 고유 특징맵(고스트 맵)들이 다수 생성되는 현상에 기반하여 설계 되었습니다. "
+          }
+        },
+        "benchmark": {
+          "벤치마크": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": " 현상에 기반하여 설계 되었습니다. 고스트넷에서는 더 효율적인 연산으로 고스트 맵들을 생성합니다. 벤치마크에서 수행된 실험을 통해 속도와 정확도의 상충 관계에 관한 고스트넷의 우수성을 보여줍니다."
+          }
+        },
+        "convolution": {
+          "합성곱": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": "고스트넷 아키텍처는 다양한 특징 맵을 효율적인 연산으로 생성하는 고스트 모듈 구조로 이루어집니다. 합성곱 신경망에서의 학습 과정에서 추론에 중요한 중복되는 고유 특징맵(고스트 맵)들이 다수 생성되는 현상에 기반하여 설계 되었습니다. 고스트넷에서는 더 효율적"
+          }
+        },
+        "convolutional neural network": {
+          "합성곱 신경망": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": "고스트넷 아키텍처는 다양한 특징 맵을 효율적인 연산으로 생성하는 고스트 모듈 구조로 이루어집니다. 합성곱 신경망에서의 학습 과정에서 추론에 중요한 중복되는 고유 특징맵(고스트 맵)들이 다수 생성되는 현상에 기반하여 설계 되었습니다. 고스트넷에서는 더 효율적인 연산"
+          }
+        },
+        "feature": {
+          "특징": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": "고스트넷 아키텍처는 다양한 특징 맵을 효율적인 연산으로 생성하는 고스트 모듈 구조로 이루어집니다. 합성곱 신경망에서의 학습 과정에서 추론에 중요한 중복되는 고유 특징맵(고스트 맵)들이"
+          }
+        },
+        "feature map": {
+          "특징 맵": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": "고스트넷 아키텍처는 다양한 특징 맵을 효율적인 연산으로 생성하는 고스트 모듈 구조로 이루어집니다. 합성곱 신경망에서의 학습 과정에서 추론에 중요한 중복되는 고유 특징맵(고스트 맵)들이 다"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": "을 효율적인 연산으로 생성하는 고스트 모듈 구조로 이루어집니다. 합성곱 신경망에서의 학습 과정에서 추론에 중요한 중복되는 고유 특징맵(고스트 맵)들이 다수 생성되는 현상에 기반하여 설계 되었습니다. 고스트넷에서는 더 효율적인 연산으로 고스트 맵들을 생성합"
+          }
+        },
+        "neural network": {
+          "신경망": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": " 아키텍처는 다양한 특징 맵을 효율적인 연산으로 생성하는 고스트 모듈 구조로 이루어집니다. 합성곱 신경망에서의 학습 과정에서 추론에 중요한 중복되는 고유 특징맵(고스트 맵)들이 다수 생성되는 현상에 기반하여 설계 되었습니다. 고스트넷에서는 더 효율적인 연산"
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 86,
+            "endLine": 88,
+            "excerpt": "트넷에서는 더 효율적인 연산으로 고스트 맵들을 생성합니다. 벤치마크에서 수행된 실험을 통해 속도와 정확도의 상충 관계에 관한 고스트넷의 우수성을 보여줍니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "사전 학습된 모델을 사용한 imagenet 데이터셋에 따른 정확도는 아래에 나열되어 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_googlenet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_googlenet.md",
+      "blobSha": "c4d7bbf393b1c9919bb110e3158b72b8f39a737c",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_googlenet.md",
+      "counts": {
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "model": {
+          "모델": 5
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 2
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 2
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "architecture": {
+          "아키텍처": 1,
+          "구조": 1
+        },
+        "convolution": {
+          "합성곱": 1
+        },
+        "convolutional neural network": {
+          "합성곱 신경망": 1
+        },
+        "crop": {
+          "크롭": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "neural network": {
+          "신경망": 2
+        }
+      },
+      "evidence": {
+        "batch": {
+          "배치": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "을 이용해 정규화되어야 합니다. 다음은 실행 예제 입니다."
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "googlenet은 코드네임 \"inception\"으로 불리는 신경망 아키텍처에 기반한 깊은 합성곱 신경망입니다. 이 모델은 imagenet large-scale visual recognition challenge 2014 (il"
+          },
+          "구조": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": "모델 구조"
+          }
+        },
+        "convolution": {
+          "합성곱": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "googlenet은 코드네임 \"inception\"으로 불리는 신경망 아키텍처에 기반한 깊은 합성곱 신경망입니다. 이 모델은 imagenet large-scale visual recognition challenge 2014 (ilsvrc 2014) 에"
+          }
+        },
+        "convolutional neural network": {
+          "합성곱 신경망": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "googlenet은 코드네임 \"inception\"으로 불리는 신경망 아키텍처에 기반한 깊은 합성곱 신경망입니다. 이 모델은 imagenet large-scale visual recognition challenge 2014 (ilsvrc 2014) 에서 새로"
+          }
+        },
+        "crop": {
+          "크롭": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "te of the art)를 달성했습니다. 사전 훈련된 모델로 imagenet 데이터셋에서의 단일-크롭 방식으로 오류 비율을 측정한 결과는 아래와 같습니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "로운 sota(state of the art)를 달성했습니다. 사전 훈련된 모델로 imagenet 데이터셋에서의 단일-크롭 방식으로 오류 비율을 측정한 결과는 아래와 같습니다."
+          }
+        },
+        "neural network": {
+          "신경망": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "googlenet은 코드네임 \"inception\"으로 불리는 신경망 아키텍처에 기반한 깊은 합성곱 신경망입니다. 이 모델은 imagenet large-scale visual recognition challenge 201"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_hardnet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_hardnet.md",
+      "blobSha": "fc74a178525f6836afd33c29a7e25d1f29c5be38",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_hardnet.md",
+      "counts": {
+        "model": {
+          "모델": 8
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 2
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 2
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "memory traffic": {
+          "메모리 트래픽": 1
+        },
+        "precision": {
+          "정확도": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "layer": {
+          "레이어": 2
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 30,
+            "endLine": 32,
+            "excerpt": "를 이용하여 정규화해야 합니다."
+          }
+        },
+        "memory traffic": {
+          "메모리 트래픽": {
+            "line": 89,
+            "endLine": 90,
+            "excerpt": "hardnet(harmonic densenet)은 낮은 메모리 트래픽을 가지는 cnn 모델로 빠르고 효율적입니다. 기본 개념은 계산 비용과 메모리 접근 비용을 동시에 최소화하는 것입니다. 따라서 hardnet 모델은 동일"
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 89,
+            "endLine": 90,
+            "excerpt": " 계산 비용과 메모리 접근 비용을 동시에 최소화하는 것입니다. 따라서 hardnet 모델은 동일한 정확도를 가진 resnet 모델에 비해 gpu에서 실행되는 속도가 35% 더 빠릅니다. (mobilenet과 비교하기 위해 설계된 두 ds 모델은 제외)"
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 92,
+            "endLine": 93,
+            "excerpt": "를 포함한 4가지 버전의 hardnet 모델이 있습니다. 사전 훈련된 모델에 대해 imagenet 데이터셋의 1-crop 오류율은 아래에 나열되어 있습니다."
+          }
+        },
+        "layer": {
+          "레이어": {
+            "line": 92,
+            "endLine": 93,
+            "excerpt": "아래에는 각각 깊이별 분리 가능한 conv 레이어가 있거나 없는 39, 68, 85개의 레이어를 포함한 4가지 버전의 hardnet 모델이 있습니다. 사전 훈련된 모델에 대해 imagenet 데이터셋의"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_ibnnet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_ibnnet.md",
+      "blobSha": "2fd0d4132e6e13ca21a574bfddb29d4e91f605e7",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_ibnnet.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "normalization": {
+          "정규화": 4
+        },
+        "pre-training": {
+          "사전 훈련": 2
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 2
+        },
+        "regularization": {
+          "정규화": 4
+        },
+        "training": {
+          "훈련": 2
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "layer": {
+          "층": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "precision": {
+          "정확도": 1
+        },
+        "benchmark": {
+          "벤치마크": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "를 이용하여 정규화해야 합니다."
+          }
+        },
+        "layer": {
+          "층": {
+            "line": 85,
+            "endLine": 88,
+            "excerpt": "불변성을 갖는 cnn 모델입니다. style transfer에 영감을 얻어 ibn-net은 단일 심층 네트워크에서 인스턴스 정규화와 일괄 정규화를 신중하게 통합합니다. 모델 복잡성을 추가하지 않고 모델링 및 범용성을 모두 증가시키는 간단한 방법을 제공합"
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "imagenet 데이터셋을 사용했을 때 사전 훈련된 모델들의 정확도는 다음과 같습니다."
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "imagenet 데이터셋을 사용했을 때 사전 훈련된 모델들의 정확도는 다음과 같습니다."
+          }
+        },
+        "benchmark": {
+          "벤치마크": {
+            "line": 99,
+            "endLine": 99,
+            "excerpt": "두 가지 re-id 벤치마크 market1501 및 dukemtmc-reid에 대한 rank1/map는 아래에 나열되어 있습니다.(michuanhaohao/reid-strong-b"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_inception_v3.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_inception_v3.md",
+      "blobSha": "9b1d2930e151022a25d20e925158267a93295de8",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_inception_v3.md",
+      "counts": {
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "model": {
+          "모델": 6
+        },
+        "normalization": {
+          "정규화": 3
+        },
+        "pre-training": {
+          "사전 훈련": 2
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 2
+        },
+        "regularization": {
+          "정규화": 3
+        },
+        "training": {
+          "훈련": 2
+        },
+        "exploitation": {
+          "이용": 2,
+          "활용": 1
+        },
+        "classification": {
+          "분류": 1
+        },
+        "convolution": {
+          "합성곱 연산": 1
+        },
+        "crop": {
+          "크롭": 2
+        },
+        "dataset": {
+          "데이터셋": 2
+        },
+        "ensemble": {
+          "앙상블": 1
+        },
+        "exploration": {
+          "탐색": 1
+        },
+        "inference": {
+          "추론": 1
+        },
+        "parameter": {
+          "파라미터": 1
+        },
+        "architecture": {
+          "구조": 1
+        }
+      },
+      "evidence": {
+        "batch": {
+          "배치": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 26,
+            "endLine": 29,
+            "excerpt": "을 이용해 정규화되어야 합니다. 다음은 실행 예제 입니다."
+          },
+          "활용": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": " v3는 합성곱 연산을 적절히 분해하고 적극적인 정규화를 통해 추가된 계산을 가능한 한 효율적으로 활용하는 것을 목표로 네트워크를 확장하는 방법에 대한 탐색을 기반으로 합니다. ilsvrc 2012 (imagenet) 분류 문제에서 본 논문은 당시 기준의"
+          }
+        },
+        "classification": {
+          "분류": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": "네트워크를 확장하는 방법에 대한 탐색을 기반으로 합니다. ilsvrc 2012 (imagenet) 분류 문제에서 본 논문은 당시 기준의 sota(state of the art) 모델보다 상당한 성능 향상을 얻었고, 단일 프레임 평가에서 21.2%의 top"
+          }
+        },
+        "convolution": {
+          "합성곱 연산": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": "inception v3는 합성곱 연산을 적절히 분해하고 적극적인 정규화를 통해 추가된 계산을 가능한 한 효율적으로 활용하는 것을 목표로 네트워크를 확장하는 방법에 대한 탐색을 기반으로 합니"
+          }
+        },
+        "crop": {
+          "크롭": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": "곱셈-덧셈 연산의 계산 비용으로 달성되었습니다. 또한 4개 모델의 앙상블(ensemble)과 다중-크롭 평가(multi-crop evaluation)을 이용하여, 17.3%의 top-1 오류와 3.6%의 top-5 오류를 평가(validation) 데이터"
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": " 이용하여, 17.3%의 top-1 오류와 3.6%의 top-5 오류를 평가(validation) 데이터셋에서 달성합니다. 사전 훈련된 모델로 imagenet 데이터셋에서의 단일-크롭 방식으로 오류 비율을 측정한 결과는 아래와 같습니다."
+          }
+        },
+        "ensemble": {
+          "앙상블": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": "미터와 단일 추론 당 50억번의 곱셈-덧셈 연산의 계산 비용으로 달성되었습니다. 또한 4개 모델의 앙상블(ensemble)과 다중-크롭 평가(multi-crop evaluation)을 이용하여, 17.3%의 top-1 오류와 3.6%의 top-5 오류를 평"
+          }
+        },
+        "exploration": {
+          "탐색": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": "를 통해 추가된 계산을 가능한 한 효율적으로 활용하는 것을 목표로 네트워크를 확장하는 방법에 대한 탐색을 기반으로 합니다. ilsvrc 2012 (imagenet) 분류 문제에서 본 논문은 당시 기준의 sota(state of the art) 모델보다 상"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": " 오류와 5.6%의 top-5 오류를 달성했습니다. 이 결과는 2500만개 이하의 파라미터와 단일 추론 당 50억번의 곱셈-덧셈 연산의 계산 비용으로 달성되었습니다. 또한 4개 모델의 앙상블(ensemble)과 다중-크롭 평가(multi-crop eval"
+          }
+        },
+        "parameter": {
+          "파라미터": {
+            "line": 84,
+            "endLine": 85,
+            "excerpt": "2%의 top-1 오류와 5.6%의 top-5 오류를 달성했습니다. 이 결과는 2500만개 이하의 파라미터와 단일 추론 당 50억번의 곱셈-덧셈 연산의 계산 비용으로 달성되었습니다. 또한 4개 모델의 앙상블(ensemble)과 다중-크롭 평가(multi-cr"
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 87,
+            "endLine": 87,
+            "excerpt": "모델 구조"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_meal_v2.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_meal_v2.md",
+      "blobSha": "90f289bb4bf3515a4e1f2f11ed61c85903621c7a",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_meal_v2.md",
+      "counts": {
+        "model": {
+          "모델": 4
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "학습": 1
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "architecture": {
+          "구조": 1
+        },
+        "ensemble": {
+          "앙상블": 1
+        },
+        "exploitation": {
+          "이용": 1,
+          "활용": 3
+        },
+        "inference": {
+          "예측": 1
+        },
+        "loss": {
+          "손실": 1
+        },
+        "label": {
+          "레이블": 1
+        },
+        "precision": {
+          "정확도": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 34,
+            "endLine": 34,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 34,
+            "endLine": 34,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 34,
+            "endLine": 34,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 34,
+            "endLine": 34,
+            "excerpt": "사전에 학습된 모든 모델은 동일한 방식으로 정규화된 입력 이미지, 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 34,
+            "endLine": 34,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 34,
+            "endLine": 34,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 34,
+            "endLine": 34,
+            "excerpt": "형태의 3-채널 rgb 이미지의 미니 배치를 요구합니다. 이미지를"
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": "50의 imagenet top-1 정확도를 80% 이상 기록할 수 있습니다. (트릭 : 1) 모델 구조 변경; 2) imagenet 외 추가 데이터 활용; 3) autoaug/randaug; 4) cosine learning rate; 5) mixup/c"
+          }
+        },
+        "ensemble": {
+          "앙상블": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": "하지 않는다는 것입니다. meal v2는 판별자를 이용한 knowledge distillation 앙상블 기법인 meal에 기초하며, meal을 단순화하기 위해 다음의 수정을 거쳤습니다. 1) 판별자 입력, 유사도 손실 계산에 최종 출력만을 활용합니다. 2"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": "llation 과정에 one-hot 레이블을 사용하지 않는다는 것입니다. meal v2는 판별자를 이용한 knowledge distillation 앙상블 기법인 meal에 기초하며, meal을 단순화하기 위해 다음의 수정을 거쳤습니다. 1) 판별자 입력,"
+          },
+          "활용": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": " 단순화하기 위해 다음의 수정을 거쳤습니다. 1) 판별자 입력, 유사도 손실 계산에 최종 출력만을 활용합니다. 2) 모든 teacher들의 예측 확률을 평균 내어 distillation에 활용합니다. 이를 통해 meal v2는 어떠한 트릭 사용 없이도 r"
+          }
+        },
+        "inference": {
+          "예측": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": ". 1) 판별자 입력, 유사도 손실 계산에 최종 출력만을 활용합니다. 2) 모든 teacher들의 예측 확률을 평균 내어 distillation에 활용합니다. 이를 통해 meal v2는 어떠한 트릭 사용 없이도 resnet-50의 imagenet top-"
+          }
+        },
+        "loss": {
+          "손실": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": "al에 기초하며, meal을 단순화하기 위해 다음의 수정을 거쳤습니다. 1) 판별자 입력, 유사도 손실 계산에 최종 출력만을 활용합니다. 2) 모든 teacher들의 예측 확률을 평균 내어 distillation에 활용합니다. 이를 통해 meal v2는 "
+          }
+        },
+        "label": {
+          "레이블": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": "meal v2의 주요 관점은 distillation 과정에 one-hot 레이블을 사용하지 않는다는 것입니다. meal v2는 판별자를 이용한 knowledge distillation 앙상블 기법인 meal에 기초하며, meal을 "
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": "이를 통해 meal v2는 어떠한 트릭 사용 없이도 resnet-50의 imagenet top-1 정확도를 80% 이상 기록할 수 있습니다. (트릭 : 1) 모델 구조 변경; 2) imagenet 외 추가 데이터 활용; 3) autoaug/randaug; "
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_mobilenet_v2.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_mobilenet_v2.md",
+      "blobSha": "73100c08455a9ca2deb86a949d94e01f2cca4de3",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_mobilenet_v2.md",
+      "counts": {
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "model": {
+          "모델": 4
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 1
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 1
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "architecture": {
+          "구조": 5
+        },
+        "convolution": {
+          "합성곱": 1
+        },
+        "feature": {
+          "특징": 1
+        },
+        "kernel": {
+          "필터": 1
+        },
+        "layer": {
+          "계층": 3
+        }
+      },
+      "evidence": {
+        "batch": {
+          "배치": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델들은 동일한 방식으로 정규화된 이미지를 입력으로 사용합니다. 즉, 미니 배치의 3-채널 rgb 이미지들은"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "을 이용해 정규화되어야 합니다."
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "mobilenet v2 구조는 잔차 블록의 입력 및 출력이 얇은 병목 계층 형태인 반전된 잔차 구조를 기반으로 합니다. 반전된 잔차 구조는 입력단에서 확장된 표현을 사용하는 기존의"
+          }
+        },
+        "convolution": {
+          "합성곱": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "하는 기존의 잔차 모델과 반대되는 구조입니다. mobilenet v2는 경량화된 depthwise 합성곱을 사용하여 중간 확장 계층의 특징들을 필터링합니다. 또한, 표현력 유지를 위해 좁은 계층의 비선형성은 제거되었습니다."
+          }
+        },
+        "feature": {
+          "특징": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "조입니다. mobilenet v2는 경량화된 depthwise 합성곱을 사용하여 중간 확장 계층의 특징들을 필터링합니다. 또한, 표현력 유지를 위해 좁은 계층의 비선형성은 제거되었습니다."
+          }
+        },
+        "kernel": {
+          "필터": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": " mobilenet v2는 경량화된 depthwise 합성곱을 사용하여 중간 확장 계층의 특징들을 필터링합니다. 또한, 표현력 유지를 위해 좁은 계층의 비선형성은 제거되었습니다."
+          }
+        },
+        "layer": {
+          "계층": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "mobilenet v2 구조는 잔차 블록의 입력 및 출력이 얇은 병목 계층 형태인 반전된 잔차 구조를 기반으로 합니다. 반전된 잔차 구조는 입력단에서 확장된 표현을 사용하는 기존의 잔차 모델과 반대되는 구조입니다. mobile"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_proxylessnas.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_proxylessnas.md",
+      "blobSha": "cd9dea0b62bbd8fe77d23223f3ac0f3c9aaea86f",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_proxylessnas.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 2
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 2
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "architecture": {
+          "아키텍처": 1
+        },
+        "feature": {
+          "특성": 1
+        },
+        "precision": {
+          "정확도": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 28,
+            "endLine": 30,
+            "excerpt": "를 이용하여 정규화해야 합니다."
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "만 gpu는 병렬화에 더 뛰어납니다. 따라서 모델을 일반화하기보다는 하드웨어 플랫폼에 맞게 cnn 아키텍처를 전문화해야 합니다. 아래에서 볼 수 있듯이, 전문화는 세 가지 플랫폼 모두에서 상당한 성능 향상을 제공합니다."
+          }
+        },
+        "feature": {
+          "특성": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "모든 하드웨어 플랫폼에 대해 하나의 효율적인 모델을 설계하는 경향이 있습니다. 하지만 하드웨어마다 특성이 다릅니다. 예를 들어 cpu는 더 높은 주파수를 가지지만 gpu는 병렬화에 더 뛰어납니다. 따라서 모델을 일반화하기보다는 하드웨어 플랫폼에 맞게 cn"
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 97,
+            "endLine": 97,
+            "excerpt": "사전 훈련된 모델에 해당하는 top-1 정확도는 아래에 나열되어 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_resnest.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_resnest.md",
+      "blobSha": "94197617ee7a86eb30d5feadd12b5e145c5b28b2",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_resnest.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 1
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 1
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 1
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "attention": {
+          "주의": 1
+        },
+        "architecture": {
+          "구조": 1
+        },
+        "backbone": {
+          "백본": 1
+        },
+        "classification": {
+          "분류": 1
+        },
+        "feature": {
+          "기능": 1
+        },
+        "image classification": {
+          "이미지 분류": 1
+        },
+        "object detection": {
+          "객체 감지": 2
+        },
+        "segmentation": {
+          "분할": 3
+        },
+        "tile": {
+          "타일": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "를 이용하여 정규화해야 합니다."
+          }
+        },
+        "attention": {
+          "주의": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "t 변형을 백본 네트워크(backbone network)로 사용합니다. 기능 맵 그룹 전반에 걸쳐 주의를 기울일 수 있는 split-attention 블록을 제시합니다. 이러한 split-attention 블록을 resnet 스타일로 쌓아서 resnest"
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": " 대부분의 다운스트림 애플리케이션(downstream applications)은 간단하게 모듈화된 구조로 인해 여전히 resnet 변형을 백본 네트워크(backbone network)로 사용합니다. 기능 맵 그룹 전반에 걸쳐 주의를 기울일 수 있는 spl"
+          }
+        },
+        "backbone": {
+          "백본": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "nstream applications)은 간단하게 모듈화된 구조로 인해 여전히 resnet 변형을 백본 네트워크(backbone network)로 사용합니다. 기능 맵 그룹 전반에 걸쳐 주의를 기울일 수 있는 split-attention 블록을 제시합니다"
+          }
+        },
+        "classification": {
+          "분류": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "최근 이미지 분류 모델이 계속 발전하고 있지만 객체 감지 및 의미 분할과 같은 대부분의 다운스트림 애플리케이션(downstream applications)은 간단하게 모"
+          }
+        },
+        "feature": {
+          "기능": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "조로 인해 여전히 resnet 변형을 백본 네트워크(backbone network)로 사용합니다. 기능 맵 그룹 전반에 걸쳐 주의를 기울일 수 있는 split-attention 블록을 제시합니다. 이러한 split-attention 블록을 resnet 스"
+          }
+        },
+        "image classification": {
+          "이미지 분류": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "최근 이미지 분류 모델이 계속 발전하고 있지만 객체 감지 및 의미 분할과 같은 대부분의 다운스트림 애플리케이션(downstream applications)은 간단하게 모"
+          }
+        },
+        "object detection": {
+          "객체 감지": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "최근 이미지 분류 모델이 계속 발전하고 있지만 객체 감지 및 의미 분할과 같은 대부분의 다운스트림 애플리케이션(downstream applications)은 간단하게 모듈화된 구조로 인해 여전히 resnet "
+          }
+        },
+        "segmentation": {
+          "분할": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "최근 이미지 분류 모델이 계속 발전하고 있지만 객체 감지 및 의미 분할과 같은 대부분의 다운스트림 애플리케이션(downstream applications)은 간단하게 모듈화된 구조로 인해 여전히 resnet 변형을 백본 네"
+          }
+        },
+        "tile": {
+          "타일": {
+            "line": 90,
+            "endLine": 90,
+            "excerpt": "t-attention 블록을 제시합니다. 이러한 split-attention 블록을 resnet 스타일로 쌓아서 resnest라고 하는 새로운 resnet 변형을 얻습니다. resnest 모델은 유사한 모델 복잡성을 가진 다른 네트워크보다 성능이 우수하며"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_resnet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_resnet.md",
+      "blobSha": "a64244a18cd424c3bc84713c26de6881830faf45",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_resnet.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_resnext.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_resnext.md",
+      "blobSha": "3daadff81be029afce7e3cc49f51a363f7ae8387",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_resnext.md",
+      "counts": {
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "model": {
+          "모델": 6
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 1
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 1
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 2
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "architecture": {
+          "아키텍처": 1,
+          "구조": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        },
+        "layer": {
+          "계층": 2
+        }
+      },
+      "evidence": {
+        "batch": {
+          "배치": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "사전 훈련된 모델들을 사용할 때는 동일한 방식으로 정규화된 이미지를 입력으로 넣어야 합니다. 즉, 미니 배치(mini-batch)의 3-채널 rgb 이미지들은"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 28,
+            "endLine": 31,
+            "excerpt": "을 이용해 정규화되어야 합니다. 다음은 실행 예제 입니다."
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 88,
+            "endLine": 91,
+            "excerpt": "계층을 가지는 2개의 resnet 모델을 제공하고 있습니다. resnet50과 resnext50의 아키텍처 차이는 논문의 table 1을 참고하십시오. imagenet 데이터셋에 대한 사전훈련된 모델의 에러(성능)은 아래 표와 같습니다."
+          },
+          "구조": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": "모델 구조"
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 88,
+            "endLine": 91,
+            "excerpt": "t50과 resnext50의 아키텍처 차이는 논문의 table 1을 참고하십시오. imagenet 데이터셋에 대한 사전훈련된 모델의 에러(성능)은 아래 표와 같습니다."
+          }
+        },
+        "layer": {
+          "계층": {
+            "line": 88,
+            "endLine": 91,
+            "excerpt": "여기서는 50개의 계층과 101개의 계층을 가지는 2개의 resnet 모델을 제공하고 있습니다. resnet50과 resnext50의 아키텍처 차이는 논문의 table 1을 "
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_shufflenet_v2.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_shufflenet_v2.md",
+      "blobSha": "a54dd32591c2817d90228c17c2b266ae55748911",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_shufflenet_v2.md",
+      "counts": {
+        "model": {
+          "모델": 3
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 1
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 1
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 1
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "architecture": {
+          "아키텍처": 2
+        },
+        "feature": {
+          "특성": 1
+        },
+        "neural network": {
+          "신경망": 1
+        },
+        "precision": {
+          "정확도": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 26,
+            "endLine": 28,
+            "excerpt": "를 이용하여 정규화해야 합니다."
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "이전에는 신경망 아키텍처 설계는 주로 flop와 같은 계산 복잡성의 간접 측정 기준에 따라 진행되었습니다. 그러나 속도와 같은 직접적인 측정은 메모리 액세스 비용 및 플랫폼 특"
+          }
+        },
+        "feature": {
+          "특성": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "정 기준에 따라 진행되었습니다. 그러나 속도와 같은 직접적인 측정은 메모리 액세스 비용 및 플랫폼 특성과 같은 다른 요소에도 의존합니다. 일련의 통제된 실험을 기반으로, 이 작업은 효율적인 네트워크 설계를 위한 몇 가지 실용적인 지침을 도출합니다. 따라서"
+          }
+        },
+        "neural network": {
+          "신경망": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "이전에는 신경망 아키텍처 설계는 주로 flop와 같은 계산 복잡성의 간접 측정 기준에 따라 진행되었습니다. 그러나 속도와 같은 직접적인 측정은 메모리 액세스 비용 및 "
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 85,
+            "endLine": 85,
+            "excerpt": "ufflenet v2라는 새로운 아키텍처가 제시됩니다. 조건 변화에 따른 모델 평가를 통해 속도와 정확도 트레이드오프 측면에서 최고 수준임을 확인했습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_squeezenet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_squeezenet.md",
+      "blobSha": "b235ab696392bb3817c75790a6b60a27be187bd2",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_squeezenet.md",
+      "counts": {
+        "model": {
+          "모델": 6
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 2
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 1
+        },
+        "mini-batch": {
+          "미니 배치": 1
+        },
+        "precision": {
+          "정확도": 1
+        },
+        "feature": {
+          "변수": 1
+        },
+        "parameter": {
+          "매개변수": 1
+        },
+        "dataset": {
+          "데이터셋": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 28,
+            "endLine": 28,
+            "excerpt": "사전에 훈련된 모델은 모두 같은 방식으로 정규화(normalize)한 이미지를 입력으로 받습니다."
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 28,
+            "endLine": 28,
+            "excerpt": "사전에 훈련된 모델은 모두 같은 방식으로 정규화(normalize)한 이미지를 입력으로 받습니다."
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 28,
+            "endLine": 28,
+            "excerpt": "사전에 훈련된 모델은 모두 같은 방식으로 정규화(normalize)한 이미지를 입력으로 받습니다."
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 28,
+            "endLine": 28,
+            "excerpt": "사전에 훈련된 모델은 모두 같은 방식으로 정규화(normalize)한 이미지를 입력으로 받습니다."
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 30,
+            "endLine": 31,
+            "excerpt": "포맷의 3채널 rgb 이미지들의 미니 배치의 경우 h 와 w 의 크기는 224 이상이어야 합니다. 이 때 모든 픽셀들은 0과 1 사이의 값을 가지도록 변환한 이후"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 30,
+            "endLine": 31,
+            "excerpt": "포맷의 3채널 rgb 이미지들의 미니 배치의 경우 h 와 w 의 크기는 224 이상이어야 합니다. 이 때 모든 픽셀들은 0과 1 사이의 값을 가지도록 변환한 이후"
+          }
+        },
+        "mini-batch": {
+          "미니 배치": {
+            "line": 30,
+            "endLine": 31,
+            "excerpt": "포맷의 3채널 rgb 이미지들의 미니 배치의 경우 h 와 w 의 크기는 224 이상이어야 합니다. 이 때 모든 픽셀들은 0과 1 사이의 값을 가지도록 변환한 이후"
+          }
+        },
+        "precision": {
+          "정확도": {
+            "line": 90,
+            "endLine": 91,
+            "excerpt": "수준의 정확도를 유지하며 2.4배 계산이 덜 필요하고,"
+          }
+        },
+        "feature": {
+          "변수": {
+            "line": 90,
+            "endLine": 91,
+            "excerpt": "보다 매개변수의 수가 적습니다."
+          }
+        },
+        "parameter": {
+          "매개변수": {
+            "line": 90,
+            "endLine": 91,
+            "excerpt": "보다 매개변수의 수가 적습니다."
+          }
+        },
+        "dataset": {
+          "데이터셋": {
+            "line": 93,
+            "endLine": 93,
+            "excerpt": "imagenet 데이터셋 기준으로 훈련된 모델들의 1-crop 에러율은 아래와 같습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_vgg.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_vgg.md",
+      "blobSha": "5855d03e2dfd15dc42da2b8cba2cb15f0c466aa1",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_vgg.md",
+      "counts": {
+        "model": {
+          "모델": 4
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 2
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 2
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 3
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 2
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "dataset": {
+          "데이터 세트": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모든 사전 훈련된 모델은 훈련때와 같은 방식으로 정규화된 입력 이미지를 주어야합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모든 사전 훈련된 모델은 훈련때와 같은 방식으로 정규화된 입력 이미지를 주어야합니다. 즉,"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모든 사전 훈련된 모델은 훈련때와 같은 방식으로 정규화된 입력 이미지를 주어야합니다. 즉,"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모든 사전 훈련된 모델은 훈련때와 같은 방식으로 정규화된 입력 이미지를 주어야합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모든 사전 훈련된 모델은 훈련때와 같은 방식으로 정규화된 입력 이미지를 주어야합니다. 즉,"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모든 사전 훈련된 모델은 훈련때와 같은 방식으로 정규화된 입력 이미지를 주어야합니다. 즉,"
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모양의 3채널 rgb 이미지의 미니배치에서"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모양의 3채널 rgb 이미지의 미니배치에서"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 34,
+            "endLine": 36,
+            "excerpt": "모양의 3채널 rgb 이미지의 미니배치에서"
+          }
+        },
+        "dataset": {
+          "데이터 세트": {
+            "line": 98,
+            "endLine": 98,
+            "excerpt": "사전 훈련된 모델이 있는 imagenet 데이터 세트의 1-crop 오류율은 아래에 나열되어 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:pytorch_vision_wide_resnet.md": {
+      "source": "pytorch-hub",
+      "path": "pytorch_vision_wide_resnet.md",
+      "blobSha": "d0e7e76a33e1c7f137a766fa77347f0eb13dc364",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "pytorch_vision_wide_resnet.md",
+      "counts": {
+        "model": {
+          "모델": 5
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "pre-training": {
+          "사전 훈련": 1
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": 1
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "training": {
+          "훈련": 1,
+          "학습": 1
+        },
+        "batch": {
+          "배치": 1
+        },
+        "channel": {
+          "채널": 3
+        },
+        "mini-batch": {
+          "미니배치": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "architecture": {
+          "아키텍처": 1
+        },
+        "convolution": {
+          "합성곱": 1
+        },
+        "layer": {
+          "층": 1
+        },
+        "mixed precision": {
+          "혼합 정밀도": 1
+        },
+        "precision": {
+          "정밀도": 2
+        },
+        "weight": {
+          "가중치": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pre-training": {
+          "사전 훈련": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "pretrained model": {
+          "사전 훈련된 모델": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "모든 사전 훈련된 모델은 동일한 방식으로 정규화된 입력 이미지를 요구합니다. 즉,"
+          },
+          "학습": {
+            "line": 92,
+            "endLine": 93,
+            "excerpt": "tarts가 있는 sgd(sgdr)를 사용하여 혼합 정밀도(mixed precision) 방식으로 학습되었습니다. 체크 포인트는 크기가 작은 경우 절반 정밀도(batch norm 제외)의 가중치를 가지며 fp32 모델에서도 사용할 수 있습니다."
+          }
+        },
+        "batch": {
+          "배치": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "channel": {
+          "채널": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "mini-batch": {
+          "미니배치": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "형태의 3채널 rgb 이미지의 미니배치가 필요합니다. 이미지를 [0, 1] 범위로 불러온 다음"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 29,
+            "endLine": 31,
+            "excerpt": "를 이용하여 정규화해야 합니다."
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 88,
+            "endLine": 90,
+            "excerpt": "wide residual 네트워크는 resnet에 비해 단순히 채널 수가 증가했습니다. 이외의 아키텍처는 resnet과 동일합니다. 병목(bottleneck) 블록이 있는 심층 imagenet 모델은 내부 3x3 합성곱 채널 수를 증가 시켰습니다."
+          }
+        },
+        "convolution": {
+          "합성곱": {
+            "line": 88,
+            "endLine": 90,
+            "excerpt": "t과 동일합니다. 병목(bottleneck) 블록이 있는 심층 imagenet 모델은 내부 3x3 합성곱 채널 수를 증가 시켰습니다."
+          }
+        },
+        "layer": {
+          "층": {
+            "line": 88,
+            "endLine": 90,
+            "excerpt": "가했습니다. 이외의 아키텍처는 resnet과 동일합니다. 병목(bottleneck) 블록이 있는 심층 imagenet 모델은 내부 3x3 합성곱 채널 수를 증가 시켰습니다."
+          }
+        },
+        "mixed precision": {
+          "혼합 정밀도": {
+            "line": 92,
+            "endLine": 93,
+            "excerpt": "모델은 warm restarts가 있는 sgd(sgdr)를 사용하여 혼합 정밀도(mixed precision) 방식으로 학습되었습니다. 체크 포인트는 크기가 작은 경우 절반 정밀도(batch norm 제외)의 가중치를 가지며 fp3"
+          }
+        },
+        "precision": {
+          "정밀도": {
+            "line": 92,
+            "endLine": 93,
+            "excerpt": "모델은 warm restarts가 있는 sgd(sgdr)를 사용하여 혼합 정밀도(mixed precision) 방식으로 학습되었습니다. 체크 포인트는 크기가 작은 경우 절반 정밀도(batch norm 제외)의 가중치를 가지며 fp3"
+          }
+        },
+        "weight": {
+          "가중치": {
+            "line": 92,
+            "endLine": 93,
+            "excerpt": "방식으로 학습되었습니다. 체크 포인트는 크기가 작은 경우 절반 정밀도(batch norm 제외)의 가중치를 가지며 fp32 모델에서도 사용할 수 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:sigsep_open-unmix-pytorch_umx.md": {
+      "source": "pytorch-hub",
+      "path": "sigsep_open-unmix-pytorch_umx.md",
+      "blobSha": "54963210e3831f6d4d3abd8ab4ed3e43c2d3efb6",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "sigsep_open-unmix-pytorch_umx.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:snakers4_silero-models_stt.md": {
+      "source": "pytorch-hub",
+      "path": "snakers4_silero-models_stt.md",
+      "blobSha": "e477d710e224b5170ef0c3bc513729ba9bde4dcb",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "snakers4_silero-models_stt.md",
+      "counts": {
+        "model": {
+          "모델": 7
+        },
+        "label": {
+          "레이블": 1
+        },
+        "normalization": {
+          "정규화": 2
+        },
+        "preprocessing": {
+          "전처리": 1
+        },
+        "regularization": {
+          "정규화": 2
+        },
+        "token": {
+          "토큰": 1
+        },
+        "checkpoint": {
+          "체크포인트": 1
+        },
+        "benchmark": {
+          "벤치마크": 2
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 52,
+            "endLine": 52,
+            "excerpt": "모델 설명"
+          }
+        },
+        "label": {
+          "레이블": {
+            "line": 54,
+            "endLine": 54,
+            "excerpt": "도구를 제공합니다. 모델 자체에 포함할 수 있지만 자막이 결합된 모듈은, 특정한 내보내기 상황에서 레이블같은 모델의 생성물을 저장할 때 문제가 있었습니다."
+          }
+        },
+        "normalization": {
+          "정규화": {
+            "line": 54,
+            "endLine": 54,
+            "excerpt": " 속도에 강인합니다(단순화를 위해 오디오는 16khz로 다시 샘플링해야 함). 모델은 샘플 형태의 정규화된 오디오(즉, [-1, 1] 범위로의 정규화를 제외한 어떤 전처리 없이)와 토큰 확률이 있는 출력 프레임을 사용합니다. 단순화를 위해 디코더 도구를 제"
+          }
+        },
+        "preprocessing": {
+          "전처리": {
+            "line": 54,
+            "endLine": 54,
+            "excerpt": "해야 함). 모델은 샘플 형태의 정규화된 오디오(즉, [-1, 1] 범위로의 정규화를 제외한 어떤 전처리 없이)와 토큰 확률이 있는 출력 프레임을 사용합니다. 단순화를 위해 디코더 도구를 제공합니다. 모델 자체에 포함할 수 있지만 자막이 결합된 모듈은, 특"
+          }
+        },
+        "regularization": {
+          "정규화": {
+            "line": 54,
+            "endLine": 54,
+            "excerpt": " 속도에 강인합니다(단순화를 위해 오디오는 16khz로 다시 샘플링해야 함). 모델은 샘플 형태의 정규화된 오디오(즉, [-1, 1] 범위로의 정규화를 제외한 어떤 전처리 없이)와 토큰 확률이 있는 출력 프레임을 사용합니다. 단순화를 위해 디코더 도구를 제"
+          }
+        },
+        "token": {
+          "토큰": {
+            "line": 54,
+            "endLine": 54,
+            "excerpt": "은 샘플 형태의 정규화된 오디오(즉, [-1, 1] 범위로의 정규화를 제외한 어떤 전처리 없이)와 토큰 확률이 있는 출력 프레임을 사용합니다. 단순화를 위해 디코더 도구를 제공합니다. 모델 자체에 포함할 수 있지만 자막이 결합된 모듈은, 특정한 내보내기 "
+          }
+        },
+        "checkpoint": {
+          "체크포인트": {
+            "line": 66,
+            "endLine": 67,
+            "excerpt": "항상 최신 지원 언어 목록을 보려면 repo를 방문하여 사용 가능한 체크포인트에 대한"
+          }
+        },
+        "benchmark": {
+          "벤치마크": {
+            "line": 69,
+            "endLine": 69,
+            "excerpt": "추가 예제 및 벤치마크"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:snakers4_silero-models_tts.md": {
+      "source": "pytorch-hub",
+      "path": "snakers4_silero-models_tts.md",
+      "blobSha": "0490cb923518c8b22b9048e3290f3c31d8aa79c9",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "snakers4_silero-models_tts.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:snakers4_silero-vad_language.md": {
+      "source": "pytorch-hub",
+      "path": "snakers4_silero-vad_language.md",
+      "blobSha": "2b4c17bcaf1c34984fed2ce5782c21e52aea1271",
+      "eligible": false,
+      "reason": "english-missing",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:snakers4_silero-vad_number.md": {
+      "source": "pytorch-hub",
+      "path": "snakers4_silero-vad_number.md",
+      "blobSha": "976967c2af3ea2ea4f029b2ddfb7abbfe04cdda0",
+      "eligible": false,
+      "reason": "english-missing",
+      "enPath": null,
+      "counts": {},
+      "evidence": {},
+      "countedAt": null
+    },
+    "pytorch-hub:snakers4_silero-vad_vad.md": {
+      "source": "pytorch-hub",
+      "path": "snakers4_silero-vad_vad.md",
+      "blobSha": "1cba4a39a74b554b15c7c10c36e05c6a503628ec",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "snakers4_silero-vad_vad.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    },
+    "pytorch-hub:ultralytics_yolov5.md": {
+      "source": "pytorch-hub",
+      "path": "ultralytics_yolov5.md",
+      "blobSha": "88dfa8de7c8379dbf572db357e247258886c81c0",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "ultralytics_yolov5.md",
+      "counts": {},
+      "evidence": {},
+      "countedAt": "2026-09-13T13:23:03+00:00"
+    }
+  },
+  "snapshotId": "12917c616cb661d1eb6436eea1371dd2c3066178b5eced79caba043b764fba88"
+}

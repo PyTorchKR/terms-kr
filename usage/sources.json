@@ -80,6 +80,31 @@
           "unstable_source"
         ]
       }
+    },
+    {
+      "id": "pytorch-hub",
+      "label": "PyTorch Hub",
+      "community": "PyTorch",
+      "repository": "https://github.com/PyTorchKR/hub-kr",
+      "checkout": "hub-kr",
+      "ref": "39749bdf8fe853e1a74ab1b3a03332168d31eb3f",
+      "adapter": "paired-markdown",
+      "root": ".",
+      "exclude": [
+        ".github/*",
+        "docs/*",
+        "CONTRIBUTING.md",
+        "CONTRIBUTING_MODELS.md",
+        "README.md",
+        "TRANSLATION_GUIDE.md",
+        "Window_build.md"
+      ],
+      "original": {
+        "repository": "https://github.com/pytorch/hub",
+        "checkout": "pytorch-hub",
+        "ref": "c7895df70c7767403e36f82786d6b611b7984557",
+        "root": "."
+      }
     }
   ]
 }
