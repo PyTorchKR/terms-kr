@@ -169,7 +169,7 @@ npm run validate:usage
 
 ### Hugging Face KREW
 
-2026-09-06에 모아 둔 고정 커밋을 사용한다. 출처 공통화 후 기존 로컬 Step 2와 모든 용어별 횟수·문서 수·첫 출현 근거가 같음을 확인했다. 스캔 254개, 포함 205개: Transformers 173/186, smolagents 17/17, HF Blog 15/51.
+2026-09-06에 모아 둔 고정 커밋을 사용한다. 출처 공통화 후 기존 로컬 Step 2와 모든 용어별 횟수·문서 수·첫 출현 근거가 같음을 확인했다. 스캔 254개, 포함 205개(스캔/포함): Transformers 186/173, smolagents 17/17, HF Blog 51/15.
 
 ### PyTorch
 
@@ -181,7 +181,8 @@ pytorch.kr이 게시하는 번역 문서를 튜토리얼·허브·블로그 세 
 | 허브 `pytorch-hub` | [hub-kr@39749bdf](https://github.com/PyTorchKR/hub-kr/tree/39749bdf8fe853e1a74ab1b3a03332168d31eb3f) | [pytorch/hub@c7895df7](https://github.com/pytorch/hub/tree/c7895df70c7767403e36f82786d6b611b7984557) | 58 / 46 |
 | 블로그 `pytorch-blog` | [pytorch.kr@dbc281dc](https://github.com/PyTorchKR/pytorch.kr/tree/dbc281dc498500109db8598180d5c3dcdaf43674) | [pytorch.github.io@9104164e](https://github.com/pytorch/pytorch.github.io/tree/9104164e5c459899b49f2ef269cb2c0143e0f703) | 48 / 45 |
 
-- **튜토리얼**(tutorials.pytorch.kr): 범위는 `beginner_source`·`intermediate_source`·`advanced_source`·`recipes_source`·`unstable_source`의 `.rst`와 sphinx-gallery `.py`다. 생성물인 `docs/`·`unstable/`과 저장소 루트의 색인 `.rst`는 중복 코퍼스이므로 넣지 않는다. 제외는 영문에서 삭제된 과거 번역 14개(`english-missing`)와 모듈 독스트링이 없는 코드 파일 5개(`not-a-gallery-document`)다. 영문 커밋은 저장소가 번역 기준으로 기록해 둔 값이다(`README.md`, `.migration_state.json`). 두 저장소 모두 BSD 3-Clause.
+- **튜토리얼**(tutorials.pytorch.kr): 범위는 `beginner_source`·`intermediate_source`·`advanced_source`·`recipes_source`·`unstable_source`의 `.rst`와 sphinx-gallery `.py`다. 생성물인 `docs/`·`unstable/`과 저장소 루트의 색인 `.rst`는 중복 코퍼스이므로 넣지 않는다. 포함 250개 중 123개에 한국어가 있고 127개는 아직 영문 그대로여서 0회로 집계된다(`unstable_source`는 25개 전부 미번역). 제외는 `english-missing` 14개와 모듈 독스트링이 없는 코드 파일 5개(`not-a-gallery-document`)다. 영문 커밋은 저장소가 번역 기준으로 기록해 둔 값이다(`README.md`, `.migration_state.json`). 두 저장소 모두 BSD 3-Clause.
+  - `english-missing` 14개 중 12개는 영문이 삭제되었거나 8~11줄짜리 이전 안내만 남은 과거 번역이다. 나머지 2개(`beginner_source/introyt/introyt_index.rst`, `intermediate_source/torchvision_tutorial.rst`)는 영문이 같은 이름의 `.py`로 바뀐 경우다. 특히 뒤의 파일은 한국어 3,247자가 남아 있지만 사이트가 빌드하는 것은 같은 이름의 `.py`(영문, 포함·0회)이므로 게시되지 않는 잔여 파일이다. 확장자만 바꿔 짝을 찾으면 같은 문서를 두 번 세게 되므로 현재 규칙을 유지한다.
 - **허브**(pytorch.kr/hub): pytorch.kr이 `_hub` 서브모듈로 싣는 모델 카드다. 문서가 저장소 루트에 있어 `root`는 `.`이고, `exclude`는 사이트 `_config.yml`이 허브 컬렉션에서 빼는 문서와 Jekyll이 무시하는 dot 디렉터리를 그대로 옮긴 것이다(10개). 영문에서 사라진 silero-vad 카드 2개는 `english-missing`이다. 포함 46개 중 37개에 한국어가 있고 9개는 아직 영문 그대로여서 0회로 집계된다. **원문·번역 저장소 모두 LICENSE 파일이 없다.** 저장하는 것은 한국어 발췌와 커밋 링크이며, 등록은 저장소를 운영하는 커뮤니티의 요청에 따른 것이다.
 - **블로그**(pytorch.kr/blog): `_posts`의 번역 글이다. 포함 45개 중 14개는 영문 Markdown이 남아 있어 `paired-translation`, 31개는 원문이 웹에만 있어 `linked-translation`이다. 업스트림이 2025-08-08 커밋 [`1cd595f7`](https://github.com/pytorch/pytorch.github.io/commit/1cd595f70eaa2577c8a0f619ec0fb28f5c063ab4)에서 `_posts`를 삭제하고 새 사이트로 옮겼기 때문에 그 직전 커밋을 영문 기준으로 고정했다. 한국어 자체 글 3개는 `english-missing`으로 제외된다. pytorch.kr은 BSD 3-Clause.
 
