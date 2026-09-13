@@ -42,7 +42,7 @@ DB, 백엔드, 큐, 예약 실행, 크롤러는 없다. 집계 도구는 원격 
 통계 영역은 용어 상세 페이지의 **한 표**로 유지한다. PyTorch와 Hugging Face KREW를 별도 표·탭·페이지로 나누지 않는다.
 
 - `community`: 참여 커뮤니티 표시 이름. HF 출처는 `Hugging Face KREW`, PyTorch 출처는 `PyTorch`로 통일한다. **해당 용어의 출현 근거가 있는 출처**의 커뮤니티만 중복 제거해 영역 상단에 ` · `로 이어 표시한다. 기준은 출처 상태 `collected`와 해당 용어의 `bySource[id].documentCount > 0`이다. HF 근거만 있으면 HF만, PyTorch 근거만 있으면 PyTorch만, 둘 다 있으면 두 이름을 표시한다. 어디에도 근거가 없으면 이름 영역을 숨긴다.
-- `label`: 문서 출처 컬럼 이름. 현재 컬럼은 `Transformers`, `smolagents`, `HF Blog`, `PyTorch Tutorials`이며 새 출처의 label이 자동 추가된다. 표시 순서는 공개 JSON의 출처 순서이며 생성기는 설정 배열 순서를 유지한다.
+- `label`: 문서 출처 컬럼 이름. 현재 컬럼은 `Transformers`, `smolagents`, `HF Blog`, `PyTorch Tutorials`, `PyTorch Hub`, `PyTorch Blog`이며 새 출처의 label이 자동 추가된다. 표시 순서는 공개 JSON의 출처 순서이며 생성기는 설정 배열 순서를 유지한다.
 - `id`: 캐시·숫자·근거를 연결하는 영구 키. 표시 이름이 아니므로 이름을 바꾸려고 ID를 변경하지 않는다.
 
 커뮤니티 이름과 출처 컬럼은 모두 데이터에서 생성한다. 현재 2단 그룹 헤더나 커뮤니티별 소계는 없으며, 단순 출처 추가에 이를 구현할 필요는 없다. 전체 합계는 수집된 모든 출처의 합이다. 출처 간 같은 문서의 중복은 자동 제거하지 않으므로 중복 코퍼스를 등록하지 않는다.
@@ -67,15 +67,20 @@ DB, 백엔드, 큐, 예약 실행, 크롤러는 없다. 집계 도구는 원격 
 
 ### 포함 범위와 어댑터
 
-출처별로 포함 범위를 명시한다. 현재 어댑터는 다음 둘이다.
+출처별로 포함 범위를 명시한다. 현재 어댑터는 다음 넷이다.
 
 - `paired-markdown`: 번역 root 아래 `.md`를 찾고, 같은 상대 경로의 영문 일반 파일이 있는지 확인한다. 원문과 번역이 서로 다른 Git 저장소여도 된다. symlink는 따라가지 않는다.
 - `krew-blog`: KREW의 `_posts` 규칙을 사용한다. 공식 HF 블로그 원문 연결, 번역 고지, 영문 파일을 확인하고 `translation_status: draft`를 제외한다. 누락된 상태 필드는 기존 정책대로 게시본으로 취급한다.
 - `paired-sphinx`: `paired-markdown`과 같은 경로 대응을 `.rst`와 sphinx-gallery `.py`에 적용한다. `root`를 배열로 적으면 형제 문서 디렉터리 여러 개를 한 출처로 묶고, 각 번역 root는 같은 순서의 영문 root와 짝지어진다. 모듈 독스트링이 없는 `.py`는 sphinx-gallery 문서가 아니므로 `not-a-gallery-document`로 제외한다.
+- `pytorch-blog`: pytorch.kr의 `_posts` 전용이다. frontmatter의 `org_link`가 `https://pytorch.org/blog/`를 가리키고 `category`에 `translation`이 있는 글을 포함하며, 날짜 접두사가 서로 달라 URL 슬러그로 영문 글을 찾는다. 다른 블로그에 이름만 바꿔 재사용하지 않는다.
 
-세 어댑터 모두 `exclude`에 매칭되는 문서를 제외 사유와 함께 기록한다. glob은 **저장소 기준 전체 경로에 대한 Python `fnmatchcase`**이며 `*`가 `/`도 매칭한다. Gitignore 패턴 문법이 아니다. 해당 형식의 파일이 root 아래에서 모두 없어지거나 경로가 잘못되면 집계가 실패한다. 전체 코퍼스 제거는 설정·상태 제거를 명시적으로 리뷰하는 별도 작업이다.
+`root`는 디렉터리 경로이고, 문서가 저장소 루트에 있으면 `.`으로 적는다. 루트 범위는 저장소의 모든 파일이 후보가 되므로 `exclude`로 문서가 아닌 파일을 함께 지정한다.
+
+네 어댑터 모두 `exclude`에 매칭되는 문서를 제외 사유와 함께 기록한다. glob은 **저장소 기준 전체 경로에 대한 Python `fnmatchcase`**이며 `*`가 `/`도 매칭한다. Gitignore 패턴 문법이 아니다. 해당 형식의 파일이 root 아래에서 모두 없어지거나 경로가 잘못되면 집계가 실패한다. 전체 코퍼스 제거는 설정·상태 제거를 명시적으로 리뷰하는 별도 작업이다.
 
 영문 대응의 존재는 번역 코퍼스를 정하는 조건이지 문장별 번역 정확성의 증명이 아니다. 포함된 문서 중 아직 번역되지 않은 부분이 있어도 한국어 표기가 없으면 0회로 집계된다. 새 저장소의 구조·형식을 확인하기 전에는 같은 경로나 어댑터를 사용할 수 있다고 가정하지 않는다.
+
+영문 원문이 Git 저장소를 떠난 경우는 `pytorch-blog`에서만 예외로 다룬다. 이 블로그는 frontmatter가 원문 주소를 명시하고 본문이 문단마다 영문 원문을 인용문으로 함께 싣기 때문에 번역 근거가 문서 안에 있다. 영문 파일이 남아 있으면 `paired-translation`으로 `enPath`까지 기록하고, 원문이 웹에만 있으면 `linked-translation`으로 구분한다. 다른 출처에 이 예외를 확대 적용하지 않는다.
 
 ## 데이터 계약: schemaVersion 2
 
@@ -85,7 +90,8 @@ DB, 백엔드, 큐, 예약 실행, 크롤러는 없다. 집계 도구는 원격 
 
 - `source`: 출처 설정, 한국어 및 영문 원본의 정확한 커밋.
 - `documents`: `<source-id>:<repository-relative-path>`를 키로 한 문서별 기록.
-- 문서 기록: `blobSha`, `eligible`, `reason`, `enPath`, `countedAt`, `counts[term][spelling]`, `evidence[term][spelling]`.
+- 문서 기록: `blobSha`, `eligible`, `reason`, `enPath`, `countedAt`, `counts[term][spelling]`, `evidence[term][spelling]`. 어댑터별 추가 필드는 포함 판단의 근거다(`krew-blog`의 `translationStatus`, `pytorch-blog`의 `originalLink`).
+- `reason`: 포함은 `paired-translation`·`linked-translation`, 제외는 `english-missing`·`draft`·`translation-notice-missing`·`not-a-gallery-document`·`excluded-by-config`다. 포함 사유는 어떤 근거로 번역 문서라고 판단했는지를 나타내며 `public/usage/scanned.md`에 그대로 남는다.
 - `candidateHash`, `countingRuleVersion`, `policyHash`, `configHash`: 캐시 사용 및 출처 간 합산의 호환성 기준.
 - `inputHash`: 커밋·목록·후보·포함 정책의 동일성. `snapshotId`: 상태 전체의 무결성 해시.
 
@@ -151,15 +157,26 @@ npm run validate:usage
 
 ## 등록된 스냅샷
 
-HF 출처는 2026-09-06에 모아 둔 고정 커밋을 사용한다. 출처 공통화 후 기존 로컬 Step 2와 모든 용어별 횟수·문서 수·첫 출현 근거가 같음을 확인했다.
+사전 263개 중 출현을 확인한 용어는 237개다(HF만 집계하던 시점 194개). 출처를 추가할 때마다 전체 재집계와 캐시 결과 비교, 동일 입력 재실행, 해당 출처 단독 갱신을 검증한다.
 
-- 스캔 254개, 포함 205개: Transformers 173/186, smolagents 17/17, HF Blog 15/51.
+### Hugging Face KREW
 
-PyTorch 한국어 튜토리얼은 [tutorials-kr@84b7db6e](https://github.com/PyTorchKR/tutorials-kr/tree/84b7db6e020c098cf38a0dfaf036007c24057bb1)를 영문 [pytorch/tutorials@c4d9d93](https://github.com/pytorch/tutorials/tree/c4d9d935655cf754c90d5ce7f37024afc015f054)와 짝지어 집계한다. 영문 커밋은 저장소가 번역 기준으로 기록해 둔 커밋이다(`README.md`, `.migration_state.json`). 두 저장소 모두 BSD 3-Clause이며 저장하는 것은 첫 출현 문맥 발췌와 해당 커밋·행으로 연결되는 링크다.
+2026-09-06에 모아 둔 고정 커밋을 사용한다. 출처 공통화 후 기존 로컬 Step 2와 모든 용어별 횟수·문서 수·첫 출현 근거가 같음을 확인했다. 스캔 254개, 포함 205개: Transformers 173/186, smolagents 17/17, HF Blog 15/51.
 
-- 범위는 `beginner_source`·`intermediate_source`·`advanced_source`·`recipes_source`·`unstable_source`의 `.rst`와 `.py`다. 생성물인 `docs/`·`unstable/`과 저장소 루트의 색인 `.rst`는 중복 코퍼스이므로 포함하지 않는다.
-- 스캔 269개, 포함 250개: `english-missing` 14개(영문에서 삭제된 과거 번역), `not-a-gallery-document` 5개(모듈 독스트링이 없는 코드 파일).
-- 사전 263개, 출현 확인 218개(출처 추가 전 194개).
-- 전체 재집계와 캐시 결과 비교, 동일 입력 재실행, 임의의 커뮤니티 ID 및 출처 단독 갱신을 검증한다.
+### PyTorch
+
+pytorch.kr이 게시하는 번역 문서를 튜토리얼·허브·블로그 세 출처로 나누어 등록했다. 셋 다 `community: "PyTorch"`이며 한 표의 서로 다른 컬럼으로 표시된다.
+
+| 출처 | 한국어 저장소 | 영문 원문 | 문서(스캔/포함) |
+| --- | --- | --- | --- |
+| 튜토리얼 `pytorch-tutorials` | [tutorials-kr@84b7db6e](https://github.com/PyTorchKR/tutorials-kr/tree/84b7db6e020c098cf38a0dfaf036007c24057bb1) | [pytorch/tutorials@c4d9d93](https://github.com/pytorch/tutorials/tree/c4d9d935655cf754c90d5ce7f37024afc015f054) | 269 / 250 |
+| 허브 `pytorch-hub` | [hub-kr@39749bdf](https://github.com/PyTorchKR/hub-kr/tree/39749bdf8fe853e1a74ab1b3a03332168d31eb3f) | [pytorch/hub@c7895df7](https://github.com/pytorch/hub/tree/c7895df70c7767403e36f82786d6b611b7984557) | 58 / 46 |
+| 블로그 `pytorch-blog` | [pytorch.kr@dbc281dc](https://github.com/PyTorchKR/pytorch.kr/tree/dbc281dc498500109db8598180d5c3dcdaf43674) | [pytorch.github.io@9104164e](https://github.com/pytorch/pytorch.github.io/tree/9104164e5c459899b49f2ef269cb2c0143e0f703) | 48 / 45 |
+
+- **튜토리얼**(tutorials.pytorch.kr): 범위는 `beginner_source`·`intermediate_source`·`advanced_source`·`recipes_source`·`unstable_source`의 `.rst`와 sphinx-gallery `.py`다. 생성물인 `docs/`·`unstable/`과 저장소 루트의 색인 `.rst`는 중복 코퍼스이므로 넣지 않는다. 제외는 영문에서 삭제된 과거 번역 14개(`english-missing`)와 모듈 독스트링이 없는 코드 파일 5개(`not-a-gallery-document`)다. 영문 커밋은 저장소가 번역 기준으로 기록해 둔 값이다(`README.md`, `.migration_state.json`). 두 저장소 모두 BSD 3-Clause.
+- **허브**(pytorch.kr/hub): pytorch.kr이 `_hub` 서브모듈로 싣는 모델 카드다. 문서가 저장소 루트에 있어 `root`는 `.`이고, `exclude`는 사이트 `_config.yml`이 허브 컬렉션에서 빼는 문서와 Jekyll이 무시하는 dot 디렉터리를 그대로 옮긴 것이다(10개). 영문에서 사라진 silero-vad 카드 2개는 `english-missing`이다. 포함 46개 중 37개에 한국어가 있고 9개는 아직 영문 그대로여서 0회로 집계된다. **원문·번역 저장소 모두 LICENSE 파일이 없다.** 저장하는 것은 한국어 발췌와 커밋 링크이며, 등록은 저장소를 운영하는 커뮤니티의 요청에 따른 것이다.
+- **블로그**(pytorch.kr/blog): `_posts`의 번역 글이다. 포함 45개 중 14개는 영문 Markdown이 남아 있어 `paired-translation`, 31개는 원문이 웹에만 있어 `linked-translation`이다. 업스트림이 2025-08-08 커밋 [`1cd595f7`](https://github.com/pytorch/pytorch.github.io/commit/1cd595f70eaa2577c8a0f619ec0fb28f5c063ab4)에서 `_posts`를 삭제하고 새 사이트로 옮겼기 때문에 그 직전 커밋을 영문 기준으로 고정했다. 한국어 자체 글 3개는 `english-missing`으로 제외된다. pytorch.kr은 BSD 3-Clause.
+
+한국어 표기가 본문에 있어도 frontmatter(제목·요약)와 raw HTML 블록은 모든 Markdown 출처에서 동일하게 제외한다.
 
 이 수치는 범위·규칙이 달랐던 초기 후보 채집 통계와 증감을 직접 비교하지 않는다. 출처마다 기준 커밋과 집계 시점이 다르므로 동시점 통계가 아니다. 정의·번역 추천과 표기 빈도 통계를 분리해서 리뷰한다.
