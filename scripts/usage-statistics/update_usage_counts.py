@@ -123,6 +123,12 @@ def source_inventory(source, sources_dir):
     ko_tree, en_tree = inventories
     originals = paired_roots(source)
     suffixes = SUFFIXES[source['adapter']]
+    # One mistyped root among several must fail, not silently shrink the corpus.
+    for prefix, original in originals.items():
+        if not any(path.startswith(prefix) for path in ko_tree):
+            raise ValueError(f'{source["id"]}: no documents under translation root {prefix or "."}')
+        if not any(path.startswith(original) for path in en_tree):
+            raise ValueError(f'{source["id"]}: no documents under original root {original or "."}')
     paths = {p: sha for p, sha in ko_tree.items() if p.endswith(suffixes) and any(p.startswith(prefix) for prefix in originals)}
     # Empty/mistyped roots and unsupported-only corpora fail instead of replacing old data with zeros.
     if not paths:
@@ -131,7 +137,8 @@ def source_inventory(source, sources_dir):
     needed = [sha for path, sha in paths.items() if source['adapter'] in FROM_FRONTMATTER or path.endswith('.py')]
     texts = blobs(sources_dir / source['checkout'], needed) if needed else {}
     # Blog posts pair by URL slug because Korean and English date prefixes differ.
-    en_posts = {re.sub(r'^\d{4}-\d{2}-\d{2}-', '', p.rsplit('/', 1)[-1])[:-3]: p for p in sorted(en_tree) if p.endswith('.md')}
+    en_posts = {re.sub(r'^\d{4}-\d{2}-\d{2}-', '', p.rsplit('/', 1)[-1])[:-3]: p
+                for p in sorted(en_tree) if p.endswith('.md')} if source['adapter'] == 'pytorch-blog' else {}
     documents = {}
     for path, sha in sorted(paths.items()):
         reason, en_path = 'paired-translation', None

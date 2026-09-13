@@ -256,6 +256,22 @@ class SourceTests(unittest.TestCase):
         self.assertEqual(self.summary()['terms']['gradient']['bySource']['blog'], {'occurrences': 3, 'documentCount': 2})
         self.assertEqual(self.run_update(selected=['blog'], check_full=True)['fullCheck'], 'passed')
 
+    def test_one_mistyped_root_fails_instead_of_shrinking_the_corpus(self):
+        self.add_sphinx_source()
+        self.run_update(selected=['sphinx-docs'])
+        before = self.outputs()
+        source = self.config['sources'][-1]
+        source['root'] = ['ko/guide', 'ko/typo']
+        self.save_config()
+        with self.assertRaisesRegex(ValueError, 'no documents under translation root'):
+            self.run_update(selected=['sphinx-docs'])
+        source['root'] = ['ko/guide', 'ko/recipe']
+        source['original']['root'] = ['en/guide', 'en/typo']
+        self.save_config()
+        with self.assertRaisesRegex(ValueError, 'no documents under original root'):
+            self.run_update(selected=['sphinx-docs'])
+        self.assertEqual(self.outputs(), before)
+
     def test_repository_root_scope_pairs_and_excludes(self):
         """Documents that live at the repository root are configured with '.'."""
         for name, files in (('root-ko', {'model.md': '기울기 기울기', 'README.md': '기울기', 'docs/template.md': '기울기', 'only-ko.md': '기울기'}),
