@@ -6,6 +6,7 @@ import {
 } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { useTermUsage } from '../hooks/useTermUsage'
+import { getUsageCommunities } from '../utils/usageCommunities'
 import type { TermUsage, UsageSnapshot } from '../types/usage'
 
 const number = (value: number): string => value.toLocaleString('ko-KR')
@@ -27,7 +28,7 @@ export function TermUsageSection({ term }: { term: string }): React.ReactNode {
 export function TermUsageContent({ usage, snapshot }: { usage: TermUsage; snapshot: UsageSnapshot }): React.ReactNode {
   const sourceIds = Object.keys(snapshot.sources)
   const sourceLabels = Object.fromEntries(sourceIds.map(id => [id, snapshot.sources[id].label]))
-  const communities = [...new Set(Object.values(snapshot.sources).map(s => s.community))].join(' · ')
+  const communities = getUsageCommunities(snapshot.sources, usage.bySource).join(' · ')
   const [variant, setVariant] = useState('')
   const [showAll, setShowAll] = useState(false)
   const evidence = useMemo(() => usage.variants
@@ -45,7 +46,7 @@ export function TermUsageContent({ usage, snapshot }: { usage: TermUsage; snapsh
         <Typography component="h2" id="usage-heading" sx={{ fontFamily: 'var(--ff-display)', fontSize: 24, fontWeight: 600 }}>
           번역 문서에서의 쓰임
         </Typography>
-        <Typography sx={{ color: 'var(--ptk-orange-press)', fontSize: 14, fontWeight: 700 }}>{communities}</Typography>
+        {communities && <Typography sx={{ color: 'var(--ptk-orange-press)', fontSize: 14, fontWeight: 700 }}>{communities}</Typography>}
       </Box>
       <Typography sx={{ color: 'var(--fg-2)', fontSize: 14, mb: 3, maxWidth: 850 }}>
         한국어 번역 문서에 아래 표기가 나타난 횟수입니다. 특정 영문 용어의 번역 횟수나 권장 번역을 뜻하지 않으며, 다의어와 다른 단어 안의 출현도 포함될 수 있습니다.
