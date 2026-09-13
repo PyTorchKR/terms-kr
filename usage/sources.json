@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "transformers",
+      "label": "Transformers",
+      "community": "Hugging Face KREW",
+      "repository": "https://github.com/huggingface/transformers",
+      "checkout": "transformers",
+      "ref": "f62dc9bf2c90353b442a56e74391fbb8c689b55e",
+      "adapter": "paired-markdown",
+      "root": "docs/source/ko",
+      "exclude": [],
+      "original": {
+        "repository": "https://github.com/huggingface/transformers",
+        "checkout": "transformers",
+        "ref": "f62dc9bf2c90353b442a56e74391fbb8c689b55e",
+        "root": "docs/source/en"
+      }
+    },
+    {
+      "id": "smolagents",
+      "label": "smolagents",
+      "community": "Hugging Face KREW",
+      "repository": "https://github.com/huggingface/smolagents",
+      "checkout": "smolagents",
+      "ref": "30bb1161095dbae2271e6bc3cc4c219cc3897a57",
+      "adapter": "paired-markdown",
+      "root": "docs/source/ko",
+      "exclude": [],
+      "original": {
+        "repository": "https://github.com/huggingface/smolagents",
+        "checkout": "smolagents",
+        "ref": "30bb1161095dbae2271e6bc3cc4c219cc3897a57",
+        "root": "docs/source/en"
+      }
+    },
+    {
+      "id": "huggingface-blog",
+      "label": "HF Blog",
+      "community": "Hugging Face KREW",
+      "repository": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io",
+      "checkout": "hf-krew-blog",
+      "ref": "aa3c6450bea58167f12a5ca42cffa7193f1819fa",
+      "adapter": "krew-blog",
+      "root": "_posts",
+      "exclude": [],
+      "original": {
+        "repository": "https://github.com/huggingface/blog",
+        "checkout": "hf-blog-original",
+        "ref": "074777edcae899141d17cceb8440885d02dd394a",
+        "root": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "showWhenUnmatched": [
+    "activation function",
+    "agency",
+    "agent",
+    "agent memory",
+    "architecture",
+    "attention",
+    "attention mask",
+    "audio classification",
+    "augmentation",
+    "automatic speech recognition",
+    "autoregressive model",
+    "backbone",
+    "baseline",
+    "batch",
+    "benchmark",
+    "BERT",
+    "bounding box",
+    "causal language modeling",
+    "chain of thought",
+    "channel",
+    "checkpoint",
+    "chunk",
+    "classification",
+    "classification token",
+    "code agent",
+    "computer vision",
+    "context",
+    "convergence",
+    "convolution",
+    "crop",
+    "CUDA",
+    "data augmentation",
+    "data collator",
+    "dataloader",
+    "dataset",
+    "decoder model",
+    "deep learning",
+    "distributed training",
+    "downstream task",
+    "dropout",
+    "embedding",
+    "encoder model",
+    "epoch",
+    "exploration",
+    "feature extraction",
+    "feature extractor",
+    "fine-tuned model",
+    "fine-tuning",
+    "forward pass",
+    "generative model",
+    "gradient",
+    "gradient accumulation",
+    "head",
+    "hidden state",
+    "image captioning",
+    "image classification",
+    "image patch",
+    "image processor",
+    "image segmentation",
+    "inference",
+    "inference provider",
+    "initialization",
+    "input IDs",
+    "iteration",
+    "knowledge distillation",
+    "KV cache",
+    "label",
+    "language model",
+    "large language model",
+    "layer",
+    "leaderboard",
+    "learning rate",
+    "likelihood",
+    "linear layer",
+    "loss",
+    "loss function",
+    "masked language modeling",
+    "matrix multiplication",
+    "MCP client",
+    "MCP server",
+    "metric",
+    "mixed precision",
+    "mixture of experts",
+    "modality",
+    "model context protocol",
+    "multi-step agent",
+    "multimodal model",
+    "named entity recognition",
+    "natural language processing",
+    "neural network",
+    "normalization",
+    "object detection",
+    "ONNX",
+    "optimizer",
+    "overfitting",
+    "padding",
+    "parsing",
+    "perplexity",
+    "pipeline",
+    "pipeline parallelism",
+    "pixel values",
+    "planning step",
+    "pooling",
+    "post-training",
+    "pre-training",
+    "preprocessing",
+    "pretrained model",
+    "profiling",
+    "prompt",
+    "quantization",
+    "query",
+    "question answering",
+    "ReAct",
+    "reasoning model",
+    "reasoning trace",
+    "reinforcement learning",
+    "representation learning",
+    "retrieval-augmented generation",
+    "reward",
+    "rotary position embedding",
+    "sampling rate",
+    "segmentation",
+    "self-attention",
+    "semantic search",
+    "sentiment analysis",
+    "sequence classification",
+    "sequence-to-sequence",
+    "softmax",
+    "special token",
+    "spectrogram",
+    "speech recognition",
+    "stride",
+    "structured output",
+    "student model",
+    "supervised learning",
+    "synthetic data",
+    "system prompt",
+    "teacher model",
+    "tensor",
+    "tensor parallelism",
+    "text-to-speech",
+    "token",
+    "token classification",
+    "tokenization",
+    "tokenizer",
+    "tool calling",
+    "training loop",
+    "transformer",
+    "unsupervised learning",
+    "validation",
+    "vision-language model",
+    "vocabulary",
+    "waveform",
+    "workflow",
+    "zero-shot learning"
+  ],
+  "extraVariants": {
+    "gradient": [
+      "그래디언트",
+      "기울기",
+      "경사"
+    ],
+    "attention": [
+      "어텐션",
+      "주의",
+      "집중"
+    ],
+    "fine-tuning": [
+      "미세조정",
+      "미세 튜닝",
+      "파인튜닝"
+    ],
+    "feature": [
+      "특징",
+      "특성",
+      "기능"
+    ],
+    "metric": [
+      "평가지표",
+      "지표",
+      "메트릭"
+    ],
+    "dataset": [
+      "데이터셋",
+      "데이터 세트",
+      "자료 집합"
+    ],
+    "label": [
+      "레이블",
+      "라벨",
+      "정답"
+    ],
+    "epoch": [
+      "에포크",
+      "에폭",
+      "학습 주기"
+    ],
+    "loss": [
+      "손실",
+      "로스",
+      "오차"
+    ],
+    "bounding box": [
+      "경계 상자",
+      "바운딩 박스",
+      "검출 상자"
+    ],
+    "object detection": [
+      "객체 검출",
+      "객체 탐지",
+      "객체 감지"
+    ],
+    "self-attention": [
+      "셀프 어텐션",
+      "자가 어텐션",
+      "자기 어텐션"
+    ],
+    "pipeline": [
+      "파이프라인",
+      "처리 흐름",
+      "작업 관로"
+    ],
+    "tokenizer": [
+      "토크나이저",
+      "토큰화기"
+    ],
+    "embedding": [
+      "임베딩",
+      "매장",
+      "내장 표현"
+    ],
+    "inference provider": [
+      "추론 공급자",
+      "추론 제공자",
+      "추론 서비스 사업자"
+    ],
+    "agent": [
+      "에이전트",
+      "대리인",
+      "행위자"
+    ],
+    "agentic": [
+      "에이전트형",
+      "에이전틱",
+      "행위 주도형"
+    ],
+    "tool calling": [
+      "도구 호출",
+      "툴 콜링",
+      "도구 사용"
+    ],
+    "guardrail": [
+      "안전장치",
+      "가드레일",
+      "보호 규칙"
+    ],
+    "chain of thought": [
+      "사고 과정",
+      "생각의 사슬",
+      "연쇄 추론"
+    ],
+    "rollout": [
+      "롤아웃",
+      "궤적 생성",
+      "전개"
+    ],
+    "quantization": [
+      "양자화",
+      "정수화",
+      "저비트 변환"
+    ],
+    "open-vocabulary": [
+      "개방형 어휘",
+      "오픈 보캐뷸러리",
+      "자유 범주"
+    ],
+    "perplexity": [
+      "퍼플렉시티",
+      "펄플렉서티",
+      "혼잡도"
+    ]
+  }
+}
