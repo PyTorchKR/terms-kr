@@ -56,9 +56,9 @@ PyTorch라고 해서 저장소 이름, 한국어 폴더 이름, 영문 대응 �
 필요한 한국어·영문 저장소를 로컬에 준비하고, 설정한 커밋이 실제로 존재하는지 확인한다. 도구는 Git blob만 읽으므로 해당 커밋으로 작업 트리를 checkout할 필요는 없다.
 
 ```bash
-python3 -m pip install -r scripts/requirements-usage.txt
+python3 -m pip install -r scripts/usage-statistics/requirements.txt
 npm run update:usage -- --source pytorch-tutorials --sources-dir /path/to/document-checkouts
-python3 scripts/update_usage_counts.py --source pytorch-tutorials --check-full --sources-dir /path/to/document-checkouts
+python3 scripts/usage-statistics/update_usage_counts.py --source pytorch-tutorials --check-full --sources-dir /path/to/document-checkouts
 npm run test:usage
 npm run build
 ```

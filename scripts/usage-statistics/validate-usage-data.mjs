@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { createHash } from 'node:crypto'
 import { existsSync, readFileSync } from 'node:fs'
 
-const path = p => new URL(`../${p}`, import.meta.url)
+const path = p => new URL(`../../${p}`, import.meta.url)
 const read = p => JSON.parse(readFileSync(path(p), 'utf8'))
 // Python sorts Unicode code points, not JavaScript UTF-16 code units.
 const compare = (a, b) => {
@@ -19,7 +19,7 @@ const hash = v => createHash('sha256').update(stable(v)).digest('hex')
 // Match Python str whitespace, including NEL/control separators but excluding BOM.
 const normalized = v => v.normalize('NFC').toLowerCase().replace(/[\u0009-\u000d\u001c-\u0020\u0085\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000]+/gu, ' ').replace(/^ | $/gu, '')
 const sorted = v => [...v].sort()
-const rule = readFileSync(path('scripts/usage_core.py'), 'utf8').match(/^RULE = '([^']+)'/m)[1]
+const rule = readFileSync(path('scripts/usage-statistics/usage_core.py'), 'utf8').match(/^RULE = '([^']+)'/m)[1]
 const input = read('usage/variants.json')
 const registry = read('usage/sources.json')
 assert.equal(input.schemaVersion, 1)

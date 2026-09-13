@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from usage_core import (RULE, blobs, canonical, compile_patterns, count_document,
                         digest, frontmatter, git, read_json, tree, update_records)
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 SCHEMA = 2
 ADAPTERS = {'paired-markdown': 1, 'krew-blog': 1}
 
@@ -300,7 +300,7 @@ def main():
     mode.add_argument('--aggregate-only', action='store_true', help='Rebuild public output from compatible committed states; no source repositories needed')
     args = parser.parse_args()
     if version('markdown-it-py') != '3.0.0':
-        raise ValueError('Install scripts/requirements-usage.txt for the pinned parser')
+        raise ValueError('Install scripts/usage-statistics/requirements.txt for the pinned parser')
     print(json.dumps(run(ROOT, args.sources_dir.resolve(), args.source, args.check_full, args.aggregate_only)))
 
 
