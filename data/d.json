@@ -327,5 +327,78 @@
         ]
       }
     ]
+  },
+  {
+    "term": "data collator",
+    "meanings": [
+      {
+        "korean": "데이터 콜레이터",
+        "definition": "여러 개별 샘플을 패딩하고 묶어 모델 입력 배치로 만드는 구성 요소",
+        "examples": [
+          {
+            "en": "Pass the training arguments to [Seq2SeqTrainer] along with the model, dataset, tokenizer, data collator, and compute_metrics function.",
+            "ko": "모델, 데이터셋, 토크나이저, 데이터 콜레이터 및 compute_metrics 함수와 함께 학습 인수를 [Seq2SeqTrainer]에 전달하세요.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/summarization.md"
+          }
+        ],
+        "synonyms": [
+          "데이터 취합기",
+          "데이터 취합자"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "decoder model",
+    "meanings": [
+      {
+        "korean": "디코더 모델",
+        "definition": "이전 토큰을 조건으로 다음 토큰을 생성하는 트랜스포머 계열 모델",
+        "examples": [
+          {
+            "en": "Also referred to as autoregressive models, decoder models involve a pretraining task (called causal language modeling) where the model reads the texts in order and has to predict the next word.",
+            "ko": "자기회귀 모델(Autoregressive models)이라고도 불리는 디코더 모델은 인과 언어 모델링(causal language modeling)이라 불리는 사전 학습 작업을 수행합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "distributed training",
+    "meanings": [
+      {
+        "korean": "분산 학습",
+        "definition": "여러 장치나 노드에 모델 계산과 데이터를 나누어 수행하는 학습 방식",
+        "examples": [
+          {
+            "en": "In distributed training environments, this is even more challenging because each process loads a pretrained model.",
+            "ko": "분산 학습 환경에서는 각 프로세스가 사전 훈련된 모델을 로드하기 때문에 이는 더욱 어려운 과제입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/models.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "downstream task",
+    "meanings": [
+      {
+        "korean": "다운스트림 과제",
+        "definition": "사전학습된 모델이나 표현을 활용해 해결하는 구체적인 응용 과제",
+        "examples": [
+          {
+            "en": "Experiments have shown that ConvBERT significantly outperforms BERT and its variants in various downstream tasks, with lower training cost and fewer model parameters.",
+            "ko": "실험 결과, ConvBERT는 다양한 다운스트림 과제에서 BERT 및 그 변형 모델보다 더 우수한 성능을 보였으며, 훈련 비용과 모델 파라미터 수가 더 적었습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/model_doc/convbert.md"
+          }
+        ],
+        "synonyms": [
+          "하위 과제"
+        ]
+      }
+    ]
   }
 ]

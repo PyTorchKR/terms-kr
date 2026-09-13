@@ -274,5 +274,147 @@
         ]
       }
     ]
+  },
+  {
+    "term": "padding",
+    "meanings": [
+      {
+        "korean": "패딩",
+        "definition": "배치 안의 시퀀스 길이를 맞추기 위해 채움 토큰이나 값을 덧붙이는 처리",
+        "examples": [
+          {
+            "en": "As you can see in this example below: the image (first element) has some padding tokens, representing empty cameras.",
+            "ko": "예를 들어 아래 예시를 보면, 이미지(첫 번째 요소)는 빈 카메라를 나타내는 패딩 토큰(padding tokens)을 포함합니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-11-10-pi0-fast.md"
+          }
+        ],
+        "synonyms": [
+          "채우기"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "parsing",
+    "meanings": [
+      {
+        "korean": "구문 분석",
+        "definition": "입력 문자열이나 모델 출력을 정해진 구조와 구성 요소로 해석하는 과정",
+        "examples": [
+          {
+            "en": "We recommend using this format with the corresponding format instruction for better parsing accuracy.",
+            "ko": "파싱 정확도를 높이려면 해당 형식 지시문과 함께 사용하는 것을 권장합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/model_doc/exaone4_5.md"
+          }
+        ],
+        "synonyms": [
+          "파싱"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "perplexity",
+    "meanings": [
+      {
+        "korean": "펄플렉서티",
+        "definition": "언어 모델이 다음 토큰을 얼마나 불확실하게 예측하는지를 나타내는 지표",
+        "examples": [
+          {
+            "en": "Perplexity is defined as the exponentiated average negative log-likelihood of a sequence.",
+            "ko": "펄플렉서티는 시퀀스의 음의 로그 우도(negative log-likelihood, NLL) 값의 평균에 지수(exponentiate)를 취한 값으로 정의됩니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/perplexity.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "pipeline",
+    "meanings": [
+      {
+        "korean": "파이프라인",
+        "definition": "전처리, 모델 추론, 후처리를 정해진 순서로 연결한 실행 흐름",
+        "examples": [
+          {
+            "en": "We first load the model and tokenizer and then pass both to Transformers' pipeline object.",
+            "ko": "먼저 모델과 토크나이저를 로드한 다음, 둘 다 Transformers의 파이프라인 객체에 전달합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/llm_tutorial_optimization.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "pixel values",
+    "meanings": [
+      {
+        "korean": "픽셀 값",
+        "definition": "이미지를 모델에 입력하기 위해 수치 텐서로 표현한 각 픽셀의 값",
+        "examples": [
+          {
+            "en": "Pass an image to the image processor to transform it into pixel values, and set return_tensors=\"pt\" to return PyTorch tensors.",
+            "ko": "이미지를 이미지 프로세서에 전달하여 픽셀 값으로 변환하고, return_tensors=\"pt\" 를 설정하여 PyTorch 텐서를 반환받으세요.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/image_processors.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "planning step",
+    "meanings": [
+      {
+        "korean": "계획 단계",
+        "definition": "에이전트가 현재 정보와 목표를 바탕으로 이후 행동 순서를 점검하거나 갱신하는 단계",
+        "examples": [
+          {
+            "en": "Planning step is created and execution pauses for human review",
+            "ko": "계획 단계가 생성되고, 사용자 검토를 위해 실행이 일시 중지됩니다.",
+            "source": "https://github.com/huggingface/smolagents/blob/30bb1161095dbae2271e6bc3cc4c219cc3897a57/docs/source/ko/examples/plan_customization.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "preprocessing",
+    "meanings": [
+      {
+        "korean": "전처리",
+        "definition": "원시 데이터를 모델이 받을 수 있는 형태로 변환하고 정규화하는 과정",
+        "examples": [
+          {
+            "en": "Some example stages found in a pipeline might be data preprocessing, feature extraction, and normalization.",
+            "ko": "파이프라인에 포함될 수 있는 단계로는 데이터 전처리, 특징 추출(feature extraction), 정규화(normalization) 등이 있습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "pretrained model",
+    "meanings": [
+      {
+        "korean": "사전학습 모델",
+        "definition": "대규모 일반 데이터로 먼저 학습되어 다른 과제에 재사용할 수 있는 모델",
+        "examples": [
+          {
+            "en": "In distributed training environments, this is even more challenging because each process loads a pretrained model.",
+            "ko": "분산 학습 환경에서는 각 프로세스가 사전 훈련된 모델을 로드하기 때문에 이는 더욱 어려운 과제입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/models.md"
+          }
+        ],
+        "synonyms": [
+          "사전 훈련된 모델"
+        ]
+      }
+    ]
   }
 ]

@@ -267,5 +267,79 @@
       }
     ],
     "issueNumber": 19
+  },
+  {
+    "term": "label",
+    "meanings": [
+      {
+        "korean": "레이블",
+        "definition": "학습이나 평가에서 샘플에 연결된 정답 또는 목표 값",
+        "examples": [
+          {
+            "en": "Get the class with the highest probability, and use the model's id2label mapping to convert it to a label:",
+            "ko": "확률이 가장 높은 클래스를 가져온 다음 모델의 id2label 매핑을 사용하여 이를 레이블로 변환합니다:",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/audio_classification.md"
+          }
+        ],
+        "synonyms": [
+          "라벨"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "large language model",
+    "meanings": [
+      {
+        "korean": "대규모 언어 모델",
+        "definition": "대규모 텍스트 데이터와 많은 매개변수로 학습해 다양한 언어 과제를 수행하는 모델",
+        "examples": [
+          {
+            "en": "Retrieval-Augmented Generation (RAG) combines the power of large language models with external knowledge retrieval to produce more accurate, factual, and contextually relevant responses.",
+            "ko": "검색 증강 생성(Retrieval-Augmented Generation, RAG)은 대규모 언어 모델의 능력과 외부 지식 검색을 결합하여 더 정확하고 사실에 기반을 두며 문맥에 맞는 응답을 생성합니다.",
+            "source": "https://github.com/huggingface/smolagents/blob/30bb1161095dbae2271e6bc3cc4c219cc3897a57/docs/source/ko/examples/rag.md"
+          }
+        ],
+        "synonyms": [
+          "LLM"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "leaderboard",
+    "meanings": [
+      {
+        "korean": "리더보드",
+        "definition": "같은 벤치마크에서 여러 모델이나 시스템의 평가 결과를 순위로 보여주는 표",
+        "examples": [
+          {
+            "en": "Check the MTEB Leaderboard for high-quality embedding models.",
+            "ko": "고품질 임베딩 모델은 MTEB 리더보드에서 확인하세요.",
+            "source": "https://github.com/huggingface/smolagents/blob/30bb1161095dbae2271e6bc3cc4c219cc3897a57/docs/source/ko/examples/rag.md"
+          }
+        ],
+        "synonyms": [
+          "순위표"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "loss function",
+    "meanings": [
+      {
+        "korean": "손실 함수",
+        "definition": "모델의 예측과 목표 값 사이의 차이를 수치로 나타내는 함수",
+        "examples": [
+          {
+            "en": "Assigning the label -100 to the special tokens [CLS] and [SEP] so they're ignored by the PyTorch loss function (see CrossEntropyLoss).",
+            "ko": "특수 토큰 [CLS]와 [SEP]에 -100 레이블을 할당하여, PyTorch 손실 함수가 해당 토큰을 무시하도록 합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/token_classification.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
   }
 ]

@@ -243,5 +243,116 @@
         ]
       }
     ]
+  },
+  {
+    "term": "ReAct",
+    "meanings": [
+      {
+        "korean": "ReAct",
+        "definition": "추론과 행동, 관찰을 번갈아 수행하며 문제를 해결하는 에이전트 패턴",
+        "examples": [
+          {
+            "en": "The ReAct framework (Yao et al., 2022) is currently the main approach to building agents.",
+            "ko": "ReAct 프레임워크(Yao et al., 2022)는 현재 에이전트 구축하는 가장 일반적인 접근 방식입니다.",
+            "source": "https://github.com/huggingface/smolagents/blob/30bb1161095dbae2271e6bc3cc4c219cc3897a57/docs/source/ko/conceptual_guides/react.md"
+          }
+        ],
+        "synonyms": [
+          "추론-행동 패턴"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "reasoning model",
+    "meanings": [
+      {
+        "korean": "추론 모델",
+        "definition": "복잡한 문제를 여러 추론 단계로 풀도록 학습하거나 최적화한 언어 모델",
+        "examples": [
+          {
+            "en": "The baselines provided as part of the benchmark are standardized prompts across the chat and reasoning models, and thus, they should be considered non-optimized *and a lower bound on performance*.",
+            "ko": "벤치마크의 일부로 제공되는 베이스라인은 채팅 및 추론 모델에 걸쳐 표준화된 프롬프트이므로, 최적화되지 않은 것으로 간주되어야 하며 *성능의 하한*입니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-11-02-DABStep.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "reasoning trace",
+    "meanings": [
+      {
+        "korean": "추론 과정",
+        "definition": "모델이 문제를 풀며 생성하거나 기록한 중간 추론 단계의 연속",
+        "examples": [
+          {
+            "en": "The reasoning trace should then be removed from the model answer before computing metrics, to avoid parsing errors, especially with math or instruct evaluations.",
+            "ko": "메트릭을 계산하기 전에 모델 답변에서 추론 과정을 제거해야 하는데, 특히 수학이나 instruction 평가에서 파싱 오류를 방지하기 위해 필수적입니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-11-3-Welcome-GPT-OSS.md"
+          }
+        ],
+        "synonyms": [
+          "추론 흔적"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "representation learning",
+    "meanings": [
+      {
+        "korean": "표현 학습",
+        "definition": "원시 데이터에서 후속 과제에 유용한 특징 표현을 자동으로 학습하는 방법",
+        "examples": [
+          {
+            "en": "*TSMixer is a lightweight neural architecture exclusively composed of multi-layer perceptron (MLP) modules designed for multivariate forecasting and representation learning on patched time series.",
+            "ko": "*TSMixer는 패치 처리된 시계열의 다변량 예측 및 표현 학습을 위해 설계된 다층 퍼셉트론(MLP) 모듈로만 구성된 경량 신경망 아키텍처입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/model_doc/patchtsmixer.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "retrieval-augmented generation",
+    "meanings": [
+      {
+        "korean": "검색 증강 생성",
+        "definition": "외부 자료를 검색해 얻은 문맥을 바탕으로 언어 모델이 답을 생성하는 방식",
+        "examples": [
+          {
+            "en": "Retrieval-Augmented Generation (RAG) combines the power of large language models with external knowledge retrieval to produce more accurate, factual, and contextually relevant responses.",
+            "ko": "검색 증강 생성(Retrieval-Augmented Generation, RAG)은 대규모 언어 모델의 능력과 외부 지식 검색을 결합하여 더 정확하고 사실에 기반을 두며 문맥에 맞는 응답을 생성합니다.",
+            "source": "https://github.com/huggingface/smolagents/blob/30bb1161095dbae2271e6bc3cc4c219cc3897a57/docs/source/ko/examples/rag.md"
+          }
+        ],
+        "synonyms": [
+          "RAG"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "rotary position embedding",
+    "meanings": [
+      {
+        "korean": "회전 위치 임베딩",
+        "definition": "쿼리와 키 벡터를 위치에 따라 회전시켜 상대적 위치 정보를 표현하는 방법",
+        "examples": [
+          {
+            "en": "The model architecture has been optimized for handling arbitrary image resolutions through Naive Dynamic Resolution support and utilizes Multimodal Rotary Position Embedding (M-ROPE) to effectively process both 1D textual and multi-dimensional visual data.",
+            "ko": "모델 아키텍처는 Naive Dynamic Resolution 지원을 통해 임의의 이미지 해상도를 처리할 수 있도록 최적화되었으며, 멀티모달 회전 위치 임베딩(M-ROPE)을 활용하여 1D 텍스트와 다차원 시각 데이터를 효과적으로 처리합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/model_doc/qwen2_vl.md"
+          }
+        ],
+        "synonyms": [
+          "RoPE",
+          "로터리 위치 임베딩"
+        ]
+      }
+    ]
   }
 ]

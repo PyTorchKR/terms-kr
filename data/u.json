@@ -17,5 +17,24 @@
         ]
       }
     ]
+  },
+  {
+    "term": "unsupervised learning",
+    "meanings": [
+      {
+        "korean": "비지도학습",
+        "definition": "정답 레이블 없이 데이터의 구조나 패턴을 학습하는 방법",
+        "examples": [
+          {
+            "en": "*In the field of artificial intelligence, a combination of scale in data and model capacity enabled by unsupervised learning has led to major advances in representation learning and statistical generation.",
+            "ko": "*인공지능 분야에서는 대규모의 데이터와 모델 용량을 갖춘 비지도 학습의 조합이 표현 학습과 통계적 생성에서 주요한 발전을 이끌어냈습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/model_doc/esm.md"
+          }
+        ],
+        "synonyms": [
+          "비지도 학습"
+        ]
+      }
+    ]
   }
 ]

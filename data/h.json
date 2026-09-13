@@ -123,5 +123,39 @@
         ]
       }
     ]
+  },
+  {
+    "term": "head",
+    "meanings": [
+      {
+        "korean": "헤드",
+        "definition": "백본의 표현을 받아 분류나 회귀 등 특정 과제의 출력을 계산하는 모델 부분",
+        "examples": [
+          {
+            "en": "[GPT2ForSequenceClassification] is a sequence classification head - a linear layer - on top of the base [GPT2Model].",
+            "ko": "[GPT2ForSequenceClassification]은 기본 [GPT2Model] 위에 시퀀스 분류를 위한 선형계층(linear layer)을 추가한 모델 헤드입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "hidden state",
+    "meanings": [
+      {
+        "korean": "은닉 상태",
+        "definition": "모델의 중간 계층이 입력에 대해 계산한 내부 표현",
+        "examples": [
+          {
+            "en": "Some models apply normalization or subsequent process to the last hidden state when it's returned.",
+            "ko": "일부 모델은 마지막 은닉 상태가 반환될 때 정규화를 적용하거나 다른 후속 프로세스를 적용합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/main_classes/output.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
   }
 ]

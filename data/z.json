@@ -1,0 +1,22 @@
+[
+  {
+    "term": "zero-shot learning",
+    "meanings": [
+      {
+        "korean": "제로샷 학습",
+        "definition": "과제별 학습 예시 없이 설명이나 사전 지식만으로 새로운 과제를 수행하는 방식",
+        "examples": [
+          {
+            "en": "Zero-shot image classification is a task that involves classifying images into different categories using a model that was not explicitly trained on data containing labeled examples from those specific categories.",
+            "ko": "제로샷(zero-shot) 이미지 분류는 특정 카테고리의 예시가 포함된 데이터를 학습되지 않은 모델을 사용해 이미지 분류를 수행하는 작업입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/zero_shot_image_classification.md"
+          }
+        ],
+        "synonyms": [
+          "무예시 학습",
+          "제로샷"
+        ]
+      }
+    ]
+  }
+]

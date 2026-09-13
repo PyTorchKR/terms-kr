@@ -159,5 +159,98 @@
         ]
       }
     ]
+  },
+  {
+    "term": "image captioning",
+    "meanings": [
+      {
+        "korean": "이미지 캡셔닝",
+        "definition": "이미지의 내용을 설명하는 자연어 문장을 생성하는 과제",
+        "examples": [
+          {
+            "en": "Image captioning is the task of predicting a caption for a given image.",
+            "ko": "이미지 캡셔닝(Image captioning)은 주어진 이미지에 대한 캡션을 예측하는 작업입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/image_captioning.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "image patch",
+    "meanings": [
+      {
+        "korean": "이미지 패치",
+        "definition": "비전 트랜스포머가 토큰처럼 처리하도록 이미지를 나눈 작은 영역",
+        "examples": [
+          {
+            "en": "Each image patch passes through the image embedding tower and the audio chunk is passed through the audio embedding tower to get both media embeddings.",
+            "ko": "각 이미지 패치는 이미지 임베딩 타워를 통과하고, 오디오 청크는 오디오 임베딩 타워를 통과하여 두 미디어 임베딩을 얻습니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2026-07-15-thinkingmachines-inkling.md"
+          }
+        ],
+        "synonyms": [
+          "이미지 조각"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "image processor",
+    "meanings": [
+      {
+        "korean": "이미지 프로세서",
+        "definition": "이미지 크기 조정과 정규화 등 비전 모델 입력 전처리를 담당하는 구성 요소",
+        "examples": [
+          {
+            "en": "Pass an image to the image processor to transform it into pixel values, and set return_tensors=\"pt\" to return PyTorch tensors.",
+            "ko": "이미지를 이미지 프로세서에 전달하여 픽셀 값으로 변환하고, return_tensors=\"pt\" 를 설정하여 PyTorch 텐서를 반환받으세요.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/image_processors.md"
+          }
+        ],
+        "synonyms": [
+          "이미지 전처리기"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "inference provider",
+    "meanings": [
+      {
+        "korean": "추론 공급자",
+        "definition": "호스팅된 모델의 추론 실행을 API로 제공하는 서비스 제공자",
+        "examples": [
+          {
+            "en": "Each agent's behavior (its default model, inference provider, which MCP servers to connect to, and its initial system prompt) is defined by an agent.json file.",
+            "ko": "각 에이전트의 동작(기본 모델, 추론 공급자, 연결할 MCP 서버, 초기 시스템 프롬프트)은 agent.json 파일에 정의됩니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-09-14-python-tiny-agents-ko.md"
+          }
+        ],
+        "synonyms": [
+          "추론 제공자"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "input IDs",
+    "meanings": [
+      {
+        "korean": "입력 ID",
+        "definition": "토크나이저가 입력 토큰을 어휘의 정수 식별자로 변환한 시퀀스",
+        "examples": [
+          {
+            "en": "The input ids are often the only required parameters to be passed to the model as input.",
+            "ko": "입력 ID는 종종 모델에 입력으로 전달해야 하는 유일한 필수 파라미터입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": [
+          "입력 토큰 ID"
+        ]
+      }
+    ]
   }
 ]

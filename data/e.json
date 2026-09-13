@@ -245,5 +245,22 @@
         ]
       }
     ]
+  },
+  {
+    "term": "encoder model",
+    "meanings": [
+      {
+        "korean": "인코더 모델",
+        "definition": "입력 전체의 양방향 문맥을 이용해 표현을 만드는 트랜스포머 계열 모델",
+        "examples": [
+          {
+            "en": "Also known as autoencoding models, encoder models take an input (such as text or images) and transform them into a condensed numerical representation called an embedding.",
+            "ko": "자동 인코딩 모델(Autoencoding models)이라고도 불리는 인코더 모델은 텍스트나 이미지와 같은 입력을 받아 임베딩이라 불리는 압축된 수치 표현으로 반환합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
   }
 ]

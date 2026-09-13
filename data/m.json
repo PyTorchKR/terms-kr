@@ -314,5 +314,173 @@
         ]
       }
     ]
+  },
+  {
+    "term": "masked language modeling",
+    "meanings": [
+      {
+        "korean": "마스크드 언어 모델링",
+        "definition": "입력에서 가린 토큰을 주변 문맥으로 예측하도록 학습하는 언어 모델링 과제",
+        "examples": [
+          {
+            "en": "ESM models are trained with a masked language modeling (MLM) objective.",
+            "ko": "ESM 모델은 마스크드 언어 모델링(MLM) 목표로 훈련되었습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/model_doc/esm.md"
+          }
+        ],
+        "synonyms": [
+          "마스크 언어 모델링",
+          "MLM"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "MCP client",
+    "meanings": [
+      {
+        "korean": "MCP 클라이언트",
+        "definition": "MCP 서버에 연결해 도구와 리소스를 발견하고 호출하는 애플리케이션 구성 요소",
+        "examples": [
+          {
+            "en": "We hope that this post has provided insights to the decisions that need to be made building Remote MCP Servers, and encourage you to try some of the examples in your favourite MCP Client.",
+            "ko": "이 글이 원격 MCP 서버 구축 시 필요한 결정 사항에 대한 통찰을 제공했기를 바라며, 여러분이 선호하는 MCP 클라이언트에서 예제들을 직접 시도해 보시길 권장합니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-09-29-building-hf-mcp-ko.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "MCP server",
+    "meanings": [
+      {
+        "korean": "MCP 서버",
+        "definition": "모델 컨텍스트 프로토콜을 통해 도구나 리소스를 클라이언트에 제공하는 프로그램",
+        "examples": [
+          {
+            "en": "To connect our Gradio MCP server to VS Code's AI chat, we'll need to edit the mcp.json file.",
+            "ko": "Gradio MCP 서버를 VS Code의 AI 채팅에 연결하려면 mcp.json 파일을 편집해야 합니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-09-14-Implementing-MCP-Servers-in-Python.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "metric",
+    "meanings": [
+      {
+        "korean": "평가지표",
+        "definition": "모델의 성능을 정해진 기준으로 수치화하는 측정값",
+        "examples": [
+          {
+            "en": "Before diving in, we should note that the metric applies specifically to classical language models (sometimes called autoregressive or causal language models) and is not well defined for masked language models like BERT.",
+            "ko": "자세히 알아보기 전에 이 평가지표는 고전적인 언어 모델(자기회귀 또는 인과적 언어 모델이라고도 함)에만 적용되며 BERT와 같은 마스킹된 언어 모델에는 잘 적용하지 않습니다 (BERT는 summary of the models 문서를 참고하세요).",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/perplexity.md"
+          }
+        ],
+        "synonyms": [
+          "메트릭",
+          "평가 지표"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "mixture of experts",
+    "meanings": [
+      {
+        "korean": "전문가 혼합",
+        "definition": "입력에 따라 여러 전문가 서브네트워크의 출력을 선택하거나 가중 결합하는 모델 구조",
+        "examples": [
+          {
+            "en": "Vision language models that have mixture-of-experts decoders seem to have enhanced performance.",
+            "ko": "전문가 혼합 디코더를 가진 VLM은 성능이 향상된 것으로 보입니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-10-20-2025-VLM.md"
+          }
+        ],
+        "synonyms": [
+          "MoE",
+          "전문가 혼합 모델"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "modality",
+    "meanings": [
+      {
+        "korean": "모달리티",
+        "definition": "텍스트, 이미지, 오디오처럼 정보가 표현되는 데이터의 유형",
+        "examples": [
+          {
+            "en": "The Document Question Answering task is a multimodal task, and you need to make sure that the inputs from each modality are preprocessed according to the model's expectations.",
+            "ko": "문서 질의 응답 태스크는 멀티모달 태스크이며, 각 모달리티의 입력이 모델의 요구에 맞게 전처리 되었는지 확인해야 합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/document_question_answering.md"
+          }
+        ],
+        "synonyms": [
+          "양식"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "model context protocol",
+    "meanings": [
+      {
+        "korean": "모델 컨텍스트 프로토콜",
+        "definition": "언어 모델 애플리케이션이 외부 도구와 데이터 소스에 연결되는 방식을 표준화한 개방형 프로토콜",
+        "examples": [
+          {
+            "en": "The Model Context Protocol (MCP) is fulfilling its promise of being the standard to connect AI Assistants to the outside world.",
+            "ko": "모델 컨텍스트 프로토콜(MCP)은 AI 어시스턴트를 외부 세계와 연결하는 표준으로 자리잡아가고 있습니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-09-29-building-hf-mcp-ko.md"
+          }
+        ],
+        "synonyms": [
+          "MCP"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "multi-step agent",
+    "meanings": [
+      {
+        "korean": "멀티스텝 에이전트",
+        "definition": "관찰과 행동을 반복하며 여러 단계에 걸쳐 과제를 해결하는 에이전트",
+        "examples": [
+          {
+            "en": "Here’s an example of how a multi-step agent can solve a simple math question:",
+            "ko": "아래는 멀티스텝 에이전트가 간단한 수학 문제를 푸는 예시입니다:",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-09-26-Introducing-smolagents.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "multimodal model",
+    "meanings": [
+      {
+        "korean": "멀티모달 모델",
+        "definition": "텍스트, 이미지, 오디오 등 둘 이상의 모달리티를 함께 처리하는 모델",
+        "examples": [
+          {
+            "en": "It’s particularly exciting as it’s one of the smallest multimodal models to have 128k token context window, and supports 140+ languages.",
+            "ko": "이 모델에서 흥미로운 점은, 현재까지 가장 작은 멀티모달 모델 중 하나이며, 128k 토큰 컨텍스트 윈도우를 가지고 있으며, 140개 이상의 언어를 지원한다는 점입니다!",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-10-20-2025-VLM.md"
+          }
+        ],
+        "synonyms": [
+          "다중양식 모델"
+        ]
+      }
+    ]
   }
 ]

@@ -215,5 +215,43 @@
         ]
       }
     ]
+  },
+  {
+    "term": "feature extraction",
+    "meanings": [
+      {
+        "korean": "특징 추출",
+        "definition": "원시 입력을 모델이나 후속 작업이 사용할 수 있는 표현으로 변환하는 과정",
+        "examples": [
+          {
+            "en": "Some example stages found in a pipeline might be data preprocessing, feature extraction, and normalization.",
+            "ko": "파이프라인에 포함될 수 있는 단계로는 데이터 전처리, 특징 추출(feature extraction), 정규화(normalization) 등이 있습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": [
+          "특성 추출"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "fine-tuned model",
+    "meanings": [
+      {
+        "korean": "미세 조정 모델",
+        "definition": "사전학습된 모델을 특정 데이터나 과제에 맞게 추가 학습한 모델",
+        "examples": [
+          {
+            "en": "Use your fine-tuned model for inference.",
+            "ko": "추론을 위해 미세 조정 모델을 사용합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/image_classification.md"
+          }
+        ],
+        "synonyms": [
+          "미세조정 모델"
+        ]
+      }
+    ]
   }
 ]

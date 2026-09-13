@@ -88,5 +88,24 @@
         ]
       }
     ]
+  },
+  {
+    "term": "KV cache",
+    "meanings": [
+      {
+        "korean": "KV 캐시",
+        "definition": "자기회귀 생성에서 이전 토큰의 키와 값 상태를 저장해 반복 계산을 줄이는 캐시",
+        "examples": [
+          {
+            "en": "A basic KV cache interface takes a key and value tensor for the current token and returns the updated K and V tensors.",
+            "ko": "기본 KV 캐시 인터페이스는 현재 토큰의 키와 값 텐서를 받아서 업데이트된 K와 V 텐서를 반환합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/cache_explanation.md"
+          }
+        ],
+        "synonyms": [
+          "키-값 캐시"
+        ]
+      }
+    ]
   }
 ]

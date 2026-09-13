@@ -65,5 +65,44 @@
       }
     ],
     "issueNumber": 27
+  },
+  {
+    "term": "vision-language model",
+    "meanings": [
+      {
+        "korean": "비전-언어 모델",
+        "definition": "이미지와 텍스트를 함께 이해하거나 생성하도록 학습한 멀티모달 모델",
+        "examples": [
+          {
+            "en": "Chameleon is a Vision-Language Model that use vector quantization to tokenize images which enables the model to generate multimodal output.",
+            "ko": "Chameleon은 벡터 양자화를 사용하여 이미지를 토큰화함으로써 멀티모달 출력을 생성할 수 있는 비전-언어 모델입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/model_doc/chameleon.md"
+          }
+        ],
+        "synonyms": [
+          "시각언어 모델",
+          "VLM"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "vocabulary",
+    "meanings": [
+      {
+        "korean": "어휘",
+        "definition": "토크나이저와 모델이 고유 ID로 인식할 수 있는 토큰의 전체 집합",
+        "examples": [
+          {
+            "en": "Here for instance, \"VRAM\" wasn't in the model vocabulary, so it's been split in \"V\", \"RA\" and \"M\".",
+            "ko": "예를 들어, \"VRAM\"은 모델의 어휘 사전에 없는 단어이기 때문에 \"V\", \"RA\", \"M\"으로 나뉘었습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": [
+          "어휘 사전"
+        ]
+      }
+    ]
   }
 ]

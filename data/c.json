@@ -244,5 +244,174 @@
         ]
       }
     ]
+  },
+  {
+    "term": "causal language modeling",
+    "meanings": [
+      {
+        "korean": "인과적 언어 모델링",
+        "definition": "이전 토큰만 보고 다음 토큰을 예측하도록 언어 모델을 학습하는 과제",
+        "examples": [
+          {
+            "en": "Causal language modeling predicts the next token in a sequence of tokens, and the model can only attend to tokens on the left.",
+            "ko": "인과 언어 모델링은 토큰 시퀀스에서 다음 토큰을 예측하며, 모델은 왼쪽의 토큰에만 접근할 수 있습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/language_modeling.md"
+          }
+        ],
+        "synonyms": [
+          "인과 언어 모델링"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "chain of thought",
+    "meanings": [
+      {
+        "korean": "사고 과정",
+        "definition": "모델이 최종 답을 내기 전에 생성하는 중간 추론 단계의 연쇄",
+        "examples": [
+          {
+            "en": "The chat template will only ever include the most recent chain of thought, and only in training (when add_generation_prompt=False and the final turn is an assistant turn).",
+            "ko": "채팅 템플릿은 가장 최근의 사고 과정만 포함하며, 훈련 시에만(즉, add_generation_prompt=False이고 마지막 턴이 어시스턴트 턴일 때) 포함합니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-11-3-Welcome-GPT-OSS.md"
+          }
+        ],
+        "synonyms": [
+          "생각의 사슬",
+          "CoT"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "channel",
+    "meanings": [
+      {
+        "korean": "채널",
+        "definition": "이미지나 특징 맵에서 서로 다른 종류의 값을 담는 텐서 차원",
+        "examples": [
+          {
+            "en": "The Easy & Efficient Quantization for Transformers (EETQ) library supports int8 weight-only per-channel quantization for NVIDIA GPUs.",
+            "ko": "EETQ 라이브러리는 NVIDIA GPU에 대해 int8 채널별(per-channel) 가중치 전용 양자화(weight-only quantization)을 지원합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/quantization/eetq.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "chunk",
+    "meanings": [
+      {
+        "korean": "청크",
+        "definition": "메모리나 문맥 길이 제약에 맞춰 데이터를 나눈 연속된 작은 단위",
+        "examples": [
+          {
+            "en": "Each image patch passes through the image embedding tower and the audio chunk is passed through the audio embedding tower to get both media embeddings.",
+            "ko": "각 이미지 패치는 이미지 임베딩 타워를 통과하고, 오디오 청크는 오디오 임베딩 타워를 통과하여 두 미디어 임베딩을 얻습니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2026-07-15-thinkingmachines-inkling.md"
+          }
+        ],
+        "synonyms": [
+          "묶음",
+          "조각"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "classification token",
+    "meanings": [
+      {
+        "korean": "분류 토큰",
+        "definition": "입력 시퀀스 전체를 대표하는 분류 결과를 얻기 위해 시퀀스 앞에 추가하는 특수 토큰",
+        "examples": [
+          {
+            "en": "For the VQA task, a classifier head is placed on top (a linear layer on top of the final hidden state of the [CLS] token) and randomly initialized.",
+            "ko": "VQA 태스크에서는 ([CLS] 토큰의 최종 은닉 상태 위에 선형 레이어인) 분류 헤더가 있으며 무작위로 초기화됩니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/visual_question_answering.md"
+          }
+        ],
+        "synonyms": [
+          "[CLS] 토큰"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "code agent",
+    "meanings": [
+      {
+        "korean": "코드 에이전트",
+        "definition": "행동을 JSON 도구 호출 대신 실행 가능한 코드로 작성해 과제를 해결하는 에이전트",
+        "examples": [
+          {
+            "en": "🧑‍💻 First-class support for Code Agents, i.e. agents that write their actions in code (as opposed to \"agents being used to write code\").",
+            "ko": "🧑‍💻 코드 에이전트(Code Agents)에 대한 일급 지원 : 동작을 코드로 작성하는 에이전트(“코드를 작성하는 데 쓰이는 에이전트”와는 다름)를 지원합니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-09-26-Introducing-smolagents.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "computer vision",
+    "meanings": [
+      {
+        "korean": "컴퓨터 비전",
+        "definition": "컴퓨터가 이미지와 영상의 시각 정보를 이해하고 처리하도록 하는 분야",
+        "examples": [
+          {
+            "en": "Moreover, most computer vision models can be used for image feature extraction, where one can remove the task-specific head (image classification, object detection etc) and get the features.",
+            "ko": "게다가 대부분의 컴퓨터 비전 모델은 이미지 특징 추출에 사용할 수 있으며, 여기서 작업 특화 헤드(이미지 분류, 물체 감지 등)를 제거하고 특징을 얻을 수 있습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/image_feature_extraction.md"
+          }
+        ],
+        "synonyms": [
+          "컴퓨터 시각"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "context",
+    "meanings": [
+      {
+        "korean": "문맥",
+        "definition": "모델이 현재 예측이나 생성을 결정할 때 참고하는 주변 입력 정보",
+        "examples": [
+          {
+            "en": "The novel convolution heads, together with the rest self-attention heads, form a new mixed attention block that is more efficient at both global and local context learning.",
+            "ko": "새로운 컨볼루션 헤드와 나머지 self-attention 헤드들이 결합하여 글로벌 및 로컬 문맥 학습에 더 효율적인 혼합 어텐션 블록을 구성합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/model_doc/convbert.md"
+          }
+        ],
+        "synonyms": [
+          "컨텍스트"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "crop",
+    "meanings": [
+      {
+        "korean": "크롭",
+        "definition": "이미지의 일부 영역을 선택해 새로운 입력으로 만드는 전처리 변환",
+        "examples": [
+          {
+            "en": "Crop a random part of the image, resize it, and normalize it with the image mean and standard deviation:",
+            "ko": "이미지의 임의 부분을 크롭하고 크기를 조정한 다음, 이미지 평균과 표준 편차로 정규화하세요:",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/image_classification.md"
+          }
+        ],
+        "synonyms": [
+          "자르기"
+        ]
+      }
+    ]
   }
 ]

@@ -23,5 +23,44 @@
         ]
       }
     ]
+  },
+  {
+    "term": "query",
+    "meanings": [
+      {
+        "korean": "쿼리",
+        "definition": "검색이나 어텐션에서 필요한 정보를 찾기 위해 기준으로 사용하는 입력 표현",
+        "examples": [
+          {
+            "en": "Initialization: the system prompt is stored in a SystemPromptStep, and the user query is logged into a TaskStep .",
+            "ko": "초기화: 시스템 프롬프트는 SystemPromptStep에 저장되고, 사용자가 입력한 쿼리는 TaskStep에 기록됩니다.",
+            "source": "https://github.com/huggingface/smolagents/blob/30bb1161095dbae2271e6bc3cc4c219cc3897a57/docs/source/ko/conceptual_guides/react.md"
+          }
+        ],
+        "synonyms": [
+          "질의"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "question answering",
+    "meanings": [
+      {
+        "korean": "질의응답",
+        "definition": "주어진 문맥을 바탕으로 질문에 대한 답을 찾거나 생성하는 과제",
+        "examples": [
+          {
+            "en": "A multiple choice task is similar to question answering, except several candidate answers are provided along with a context and the model is trained to select the correct answer.",
+            "ko": "객관식 과제는 문맥과 함께 여러 개의 후보 답변이 제공되고 모델이 정답을 선택하도록 학습된다는 점을 제외하면 질의응답과 유사합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/multiple_choice.md"
+          }
+        ],
+        "synonyms": [
+          "질문 답변",
+          "질의 응답"
+        ]
+      }
+    ]
   }
 ]

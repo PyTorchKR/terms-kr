@@ -291,5 +291,60 @@
         ]
       }
     ]
+  },
+  {
+    "term": "token classification",
+    "meanings": [
+      {
+        "korean": "토큰 분류",
+        "definition": "입력 시퀀스의 각 토큰마다 클래스 레이블을 예측하는 과제",
+        "examples": [
+          {
+            "en": "Token classification assigns a label to individual tokens in a sentence.",
+            "ko": "토큰 분류는 문장의 개별 토큰에 레이블을 할당합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/token_classification.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "tokenizer",
+    "meanings": [
+      {
+        "korean": "토크나이저",
+        "definition": "텍스트를 모델이 처리할 토큰과 정수 ID로 나누고 변환하는 구성 요소",
+        "examples": [
+          {
+            "en": "With the AutoProcessor module, the users can train a custom FAST tokenizer on their own datasets.",
+            "ko": "또한, AutoProcessor 모듈을 사용하면 사용자 데이터셋에 맞춰 커스텀 FAST 토크나이저를 직접 학습시킬 수도 있습니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-11-10-pi0-fast.md"
+          }
+        ],
+        "synonyms": [
+          "토큰화기"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "tool calling",
+    "meanings": [
+      {
+        "korean": "도구 호출",
+        "definition": "언어 모델이 정해진 형식으로 외부 함수나 도구의 실행을 요청하는 방식",
+        "examples": [
+          {
+            "en": "Web browsing is a single-timeline task that does not require parallel tool calls, so JSON tool calling works well for that.",
+            "ko": "웹 브라우징은 병렬 도구 호출이 필요없는 단일 타임라인 작업이므로, JSON 도구 호출 방식이 적합합니다.",
+            "source": "https://github.com/huggingface/smolagents/blob/30bb1161095dbae2271e6bc3cc4c219cc3897a57/docs/source/ko/examples/multiagents.md"
+          }
+        ],
+        "synonyms": [
+          "툴 호출"
+        ]
+      }
+    ]
   }
 ]

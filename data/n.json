@@ -118,5 +118,25 @@
         ]
       }
     ]
+  },
+  {
+    "term": "natural language processing",
+    "meanings": [
+      {
+        "korean": "자연어 처리",
+        "definition": "컴퓨터가 사람의 언어를 분석하고 이해하고 생성하도록 하는 분야",
+        "examples": [
+          {
+            "en": "Pipelines available for natural language processing tasks include the following.",
+            "ko": "자연어 처리 작업에 사용할 수 있는 파이프라인은 다음과 같습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/main_classes/pipelines.md"
+          }
+        ],
+        "synonyms": [
+          "NLP",
+          "자연어처리"
+        ]
+      }
+    ]
   }
 ]

@@ -25,6 +25,7 @@ import { Layout } from '../components/Layout'
 import { useTerms } from '../hooks/useTerms'
 import type { TermMeaning, TermExample } from '../types/term'
 import { getFeedbackUrl, getIssueUrl, getNewTermUrl } from '../data/const'
+import { getReadableSourceUrl } from '../utils/sourceLinks'
 
 function isTermExample(example: string | TermExample): example is TermExample {
   return typeof example === 'object' && 'en' in example && 'ko' in example
@@ -115,7 +116,7 @@ function MeaningContent({ meaning }: { meaning: TermMeaning }) {
                     <Box sx={{ color: 'var(--fg-1)' }}>{example.ko}</Box>
                     {example.source && (
                       <Link
-                        href={example.source}
+                        href={getReadableSourceUrl(example.source)}
                         target="_blank"
                         rel="noopener noreferrer"
                         sx={{

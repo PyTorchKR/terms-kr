@@ -196,5 +196,206 @@
         ]
       }
     ]
+  },
+  {
+    "term": "sampling rate",
+    "meanings": [
+      {
+        "korean": "샘플링 레이트",
+        "definition": "오디오 신호를 1초 동안 측정해 저장한 샘플의 수",
+        "examples": [
+          {
+            "en": "Remember to resample the sampling rate of the audio file to match the sampling rate of the model if you need to!",
+            "ko": "필요한 경우 오디오 파일의 샘플링 비율을 모델의 샘플링 레이트에 맞게 리샘플링하는 것을 잊지 마세요!",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/asr.md"
+          }
+        ],
+        "synonyms": [
+          "표본화율",
+          "샘플율"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "segmentation",
+    "meanings": [
+      {
+        "korean": "분할",
+        "definition": "이미지나 시퀀스를 의미 있는 영역 또는 단위로 나누는 과제",
+        "examples": [
+          {
+            "en": "Segment Anything is an image segmentation model, and it combines the query-key-value (qkv) projection in its attention mechanisms.",
+            "ko": "Segment Anything은 이미지 분할 모델로, 어텐션 메커니즘에서 query-key-value(qkv) 프로젝션을 결합합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/how_to_hack_models.md"
+          }
+        ],
+        "synonyms": [
+          "세그멘테이션"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "self-attention",
+    "meanings": [
+      {
+        "korean": "셀프 어텐션",
+        "definition": "같은 시퀀스에서 허용된 위치의 요소들을 참조해 각 요소의 표현을 갱신하는 어텐션",
+        "examples": [
+          {
+            "en": "Looking at the formula, one would intuitively say that Flash Attention must be much slower compared to the default self-attention formula as more computation needs to be done.",
+            "ko": "공식을 보면, 플래시 어텐션이 더 많은 계산을 필요로 하기 때문에 기본 셀프 어텐션 공식보다 훨씬 느릴 것이라고 생각할 수 있습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/llm_tutorial_optimization.md"
+          }
+        ],
+        "synonyms": [
+          "자가 어텐션",
+          "자기 어텐션"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "semantic search",
+    "meanings": [
+      {
+        "korean": "시맨틱 검색",
+        "definition": "키워드의 정확한 일치보다 표현의 의미적 유사성을 이용해 결과를 찾는 검색 방식",
+        "examples": [
+          {
+            "en": "It works by combining the Hub's existing semantic search over Spaces, alongside our Agent Skills, and serving the results as ARD catalog entries.",
+            "ko": "허깅페이스 허브의 Spaces에 대한 기존 시맨틱 검색과 우리의 에이전트 스킬을 결합하고, 그 결과를 ARD 카탈로그 항목으로 제공합니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2026-06-17-agentic-resource-discovery-launch.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "sequence classification",
+    "meanings": [
+      {
+        "korean": "시퀀스 분류",
+        "definition": "텍스트나 다른 시퀀스 전체에 하나 이상의 클래스 레이블을 예측하는 과제",
+        "examples": [
+          {
+            "en": "[GPT2ForSequenceClassification] is a sequence classification head - a linear layer - on top of the base [GPT2Model].",
+            "ko": "[GPT2ForSequenceClassification]은 기본 [GPT2Model] 위에 시퀀스 분류를 위한 선형계층(linear layer)을 추가한 모델 헤드입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "special token",
+    "meanings": [
+      {
+        "korean": "특수 토큰",
+        "definition": "문장 경계, 패딩, 마스킹처럼 모델 처리에 필요한 특별한 역할을 가진 토큰",
+        "examples": [
+          {
+            "en": "Assigning the label -100 to the special tokens [CLS] and [SEP] so they're ignored by the PyTorch loss function (see CrossEntropyLoss).",
+            "ko": "특수 토큰 [CLS]와 [SEP]에 -100 레이블을 할당하여, PyTorch 손실 함수가 해당 토큰을 무시하도록 합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/token_classification.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "stride",
+    "meanings": [
+      {
+        "korean": "스트라이드",
+        "definition": "슬라이딩 윈도나 합성곱 필터가 한 번에 이동하는 간격",
+        "examples": [
+          {
+            "en": "Running this with the stride length equal to the max input length is equivalent to the suboptimal, non-sliding-window strategy we discussed above.",
+            "ko": "스트라이드를 최대 입력 길이와 동일하게 설정하면 위에서 설명한 차선책인 비슬라이딩 윈도우 전략과 동일합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/perplexity.md"
+          }
+        ],
+        "synonyms": [
+          "보폭"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "structured output",
+    "meanings": [
+      {
+        "korean": "구조화된 출력",
+        "definition": "모델 응답을 JSON 스키마 등 미리 정한 데이터 구조에 맞춰 생성하는 기능",
+        "examples": [
+          {
+            "en": "With Structured outputs, you can force the LLM to generate explicit thoughts and code as a JSON blob:",
+            "ko": "구조화된 출력을 사용하면, LLM이 사고 과정과 코드를 명확하게 JSON 형식으로 생성하도록 유도할 수 있습니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-10-13-structured-codeagent-ko.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "supervised learning",
+    "meanings": [
+      {
+        "korean": "지도학습",
+        "definition": "입력과 정답 레이블의 쌍을 사용해 모델을 학습하는 방법",
+        "examples": [
+          {
+            "en": "It differs from unsupervised learning and supervised learning in that the learning process is supervised, but not explicitly from the user.",
+            "ko": "비지도 학습이나 지도 학습과 달리, 학습 과정 자체는 감독 방식 되지만, 라벨이 명시적으로 주어지는 것은 아닙니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": [
+          "지도 학습"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "synthetic data",
+    "meanings": [
+      {
+        "korean": "합성 데이터",
+        "definition": "실제 관측을 직접 수집하는 대신 규칙, 시뮬레이션, 생성 모델로 만든 데이터",
+        "examples": [
+          {
+            "en": "The community used to scale intelligence through the number of parameters, and then high-quality synthetic data.",
+            "ko": "커뮤니티는 과거에 파라미터 수를 통해 지능을 확장하고, 이후 고품질 합성 데이터를 활용하곤 했습니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-10-20-2025-VLM.md"
+          }
+        ],
+        "synonyms": [
+          "인공 데이터"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "system prompt",
+    "meanings": [
+      {
+        "korean": "시스템 프롬프트",
+        "definition": "모델의 역할, 규칙, 출력 형식을 대화보다 우선해 지정하는 지시문",
+        "examples": [
+          {
+            "en": "Each agent's behavior (its default model, inference provider, which MCP servers to connect to, and its initial system prompt) is defined by an agent.json file.",
+            "ko": "각 에이전트의 동작(기본 모델, 추론 공급자, 연결할 MCP 서버, 초기 시스템 프롬프트)은 agent.json 파일에 정의됩니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-09-14-python-tiny-agents-ko.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
   }
 ]

@@ -208,5 +208,150 @@
       }
     ],
     "issueNumber": 18
+  },
+  {
+    "term": "agency",
+    "meanings": [
+      {
+        "korean": "에이전시",
+        "definition": "언어 모델이 시스템의 작업 흐름과 행동 선택에 미치는 영향의 정도",
+        "examples": [
+          {
+            "en": "The influence of the LLM's input on the code workflow is the level of agency of LLMs in the system.",
+            "ko": "LLM 입력이 코드 워크플로우에 미치는 영향력이 해당 시스템에서 LLM이 가지는 에이전시의 수준을 결정합니다.",
+            "source": "https://github.com/Hugging-Face-KREW/hugging-face-krew.github.io/blob/aa3c6450bea58167f12a5ca42cffa7193f1819fa/_posts/2025-09-26-Introducing-smolagents.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "agent memory",
+    "meanings": [
+      {
+        "korean": "에이전트 메모리",
+        "definition": "에이전트가 이전 단계의 행동과 관찰을 다음 판단에 사용하도록 보존한 기록",
+        "examples": [
+          {
+            "en": "Running agent.write_memory_to_messages() writes the agent's memory as list of chat messages for the Model to view.",
+            "ko": "agent.write_memory_to_messages()는 에이전트의 메모리를 모델이 볼 수 있는 채팅 메시지 목록으로 변환합니다.",
+            "source": "https://github.com/huggingface/smolagents/blob/30bb1161095dbae2271e6bc3cc4c219cc3897a57/docs/source/ko/guided_tour.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "architecture",
+    "meanings": [
+      {
+        "korean": "아키텍처",
+        "definition": "모델을 이루는 계층과 연산, 데이터 흐름의 전체적인 설계",
+        "examples": [
+          {
+            "en": "Today's top-performing LLMs share more or less the same fundamental architecture that consists of feed-forward layers, activation layers, layer normalization layers, and most crucially, self-attention layers.",
+            "ko": "오늘날의 최고 성능을 자랑하는 대규모 언어 모델은 대체로 피드포워드 레이어(feed-forward layer), 활성화 레이어(activation layer), 레이어 정규화 레이어(layer normalization layer), 그리고 가장 중요한 셀프 어텐션 레이어(self-attention layer)로 구성된 아키텍처를 공유하고 있습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/llm_tutorial_optimization.md"
+          }
+        ],
+        "synonyms": [
+          "구조"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "attention mask",
+    "meanings": [
+      {
+        "korean": "어텐션 마스크",
+        "definition": "어텐션 계산에서 모델이 참조하거나 무시할 토큰 위치를 표시하는 마스크",
+        "examples": [
+          {
+            "en": "The attention mask is a binary tensor indicating the position of the padded indices so that the model does not attend to them.",
+            "ko": "어텐션 마스크는 모델이 패딩 된 인덱스를 참조하지 않도록 해당 위치를 나타내는 이진 텐서입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/glossary.md"
+          }
+        ],
+        "synonyms": [
+          "주의 마스크"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "audio classification",
+    "meanings": [
+      {
+        "korean": "오디오 분류",
+        "definition": "오디오 입력을 하나 이상의 미리 정의된 범주로 분류하는 과제",
+        "examples": [
+          {
+            "en": "Audio classification - just like with text - assigns a class label as output from the input data.",
+            "ko": "오디오 분류는 텍스트와 마찬가지로 입력 데이터에 클래스 레이블 출력을 할당합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/audio_classification.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
+  },
+  {
+    "term": "augmentation",
+    "meanings": [
+      {
+        "korean": "증강",
+        "definition": "학습 데이터에 변환을 적용해 다양성을 늘리는 처리",
+        "examples": [
+          {
+            "en": "The do_resize parameter is set to False because the images have already been resized in the augmentation step by RandomResizedCrop.",
+            "ko": "여기서 do_resize파라미터를 False로 설정한 이유는, 앞선 증강 단계에서 RandomResizedCrop을 통해 이미 이미지 크기를 조절했기 때문입니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/image_processors.md"
+          }
+        ],
+        "synonyms": [
+          "데이터 증강"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "automatic speech recognition",
+    "meanings": [
+      {
+        "korean": "자동 음성 인식",
+        "definition": "사람의 음성 신호를 텍스트로 변환하는 기술과 과제",
+        "examples": [
+          {
+            "en": "Automatic speech recognition (ASR) converts a speech signal to text, mapping a sequence of audio inputs to text outputs.",
+            "ko": "자동 음성 인식(Automatic Speech Recognition, ASR)은 음성 신호를 텍스트로 변환하여 음성 입력 시퀀스를 텍스트 출력에 매핑합니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/tasks/asr.md"
+          }
+        ],
+        "synonyms": [
+          "ASR",
+          "자동 음성인식"
+        ]
+      }
+    ]
+  },
+  {
+    "term": "autoregressive model",
+    "meanings": [
+      {
+        "korean": "자기회귀 모델",
+        "definition": "앞서 생성된 요소를 조건으로 다음 요소를 순차적으로 예측하는 모델",
+        "examples": [
+          {
+            "en": "Autoregressive model generation can be slow because it makes a prediction one token at a time.",
+            "ko": "자기회귀 모델의 생성은 한 번에 하나의 토큰씩 예측하기 때문에 느릴 수 있습니다.",
+            "source": "https://github.com/huggingface/transformers/blob/f62dc9bf2c90353b442a56e74391fbb8c689b55e/docs/source/ko/cache_explanation.md"
+          }
+        ],
+        "synonyms": []
+      }
+    ]
   }
 ]
