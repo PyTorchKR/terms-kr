@@ -18,10 +18,13 @@
     "predev": "node scripts/sync-public-data.mjs",
     "dev": "vite",
     "prebuild": "node scripts/sync-public-data.mjs",
-    "build": "npm run validate:data && tsc -b && vite build",
+    "build": "npm run validate:data && npm run validate:usage && tsc -b && vite build",
     "lint": "eslint .",
     "audit:security": "npm audit --audit-level=moderate && npm audit signatures",
     "validate:data": "node scripts/validate-term-data.mjs",
+    "validate:usage": "node scripts/validate-usage-data.mjs",
+    "test:usage": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/source-links.test.mjs && npm run validate:usage",
+    "update:usage": "python3 scripts/update_usage_counts.py",
     "preview": "vite preview"
   },
   "dependencies": {
