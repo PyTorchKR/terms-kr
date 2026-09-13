@@ -1,0 +1,2144 @@
+{
+  "schemaVersion": 2,
+  "configHash": "44ad121841de5bd53d0af5ccc69ada76968acacde5d72bbace59c4559367e55b",
+  "candidateHash": "ff50a3083165c0ba3d8360cad1d8188304877e749eb311754fa717fbacf043ce",
+  "countingRuleVersion": "ko-surface-v2.1",
+  "policyHash": "c5b88173d05f98c2f63fa4360d84cce58ab8bd0694c30af160a31f73d23fabc1",
+  "inputHash": "54b666be0c2e48a2c547d018603f6c3143dd48932e223d5091dcd60bc0ac2640",
+  "generatedAt": "2026-09-13T10:53:20+00:00",
+  "source": {
+    "id": "smolagents",
+    "label": "smolagents",
+    "community": "Hugging Face KREW",
+    "repository": "https://github.com/huggingface/smolagents",
+    "checkout": "smolagents",
+    "ref": "30bb1161095dbae2271e6bc3cc4c219cc3897a57",
+    "adapter": "paired-markdown",
+    "root": "docs/source/ko",
+    "exclude": [],
+    "original": {
+      "repository": "https://github.com/huggingface/smolagents",
+      "checkout": "smolagents",
+      "ref": "30bb1161095dbae2271e6bc3cc4c219cc3897a57",
+      "root": "docs/source/en",
+      "commit": "30bb1161095dbae2271e6bc3cc4c219cc3897a57"
+    },
+    "commit": "30bb1161095dbae2271e6bc3cc4c219cc3897a57"
+  },
+  "documents": {
+    "smolagents:docs/source/ko/conceptual_guides/react.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/conceptual_guides/react.md",
+      "blobSha": "6ab57fe22539880e8293c4a38a4f46d6d84ce82e",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/conceptual_guides/react.md",
+      "counts": {
+        "agent": {
+          "에이전트": 9
+        },
+        "multi-step agent": {
+          "멀티스텝 에이전트": 2
+        },
+        "architecture": {
+          "구조": 1
+        },
+        "inference": {
+          "추론": 2
+        },
+        "feature": {
+          "변수": 1,
+          "함수": 1
+        },
+        "initialization": {
+          "초기화": 1
+        },
+        "prompt": {
+          "프롬프트": 1
+        },
+        "system prompt": {
+          "시스템 프롬프트": 1
+        },
+        "query": {
+          "쿼리": 1
+        },
+        "parsing": {
+          "파싱": 1
+        },
+        "tool calling": {
+          "도구 호출": 3
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "멀티스텝 에이전트는 어떻게 동작하나요?"
+          }
+        },
+        "multi-step agent": {
+          "멀티스텝 에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "멀티스텝 에이전트는 어떻게 동작하나요?"
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "react라는 이름은 \"추론(reason)\"과 \"행동(act)\"을 결합한 것입니다. 실제로 이 구조를 따르는 에이전트는 주어진 작업을 해결하기 위해 필요한 만큼 여러 단계를 거칩니다. 각 단계는 추론 단계와 행동 단계로 이루어져 있으며, 행동 단계에서"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "react라는 이름은 \"추론(reason)\"과 \"행동(act)\"을 결합한 것입니다. 실제로 이 구조를 따르는 에이전트는 주어진 작업을 해결하기 위해 필요한 만큼 여러 단계를 거칩니"
+          }
+        },
+        "feature": {
+          "변수": {
+            "line": 9,
+            "endLine": 9,
+            "excerpt": "이 클래스는 기본적으로 아래와 같은 루프로 동작하며, 기존 변수와 지식도 에이전트 로그에 함께 반영됩니다."
+          },
+          "함수": {
+            "line": 18,
+            "endLine": 18,
+            "excerpt": "에 정의된 모든 콜백 함수를 실행합니다."
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 11,
+            "endLine": 11,
+            "excerpt": "초기화: 시스템 프롬프트는"
+          }
+        },
+        "prompt": {
+          "프롬프트": {
+            "line": 11,
+            "endLine": 11,
+            "excerpt": "초기화: 시스템 프롬프트는"
+          }
+        },
+        "system prompt": {
+          "시스템 프롬프트": {
+            "line": 11,
+            "endLine": 11,
+            "excerpt": "초기화: 시스템 프롬프트는"
+          }
+        },
+        "query": {
+          "쿼리": {
+            "line": 11,
+            "endLine": 11,
+            "excerpt": "에 저장되고, 사용자가 입력한 쿼리는"
+          }
+        },
+        "parsing": {
+          "파싱": {
+            "line": 16,
+            "endLine": 16,
+            "excerpt": "객체에 전송하여 응답을 받습니다. 에이전트는 응답을 파싱하여 액션("
+          }
+        },
+        "tool calling": {
+          "도구 호출": {
+            "line": 44,
+            "endLine": 44,
+            "excerpt": "도구 호출을 python 코드 스니펫 형태로 생성하는 ["
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/examples/async_agent.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/examples/async_agent.md",
+      "blobSha": "bf402ba8e56573cb7b2a9dce08963b4a117243a8",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/examples/async_agent.md",
+      "counts": {
+        "agent": {
+          "에이전트": 6
+        },
+        "exploitation": {
+          "활용": 2
+        },
+        "workflow": {
+          "워크플로우": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "에이전트를 활용한 비동기 애플리케이션"
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "에이전트를 활용한 비동기 애플리케이션"
+          }
+        },
+        "workflow": {
+          "워크플로우": {
+            "line": 16,
+            "endLine": 16,
+            "excerpt": "예시 워크플로우"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/examples/multiagents.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/examples/multiagents.md",
+      "blobSha": "373fdba26294b71d0b7b4145f25c83b30148da56",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/examples/multiagents.md",
+      "counts": {
+        "agent": {
+          "에이전트": 18
+        },
+        "architecture": {
+          "구조": 1
+        },
+        "layer": {
+          "계층": 1
+        },
+        "feature": {
+          "속성": 3,
+          "기능": 2
+        },
+        "model": {
+          "모델": 2
+        },
+        "inference": {
+          "추론": 2
+        },
+        "initialization": {
+          "초기화": 2
+        },
+        "tool calling": {
+          "도구 호출": 2
+        },
+        "exploration": {
+          "탐색": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "멀티 에이전트 시스템 오케스트레이션 🤖🤝🤖"
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": "멀티 에이전트는 간단한 계층 구조로 구성됩니다."
+          }
+        },
+        "layer": {
+          "계층": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": "멀티 에이전트는 간단한 계층 구조로 구성됩니다."
+          }
+        },
+        "feature": {
+          "속성": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "다음 명령어를 실행하여 필요한 종속성을 설치합니다."
+          },
+          "기능": {
+            "line": 50,
+            "endLine": 50,
+            "excerpt": "웹 브라우징을 위해 google 검색과 동등한 기능을 제공하는 기본 ["
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 39,
+            "endLine": 39,
+            "excerpt": "t-80b-a3b-thinking로 구동됩니다. inference api를 사용하면 모든 오픈소스 모델을 빠르고 쉽게 실행할 수 있습니다."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 41,
+            "endLine": 42,
+            "excerpt": "[!tip] inference providers는 서버리스 추론 파트너가 지원하는 수백 개의 모델에 대한 액세스를 제공합니다. 지원되는 프로바이더 목록은 여기에서 확인할 수 있습니다."
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 94,
+            "endLine": 94,
+            "excerpt": "이제 도구를 초기화하고 테스트해보겠습니다!"
+          }
+        },
+        "tool calling": {
+          "도구 호출": {
+            "line": 105,
+            "endLine": 105,
+            "excerpt": "웹 브라우징은 병렬 도구 호출이 필요없는 단일 타임라인 작업이므로, json 도구 호출 방식이 적합합니다. 따라서"
+          }
+        },
+        "exploration": {
+          "탐색": {
+            "line": 106,
+            "endLine": 106,
+            "excerpt": "또한 웹 검색은 올바른 답을 찾기 전에 많은 페이지를 탐색해야 하는 경우가 있으므로,"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/examples/plan_customization.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/examples/plan_customization.md",
+      "blobSha": "7a7aa5a0bcac423d7edbfba0dd8c84e4c54d2ceb",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/examples/plan_customization.md",
+      "counts": {
+        "agent": {
+          "에이전트": 17
+        },
+        "workflow": {
+          "워크플로": 1,
+          "워크플로우": 1
+        },
+        "exploitation": {
+          "이용": 1
+        },
+        "feature": {
+          "함수": 1
+        },
+        "agent memory": {
+          "에이전트 메모리": 1
+        },
+        "planning step": {
+          "계획 단계": 1
+        },
+        "token": {
+          "토큰": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "human-in-the-loop: 사용자와 상호작용하며 에이전트 계획 수정하기"
+          }
+        },
+        "workflow": {
+          "워크플로": {
+            "line": 3,
+            "endLine": 4,
+            "excerpt": "급 사용법을 소개합니다. 특히 사용자와의 상호작용을 통한 계획 생성, 계획 수정, 그리고 에이전트 워크플로에서의 메모리 보존을 위한 human-in-the-loop (hitl) 접근 방식을 중점적으로 설명합니다. 예제는"
+          },
+          "워크플로우": {
+            "line": 86,
+            "endLine": 86,
+            "excerpt": "human-in-the-loop 워크플로우 예시"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 17,
+            "endLine": 17,
+            "excerpt": "단계 콜백을 이용한 계획 중단"
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 34,
+            "endLine": 34,
+            "excerpt": "에이전트가 계획을 생성하면, 콜백 함수가 해당 계획을 사용자에게 보여주고 다음 옵션 중 하나를 선택하도록 안내합니다."
+          }
+        },
+        "agent memory": {
+          "에이전트 메모리": {
+            "line": 75,
+            "endLine": 75,
+            "excerpt": "에이전트 메모리 검사"
+          }
+        },
+        "planning step": {
+          "계획 단계": {
+            "line": 89,
+            "endLine": 89,
+            "excerpt": "계획 단계가 생성되고, 사용자 검토를 위해 실행이 일시 중지됩니다."
+          }
+        },
+        "token": {
+          "토큰": {
+            "line": 105,
+            "endLine": 105,
+            "excerpt": "inferenceclientmodel (🤗 hugging face api 토큰 필요)"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/examples/rag.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/examples/rag.md",
+      "blobSha": "1a4e0082d3795a2f0efea9ab7822a31917eb55b9",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/examples/rag.md",
+      "counts": {
+        "augmentation": {
+          "증강": 2
+        },
+        "retrieval-augmented generation": {
+          "검색 증강 생성": 2
+        },
+        "context": {
+          "문맥": 1,
+          "컨텍스트": 2
+        },
+        "feature": {
+          "능력": 3,
+          "특징": 1
+        },
+        "language model": {
+          "언어 모델": 4
+        },
+        "large language model": {
+          "대규모 언어 모델": 3
+        },
+        "model": {
+          "모델": 11
+        },
+        "query": {
+          "쿼리": 11
+        },
+        "fine-tuning": {
+          "미세 조정": 1
+        },
+        "training": {
+          "훈련": 2,
+          "학습": 1
+        },
+        "inference": {
+          "추론": 7
+        },
+        "pipeline": {
+          "파이프라인": 3
+        },
+        "agent": {
+          "에이전트": 16
+        },
+        "iteration": {
+          "반복": 1
+        },
+        "embedding": {
+          "임베딩": 3
+        },
+        "token": {
+          "토큰": 1
+        },
+        "dataset": {
+          "데이터 세트": 1
+        },
+        "environment": {
+          "환경": 1
+        },
+        "exploitation": {
+          "활용": 2
+        },
+        "leaderboard": {
+          "리더보드": 1
+        },
+        "vocabulary": {
+          "어휘": 1
+        },
+        "exploration": {
+          "탐색": 1
+        },
+        "architecture": {
+          "아키텍처": 1
+        }
+      },
+      "evidence": {
+        "augmentation": {
+          "증강": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "rag(검색 증강 생성) 소개"
+          }
+        },
+        "retrieval-augmented generation": {
+          "검색 증강 생성": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "rag(검색 증강 생성) 소개"
+          }
+        },
+        "context": {
+          "문맥": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": " rag)은 대규모 언어 모델의 능력과 외부 지식 검색을 결합하여 더 정확하고 사실에 기반을 두며 문맥에 맞는 응답을 생성합니다. rag의 핵심은 \"대규모 언어 모델을 사용해 사용자 쿼리에 답변을 제공하되, 지식 베이스에서 검색된 정보에 기반하여 답변하는"
+          },
+          "컨텍스트": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "컨텍스트 윈도우 제약: 검색된 문서는 모델의 컨텍스트 윈도우 크기에 맞춰야 합니다."
+          }
+        },
+        "feature": {
+          "능력": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": "증강 생성(retrieval-augmented generation, rag)은 대규모 언어 모델의 능력과 외부 지식 검색을 결합하여 더 정확하고 사실에 기반을 두며 문맥에 맞는 응답을 생성합니다. rag의 핵심은 \"대규모 언어 모델을 사용해 사용자 쿼리에"
+          },
+          "특징": {
+            "line": 201,
+            "endLine": 201,
+            "excerpt": "저희가 보여드린 접근 방식은 다음과 같은 특징이 있습니다:"
+          }
+        },
+        "language model": {
+          "언어 모델": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": "검색 증강 생성(retrieval-augmented generation, rag)은 대규모 언어 모델의 능력과 외부 지식 검색을 결합하여 더 정확하고 사실에 기반을 두며 문맥에 맞는 응답을 생성합니다. rag의 핵심은 \"대규모 언어 모델을 사용해 사용자"
+          }
+        },
+        "large language model": {
+          "대규모 언어 모델": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": "검색 증강 생성(retrieval-augmented generation, rag)은 대규모 언어 모델의 능력과 외부 지식 검색을 결합하여 더 정확하고 사실에 기반을 두며 문맥에 맞는 응답을 생성합니다. rag의 핵심은 \"대규모 언어 모델을 사용해 사용자"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": "검색 증강 생성(retrieval-augmented generation, rag)은 대규모 언어 모델의 능력과 외부 지식 검색을 결합하여 더 정확하고 사실에 기반을 두며 문맥에 맞는 응답을 생성합니다. rag의 핵심은 \"대규모 언어 모델을 사용해 사용자"
+          }
+        },
+        "query": {
+          "쿼리": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": " 기반을 두며 문맥에 맞는 응답을 생성합니다. rag의 핵심은 \"대규모 언어 모델을 사용해 사용자 쿼리에 답변을 제공하되, 지식 베이스에서 검색된 정보에 기반하여 답변하는 것\"입니다."
+          }
+        },
+        "fine-tuning": {
+          "미세 조정": {
+            "line": 11,
+            "endLine": 11,
+            "excerpt": "rag는 기본 대규모 언어 모델이나 미세 조정된 모델을 사용하는 것에 비해 다음과 같은 몇 가지 중요한 장점을 제공합니다."
+          }
+        },
+        "training": {
+          "훈련": {
+            "line": 14,
+            "endLine": 14,
+            "excerpt": "도메인 특화: 모델을 다시 훈련시키지 않고도 특정 도메인의 지식을 제공합니다."
+          },
+          "학습": {
+            "line": 195,
+            "endLine": 195,
+            "excerpt": "교육 튜터링: 교과서와 학습 자료를 기반으로 설명을 제공합니다."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "제한된 추론: 단순한 rag 파이프라인은 다단계 논리적 추론이나 쿼리 정제를 허용하지 않습니다."
+          }
+        },
+        "pipeline": {
+          "파이프라인": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "제한된 추론: 단순한 rag 파이프라인은 다단계 논리적 추론이나 쿼리 정제를 허용하지 않습니다."
+          }
+        },
+        "agent": {
+          "에이전트": {
+            "line": 30,
+            "endLine": 30,
+            "excerpt": "agentic rag 시스템, 즉 검색 능력을 갖춘 에이전트를 구현함으로써 이러한 한계를 극복할 수 있습니다. 이 접근 방식은 rag를 경직된 파이프라인에서 논리적 추론 중심의 상호작용적 프로세스로 탈바꿈시키는 "
+          }
+        },
+        "iteration": {
+          "반복": {
+            "line": 37,
+            "endLine": 37,
+            "excerpt": "✅ 다중 검색 수행: 에이전트는 필요에 따라 반복적으로 정보를 검색할 수 있습니다."
+          }
+        },
+        "embedding": {
+          "임베딩": {
+            "line": 42,
+            "endLine": 42,
+            "excerpt": "가상 문서 임베딩(hyde): 사용자 쿼리를 직접 사용하는 대신, 에이전트가 검색에 최적화된 쿼리를 생성합니다 (논문 참조)"
+          }
+        },
+        "token": {
+          "토큰": {
+            "line": 59,
+            "endLine": 59,
+            "excerpt": "허깅 페이스의 추론 api를 사용하려면 api 토큰을 설정해야 합니다."
+          }
+        },
+        "dataset": {
+          "데이터 세트": {
+            "line": 69,
+            "endLine": 69,
+            "excerpt": "허깅 페이스 설명서가 포함된 데이터 세트를 불러와 검색에 사용할 준비를 해보겠습니다."
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 146,
+            "endLine": 147,
+            "excerpt": "[!tip] 단순성과 속도를 위해 어휘 검색 방식인 bm25를 사용하고 있습니다. 실제 서비스 환경에서는 검색 품질을 높이기 위해 임베딩을 활용한 의미 기반 검색을 사용하는 것이 좋습니다. 고품질 임베딩 모델은 mteb 리더보드에서 확인하세요."
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 146,
+            "endLine": 147,
+            "excerpt": "색 방식인 bm25를 사용하고 있습니다. 실제 서비스 환경에서는 검색 품질을 높이기 위해 임베딩을 활용한 의미 기반 검색을 사용하는 것이 좋습니다. 고품질 임베딩 모델은 mteb 리더보드에서 확인하세요."
+          }
+        },
+        "leaderboard": {
+          "리더보드": {
+            "line": 146,
+            "endLine": 147,
+            "excerpt": "기 위해 임베딩을 활용한 의미 기반 검색을 사용하는 것이 좋습니다. 고품질 임베딩 모델은 mteb 리더보드에서 확인하세요."
+          }
+        },
+        "vocabulary": {
+          "어휘": {
+            "line": 146,
+            "endLine": 147,
+            "excerpt": "[!tip] 단순성과 속도를 위해 어휘 검색 방식인 bm25를 사용하고 있습니다. 실제 서비스 환경에서는 검색 품질을 높이기 위해 임베딩을 활용한 의미 기반 검색을 사용하는 것이 좋습니다. "
+          }
+        },
+        "exploration": {
+          "탐색": {
+            "line": 191,
+            "endLine": 191,
+            "excerpt": "기술 문서 지원: 사용자가 복잡한 기술 문서를 탐색하는 데 도움을 줍니다."
+          }
+        },
+        "architecture": {
+          "아키텍처": {
+            "line": 206,
+            "endLine": 206,
+            "excerpt": "자신만의 agentic rag 시스템을 구축할 때에는, 다양한 검색 방법과 에이전트 아키텍처, 지식 소스를 실험하며 사용 사례에 최적화된 구성을 찾아보세요."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/examples/text_to_sql.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/examples/text_to_sql.md",
+      "blobSha": "d06a0b1ce60da44c4d7515c04e70e48734bd2af6",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/examples/text_to_sql.md",
+      "counts": {
+        "agent": {
+          "에이전트": 10
+        },
+        "pipeline": {
+          "파이프라인": 2
+        },
+        "query": {
+          "쿼리": 2
+        },
+        "environment": {
+          "환경": 3
+        },
+        "feature": {
+          "변수": 2,
+          "속성": 1,
+          "능력": 1
+        },
+        "inference": {
+          "추론": 2
+        },
+        "exploitation": {
+          "이용": 1,
+          "활용": 2
+        },
+        "token": {
+          "토큰": 1
+        },
+        "prompt": {
+          "프롬프트": 1
+        },
+        "iteration": {
+          "반복": 1
+        },
+        "model": {
+          "모델": 2
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "를 사용해 sql을 다루는 에이전트를 구현해보겠습니다."
+          }
+        },
+        "pipeline": {
+          "파이프라인": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": "먼저 중요한 질문 하나로 시작하겠습니다. 그냥 간단하게 일반적인 text-to-sql 파이프라인을 쓰면 안 될까요?"
+          }
+        },
+        "query": {
+          "쿼리": {
+            "line": 9,
+            "endLine": 9,
+            "excerpt": "표준 text-to-sql 파이프라인은 안정성이 떨어지는 경우가 많습니다. 쿼리가 잘못 생성될 수 있고, 심지어는 오류 없이 틀리거나 쓸모없는 결과를 반환할 수도 있습니다."
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 20,
+            "endLine": 21,
+            "excerpt": "추론 프로바이더를 호출하려면 환경 변수"
+          }
+        },
+        "feature": {
+          "변수": {
+            "line": 20,
+            "endLine": 21,
+            "excerpt": "추론 프로바이더를 호출하려면 환경 변수"
+          },
+          "속성": {
+            "line": 75,
+            "endLine": 75,
+            "excerpt": "툴의 설명 속성은 에이전트 시스템에 의해 llm 프롬프트에 포함되는 부분으로, llm이 해당 도구를 어떻게 사용할 수 있는지에 대한 정보를 제공합니다. 바로 이 부분에"
+          },
+          "능력": {
+            "line": 196,
+            "endLine": 196,
+            "excerpt": "더 강력한 llm으로 에이전트 추론 능력 향상시키기"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 20,
+            "endLine": 21,
+            "excerpt": "추론 프로바이더를 호출하려면 환경 변수"
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 20,
+            "endLine": 21,
+            "excerpt": "에 유효한 토큰이 설정되어 있어야 합니다. python-dotenv를 이용해 환경 변수를 불러오겠습니다."
+          },
+          "활용": {
+            "line": 73,
+            "endLine": 73,
+            "excerpt": "이제 도구를 활용해 sql 테이블을 조회할 수 있도록 만들어봅시다."
+          }
+        },
+        "token": {
+          "토큰": {
+            "line": 20,
+            "endLine": 21,
+            "excerpt": "에 유효한 토큰이 설정되어 있어야 합니다. python-dotenv를 이용해 환경 변수를 불러오겠습니다."
+          }
+        },
+        "prompt": {
+          "프롬프트": {
+            "line": 75,
+            "endLine": 75,
+            "excerpt": "툴의 설명 속성은 에이전트 시스템에 의해 llm 프롬프트에 포함되는 부분으로, llm이 해당 도구를 어떻게 사용할 수 있는지에 대한 정보를 제공합니다. 바로 이 부분에 우리가 정의한 sql 테이블의 설명을 작"
+          }
+        },
+        "iteration": {
+          "반복": {
+            "line": 124,
+            "endLine": 124,
+            "excerpt": "는 코드로 액션을 작성하고 react 프레임워크에 따라 이전 출력 결과를 반복적으로 개선할 수 있습니다."
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 126,
+            "endLine": 126,
+            "excerpt": "모델은 에이전트 시스템을 구동하는 llm을 의미합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/examples/using_different_models.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/examples/using_different_models.md",
+      "blobSha": "c00ea7d53e0a47cf012b50c454304408b9281584",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/examples/using_different_models.md",
+      "counts": {
+        "model": {
+          "모델": 23
+        },
+        "agent": {
+          "에이전트": 1
+        },
+        "language model": {
+          "언어 모델": 3
+        },
+        "inference": {
+          "추론": 2
+        },
+        "large language model": {
+          "대규모 언어 모델": 1
+        },
+        "feature": {
+          "변수": 4
+        },
+        "parameter": {
+          "매개변수": 4
+        },
+        "initialization": {
+          "초기화": 3
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "다양한 모델 사용하기"
+          }
+        },
+        "agent": {
+          "에이전트": {
+            "line": 5,
+            "endLine": 6,
+            "excerpt": "다양한 프로바이더의 여러 언어 모델을 사용할 수 있는 유연한 프레임워크를 제공합니다. 이 가이드는 에이전트와 함께 다양한 모델 유형을 사용하는 방법을 보여줍니다."
+          }
+        },
+        "language model": {
+          "언어 모델": {
+            "line": 5,
+            "endLine": 6,
+            "excerpt": "는 다양한 프로바이더의 여러 언어 모델을 사용할 수 있는 유연한 프레임워크를 제공합니다. 이 가이드는 에이전트와 함께 다양한 모델 유형을 사용하는 방법을 보여줍니다."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 11,
+            "endLine": 11,
+            "excerpt": "]: hugging face의 추론 api를 사용하여 모델에 접근"
+          }
+        },
+        "large language model": {
+          "대규모 언어 모델": {
+            "line": 15,
+            "endLine": 15,
+            "excerpt": "]: litellm을 통해 수백 개의 대규모 언어 모델에 접근 제공"
+          }
+        },
+        "feature": {
+          "변수": {
+            "line": 21,
+            "endLine": 22,
+            "excerpt": "등)을 직접 전달하는 것을 지원합니다. 이러한 매개변수들은 자동으로 기본 모델의 완성 호출로 전달되어, 창의성, 응답 길이, 샘플링 전략과 같은 모델 동작을 구성할 수 있게 해줍니다."
+          }
+        },
+        "parameter": {
+          "매개변수": {
+            "line": 21,
+            "endLine": 22,
+            "excerpt": "등)을 직접 전달하는 것을 지원합니다. 이러한 매개변수들은 자동으로 기본 모델의 완성 호출로 전달되어, 창의성, 응답 길이, 샘플링 전략과 같은 모델 동작을 구성할 수 있게 해줍니다."
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 40,
+            "endLine": 41,
+            "excerpt": "매개변수를 gemini api 베이스 url로 설정하여 gemini 모델을 초기화할 수 있습니다:"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/examples/web_browser.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/examples/web_browser.md",
+      "blobSha": "0108bc4e41b5e4cdf473bb49a2527af05ee7cc4a",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/examples/web_browser.md",
+      "counts": {
+        "agent": {
+          "에이전트": 7
+        },
+        "exploitation": {
+          "활용": 1
+        },
+        "exploration": {
+          "탐색": 3
+        },
+        "feature": {
+          "기능": 2,
+          "변수": 1
+        },
+        "environment": {
+          "환경": 1
+        },
+        "validation": {
+          "검증": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "에이전트를 활용한 웹 브라우저 자동화 🤖🌐"
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "에이전트를 활용한 웹 브라우저 자동화 🤖🌐"
+          }
+        },
+        "exploration": {
+          "탐색": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "이 노트북에서는 에이전트 기반 웹 브라우저 자동화 시스템을 구축해보겠습니다! 이 시스템은 웹사이트 탐색, 요소 상호작용, 정보 자동 추출이 가능합니다."
+          }
+        },
+        "feature": {
+          "기능": {
+            "line": 7,
+            "endLine": 7,
+            "excerpt": "에이전트는 다음과 같은 기능을 수행할 수 있습니다."
+          },
+          "변수": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "필요한 라이브러리를 가져오고 환경 변수를 설정해보겠습니다."
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "필요한 라이브러리를 가져오고 환경 변수를 설정해보겠습니다."
+          }
+        },
+        "validation": {
+          "검증": {
+            "line": 212,
+            "endLine": 212,
+            "excerpt": "ui 테스트 및 검증"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/guided_tour.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/guided_tour.md",
+      "blobSha": "d21f4904bf95f1c7d75e2077424531eb9610ecd4",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/guided_tour.md",
+      "counts": {
+        "agent": {
+          "에이전트": 72
+        },
+        "training": {
+          "학습": 1
+        },
+        "architecture": {
+          "구조": 7
+        },
+        "tool calling": {
+          "도구 호출": 8,
+          "도구 사용": 2
+        },
+        "feature": {
+          "함수": 10,
+          "변수": 14,
+          "기능": 3,
+          "속성": 6
+        },
+        "inference": {
+          "추론": 8,
+          "예측": 1
+        },
+        "iteration": {
+          "반복": 1
+        },
+        "environment": {
+          "환경": 9
+        },
+        "parameter": {
+          "매개변수": 6
+        },
+        "validation": {
+          "검증": 6
+        },
+        "parsing": {
+          "구문 분석": 1
+        },
+        "query": {
+          "쿼리": 1
+        },
+        "initialization": {
+          "초기화": 17
+        },
+        "layer": {
+          "계층": 2
+        },
+        "generative model": {
+          "생성 모델": 1
+        },
+        "model": {
+          "모델": 14
+        },
+        "pipeline": {
+          "파이프라인": 3
+        },
+        "exploitation": {
+          "활용": 3
+        },
+        "inference provider": {
+          "추론 제공자": 3
+        },
+        "speech recognition": {
+          "음성 인식": 1
+        },
+        "token": {
+          "토큰": 1
+        },
+        "model serving": {
+          "모델 배포": 2
+        },
+        "prompt": {
+          "프롬프트": 6
+        },
+        "system prompt": {
+          "시스템 프롬프트": 6
+        },
+        "structured output": {
+          "구조화된 출력": 1
+        },
+        "benchmark": {
+          "벤치마크": 1
+        },
+        "leaderboard": {
+          "리더보드": 1
+        },
+        "chain of thought": {
+          "사고 과정": 1
+        },
+        "code agent": {
+          "코드 에이전트": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "에이전트 안내서"
+          }
+        },
+        "training": {
+          "학습": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": " 구축하는 방법, 실행하는 방법, 그리고 사용 사례에 맞게 더 잘 작동하도록 맞춤 설정하는 방법을 학습합니다."
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 9,
+            "endLine": 10,
+            "excerpt": "다릅니다. 두 방식의 핵심 차이점은 '액션을 지정하고 실행'하는 방식에 있습니다: 코드 생성 vs 구조화된 도구 호출."
+          }
+        },
+        "tool calling": {
+          "도구 호출": {
+            "line": 9,
+            "endLine": 10,
+            "excerpt": " 두 방식의 핵심 차이점은 '액션을 지정하고 실행'하는 방식에 있습니다: 코드 생성 vs 구조화된 도구 호출."
+          },
+          "도구 사용": {
+            "line": 451,
+            "endLine": 452,
+            "excerpt": "데코레이터입니다: 도구 사용 api에 대해 더 자세히 알아보려면 여기를 읽어보세요."
+          }
+        },
+        "feature": {
+          "함수": {
+            "line": 14,
+            "endLine": 14,
+            "excerpt": "도구는 python 함수로 노출됩니다(바인딩을 통해)."
+          },
+          "변수": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "도구는 json 스키마로 정의됩니다: 이름, 설명, 매개변수 타입 등."
+          },
+          "기능": {
+            "line": 50,
+            "endLine": 50,
+            "excerpt": "코드 합성 없음: 도구 기능으로 제한됩니다."
+          },
+          "속성": {
+            "line": 367,
+            "endLine": 367,
+            "excerpt": "실행 후 무슨 일이 일어났는지 확인하는 데 유용한 몇 가지 속성이 있습니다:"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "높은 표현력: 복잡한 로직과 제어 흐름을 허용하고 도구를 결합하고, 반복하고, 변환하고, 추론할 수 있습니다."
+          },
+          "예측": {
+            "line": 26,
+            "endLine": 26,
+            "excerpt": "예측성 부족: 예상치 못한 또는 안전하지 않은 출력에 더 취약합니다."
+          }
+        },
+        "iteration": {
+          "반복": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "높은 표현력: 복잡한 로직과 제어 흐름을 허용하고 도구를 결합하고, 반복하고, 변환하고, 추론할 수 있습니다."
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 27,
+            "endLine": 27,
+            "excerpt": "보안 실행 환경이 필요합니다."
+          }
+        },
+        "parameter": {
+          "매개변수": {
+            "line": 31,
+            "endLine": 31,
+            "excerpt": "도구는 json 스키마로 정의됩니다: 이름, 설명, 매개변수 타입 등."
+          }
+        },
+        "validation": {
+          "검증": {
+            "line": 44,
+            "endLine": 44,
+            "excerpt": "안정성: 환각이 적고, 출력이 구조화되고 검증됩니다."
+          }
+        },
+        "parsing": {
+          "구문 분석": {
+            "line": 55,
+            "endLine": 55,
+            "excerpt": "도구가 결합할 수 있는 함수인 경우(예: 구문 분석 + 수학 + 쿼리)."
+          }
+        },
+        "query": {
+          "쿼리": {
+            "line": 55,
+            "endLine": 55,
+            "excerpt": "도구가 결합할 수 있는 함수인 경우(예: 구문 분석 + 수학 + 쿼리)."
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 70,
+            "endLine": 71,
+            "excerpt": "]를 초기화할 때"
+          }
+        },
+        "layer": {
+          "계층": {
+            "line": 79,
+            "endLine": 81,
+            "excerpt": "또한 추가 보안 계층으로, import 목록에서 명시적으로 승인되지 않는 한 서브모듈에 대한 접근은 기본적으로 금지됩니다. 예를 들어,"
+          }
+        },
+        "generative model": {
+          "생성 모델": {
+            "line": 110,
+            "endLine": 110,
+            "excerpt": ", 에이전트를 구동하는 텍스트 생성 모델 - 에이전트는 단순한 llm과 다르며, llm을 엔진으로 사용하는 시스템입니다. 다음 옵션 중 하나를 사용할 수 있습니다:"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 110,
+            "endLine": 110,
+            "excerpt": ", 에이전트를 구동하는 텍스트 생성 모델 - 에이전트는 단순한 llm과 다르며, llm을 엔진으로 사용하는 시스템입니다. 다음 옵션 중 하나를 사용할 수 있습니다:"
+          }
+        },
+        "pipeline": {
+          "파이프라인": {
+            "line": 111,
+            "endLine": 111,
+            "excerpt": "파이프라인을 가져와"
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 112,
+            "endLine": 112,
+            "excerpt": "를 활용하며 hub의 모든 추론 제공자를 지원합니다: cerebras, cohere, fal, fireworks, hf-inference, hyperbolic,"
+          }
+        },
+        "inference provider": {
+          "추론 제공자": {
+            "line": 112,
+            "endLine": 112,
+            "excerpt": "를 활용하며 hub의 모든 추론 제공자를 지원합니다: cerebras, cohere, fal, fireworks, hf-inference, hyperbolic, nebius, novita, "
+          }
+        },
+        "speech recognition": {
+          "음성 인식": {
+            "line": 118,
+            "endLine": 118,
+            "excerpt": " add_base_tools=true 옵션을 사용하면 기본 제공되는 도구들(웹 검색, 코드 실행, 음성 인식 등)을"
+          }
+        },
+        "token": {
+          "토큰": {
+            "line": 130,
+            "endLine": 130,
+            "excerpt": "변수를 전달해야 합니다. 설정 페이지에서 토큰을 얻을 수 있습니다."
+          }
+        },
+        "model serving": {
+          "모델 배포": {
+            "line": 202,
+            "endLine": 202,
+            "excerpt": "의 인스턴스를 초기화하려면 모델 배포 이름을 전달한 다음"
+          }
+        },
+        "prompt": {
+          "프롬프트": {
+            "line": 370,
+            "endLine": 370,
+            "excerpt": ". 이 메소드는 로그의 각 단계를 살펴보고 중요한 내용만 메시지로 저장합니다. 예를 들어, 시스템 프롬프트와 작업을 각각 별도 메시지로 저장하고, 각 단계의 llm 출력과 도구 호출 결과를 개별 메시지로 저장합니다. 전체적인 흐름 파악이 필요할 때 권장드립니"
+          }
+        },
+        "system prompt": {
+          "시스템 프롬프트": {
+            "line": 370,
+            "endLine": 370,
+            "excerpt": "환합니다. 이 메소드는 로그의 각 단계를 살펴보고 중요한 내용만 메시지로 저장합니다. 예를 들어, 시스템 프롬프트와 작업을 각각 별도 메시지로 저장하고, 각 단계의 llm 출력과 도구 호출 결과를 개별 메시지로 저장합니다. 전체적인 흐름 파악이 필요할 때 권장드립니"
+          }
+        },
+        "structured output": {
+          "구조화된 출력": {
+            "line": 384,
+            "endLine": 384,
+            "excerpt": "가 정의된 도구(구조화된 출력을 가진 mcp 도구 등)의 경우,"
+          }
+        },
+        "benchmark": {
+          "벤치마크": {
+            "line": 533,
+            "endLine": 534,
+            "excerpt": " 프레임워크에서는 단일 에이전트 대신 여러 에이전트가 협력하여 작업을 해결합니다. 실제로 대부분의 벤치마크에서 더 우수한 성능을 보여줍니다. 성능이 향상되는 이유는 개념적으로 단순합니다. 많은 작업에서 모든 기능을 담당하는 범용 시스템보다는 특정 하위 작업에"
+          }
+        },
+        "leaderboard": {
+          "리더보드": {
+            "line": 562,
+            "endLine": 563,
+            "excerpt": "[!tip] 효율적인 멀티 에이전트 구현의 심화 예제를 보려면 멀티 에이전트 시스템을 gaia 리더보드 상위권으로 끌어올린 방법을 확인하세요."
+          }
+        },
+        "chain of thought": {
+          "사고 과정": {
+            "line": 565,
+            "endLine": 565,
+            "excerpt": "에이전트와 대화하고 멋진 gradio 인터페이스에서 그 사고 과정을 시각화하기"
+          }
+        },
+        "code agent": {
+          "코드 에이전트": {
+            "line": 610,
+            "endLine": 610,
+            "excerpt": "코드 에이전트가 작동하는 방법에 대한 설명"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/index.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/index.md",
+      "blobSha": "06e89b54d5db3c5439ba6371e5295d1edb1205de",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/index.md",
+      "counts": {
+        "agent": {
+          "에이전트": 15
+        },
+        "feature": {
+          "특징": 1,
+          "함수": 1,
+          "기능": 1
+        },
+        "architecture": {
+          "구조": 1
+        },
+        "code agent": {
+          "코드 에이전트": 1
+        },
+        "environment": {
+          "환경": 1
+        },
+        "tool calling": {
+          "도구 호출": 3
+        },
+        "model": {
+          "모델": 4
+        },
+        "exploitation": {
+          "활용": 2
+        },
+        "modality": {
+          "모달리티": 1
+        },
+        "MCP server": {
+          "MCP 서버": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 9,
+            "endLine": 9,
+            "excerpt": "는 단 몇 줄의 코드만으로 에이전트를 구축하고 실행할 수 있도록 설계된 오픈소스 python 라이브러리입니다."
+          }
+        },
+        "feature": {
+          "특징": {
+            "line": 11,
+            "endLine": 11,
+            "excerpt": "의 주요 특징:"
+          },
+          "함수": {
+            "line": 15,
+            "endLine": 15,
+            "excerpt": " 계산 수행을 위해 직접 코드를 작성합니다 (\"코드 작성용 에이전트\"와는 반대 개념). 이를 통해 함수 중첩, 루프, 조건문 등을 자연스럽게 조합할 수 있습니다. 보안을 위해 e2b나 docker를 통한 샌드박스 환경 실행을 지원합니다."
+          },
+          "기능": {
+            "line": 101,
+            "endLine": 101,
+            "excerpt": "더 고급 기능은 안내서를 확인하세요"
+          }
+        },
+        "architecture": {
+          "구조": {
+            "line": 13,
+            "endLine": 13,
+            "excerpt": "✨ 단순함: 에이전트 로직이 약 천 줄의 코드로 구현되어 있습니다. 코드 위에 불필요한 복잡한 구조를 추가하지 않고 단순하게 만들었습니다!"
+          }
+        },
+        "code agent": {
+          "코드 에이전트": {
+            "line": 15,
+            "endLine": 15,
+            "excerpt": "🧑‍💻 코드 에이전트의 완전한 지원:"
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 15,
+            "endLine": 15,
+            "excerpt": ", 조건문 등을 자연스럽게 조합할 수 있습니다. 보안을 위해 e2b나 docker를 통한 샌드박스 환경 실행을 지원합니다."
+          }
+        },
+        "tool calling": {
+          "도구 호출": {
+            "line": 15,
+            "endLine": 15,
+            "excerpt": "는 도구 호출이나 계산 수행을 위해 직접 코드를 작성합니다 (\"코드 작성용 에이전트\"와는 반대 개념). 이를 통해 함수 중첩, 루프, 조건문 등을 자연스럽게 조합할 "
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 21,
+            "endLine": 21,
+            "excerpt": "🌐 모델 독립적: hub의 inference providers나 openai, anthropic 등의 api를 통해 접근하거나, litellm 통합으로 다양한 "
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "👁️ 모달리티 독립적: 텍스트뿐만 아니라 비전, 비디오, 오디오 입력도 처리할 수 있어 활용 가능한 애플리케이션 범위가 확장됩니다. 비전 관련 튜토리얼을 확인해보세요."
+          }
+        },
+        "modality": {
+          "모달리티": {
+            "line": 23,
+            "endLine": 23,
+            "excerpt": "👁️ 모달리티 독립적: 텍스트뿐만 아니라 비전, 비디오, 오디오 입력도 처리할 수 있어 활용 가능한 애플리케이션 범위가 확장됩니다. 비전 관련 튜토리얼을 확인해보세요"
+          }
+        },
+        "MCP server": {
+          "MCP 서버": {
+            "line": 25,
+            "endLine": 25,
+            "excerpt": "🛠️ 도구 독립적: mcp 서버의 도구나 langchain의 도구를 사용할 수 있고, hub space도 도구로 활용할 수 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/installation.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/installation.md",
+      "blobSha": "af8fb1017519fb6031a0adc5935773f021688d42",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/installation.md",
+      "counts": {
+        "environment": {
+          "환경": 3
+        },
+        "feature": {
+          "기능": 10,
+          "함수": 1
+        },
+        "model": {
+          "모델": 8
+        },
+        "transformer": {
+          "트랜스포머 모델": 1
+        },
+        "inference": {
+          "추론": 2
+        },
+        "computer vision": {
+          "컴퓨터 비전": 1
+        },
+        "agent": {
+          "에이전트": 1
+        }
+      },
+      "evidence": {
+        "environment": {
+          "환경": {
+            "line": 9,
+            "endLine": 9,
+            "excerpt": "가상 환경"
+          }
+        },
+        "feature": {
+          "기능": {
+            "line": 55,
+            "endLine": 55,
+            "excerpt": "추가 기능과 함께 설치"
+          },
+          "함수": {
+            "line": 257,
+            "endLine": 257,
+            "excerpt": "클래스와 함수에 대한 자세한 정보를 확인하고 싶으시면 api 레퍼런스를 살펴보세요."
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 97,
+            "endLine": 97,
+            "excerpt": "모델 통합"
+          }
+        },
+        "transformer": {
+          "트랜스포머 모델": {
+            "line": 105,
+            "endLine": 105,
+            "excerpt": "transformers: hugging face 트랜스포머 모델을 활성화합니다."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 109,
+            "endLine": 109,
+            "excerpt": "vllm: 효율적인 모델 추론을 위한 vllm 지원을 추가합니다."
+          }
+        },
+        "computer vision": {
+          "컴퓨터 비전": {
+            "line": 158,
+            "endLine": 158,
+            "excerpt": "vision: 이미지 처리 및 컴퓨터 비전 작업 지원을 추가합니다."
+          }
+        },
+        "agent": {
+          "에이전트": {
+            "line": 256,
+            "endLine": 256,
+            "excerpt": "에이전트 구축에 대한 심화 튜토리얼은 튜토리얼를 확인해보세요."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/reference/agents.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/reference/agents.md",
+      "blobSha": "6bf1c60365bf867cb6030f0f26c6754be6b74f9d",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/reference/agents.md",
+      "counts": {
+        "agent": {
+          "에이전트": 7
+        },
+        "model": {
+          "모델": 1
+        },
+        "tool calling": {
+          "도구 호출": 3
+        },
+        "initialization": {
+          "초기화": 1
+        },
+        "prompt": {
+          "프롬프트": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "에이전트"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "smolagents는 실험적인 api로 언제든지 변경될 수 있습니다. api나 사용되는 모델이 변경될 수 있기 때문에 에이전트가 반환하는 결과도 달라질 수 있습니다."
+          }
+        },
+        "tool calling": {
+          "도구 호출": {
+            "line": 13,
+            "endLine": 13,
+            "excerpt": "]를 상속받으며, 이는 하나의 생각과 하나의 도구 호출 및 실행으로 구성된 여러 단계를 수행할 수 있음을 의미합니다. 이 개념 가이드에서 더 자세히 알아보세요."
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 19,
+            "endLine": 19,
+            "excerpt": "두 경우 모두 초기화 시"
+          }
+        },
+        "prompt": {
+          "프롬프트": {
+            "line": 40,
+            "endLine": 40,
+            "excerpt": "프롬프트"
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/reference/models.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/reference/models.md",
+      "blobSha": "b0e4236225ddee661f34018e7915f5b1c6f314f5",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/reference/models.md",
+      "counts": {
+        "model": {
+          "모델": 26
+        },
+        "agent": {
+          "에이전트": 7
+        },
+        "parameter": {
+          "파라미터": 1
+        },
+        "feature": {
+          "기능": 2,
+          "변수": 1,
+          "속성": 2
+        },
+        "initialization": {
+          "초기화": 2
+        },
+        "pipeline": {
+          "파이프라인": 1
+        },
+        "exploitation": {
+          "활용": 1
+        },
+        "environment": {
+          "환경": 2
+        },
+        "attention": {
+          "주의": 1
+        },
+        "inference": {
+          "추론": 1
+        }
+      },
+      "evidence": {
+        "model": {
+          "모델": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "모델"
+          }
+        },
+        "agent": {
+          "에이전트": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "olagents는 언제든지 변경될 수 있는 실험적인 api입니다. api 또는 기반 모델이 바뀌면 에이전트가 반환하는 결과도 달라질 수 있습니다."
+          }
+        },
+        "parameter": {
+          "파라미터": {
+            "line": 13,
+            "endLine": 14,
+            "excerpt": "등)를 인스턴스화 시점에 바로 전달할 수 있습니다. 이 파라미터들은 기반 모델의 생성 호출에 자동으로 전달되어, 창의성, 응답 길이, 샘플링 전략과 같은 모델의 동작을 설정할 수 있습니다."
+          }
+        },
+        "feature": {
+          "기능": {
+            "line": 24,
+            "endLine": 24,
+            "excerpt": "현의 토대가 되며, 외부 api 상호 작용, 속도 제한, 클라이언트 관리 등 모델이 상속하는 공통 기능을 제공합니다."
+          },
+          "변수": {
+            "line": 174,
+            "endLine": 174,
+            "excerpt": "인수는 환경 변수("
+          },
+          "속성": {
+            "line": 253,
+            "endLine": 253,
+            "excerpt": "속성을 가진 객체를 반환합니다."
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 30,
+            "endLine": 30,
+            "excerpt": "편의를 위해, 초기화 시 주어진 model_id에 대한 로컬"
+          }
+        },
+        "pipeline": {
+          "파이프라인": {
+            "line": 30,
+            "endLine": 30,
+            "excerpt": "파이프라인을 구축하여 위 사항들을 구현하는"
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 93,
+            "endLine": 94,
+            "excerpt": "은 litellm을 활용하여 다양한 제공업체의 100개 이상의 llm을 지원합니다. 모델 초기화 시 키워드 인수를 전달하면, 이후 모델을 사용할 때마다 해당 설정이 적용됩니다."
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 111,
+            "endLine": 111,
+            "excerpt": "llm router를 감싼 래퍼로, 다양한 고급 라우팅 전략을 지원합니다. 예를 들어, 여러 배포 환경 간 로드 밸런싱, 큐 기반의 중요 요청 우선 처리, 쿨다운, 폴백, 지수적 백오프 재시도 같은 기본 신뢰성 조치 구현 기능을 제공합니다."
+          }
+        },
+        "attention": {
+          "주의": {
+            "line": 176,
+            "endLine": 176,
+            "excerpt": "접두사가 포함되지 않는다는 점을 주의하시기 바랍니다. 이는 기반이 되는 openai 패키지의 설계 방식 때문입니다."
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 232,
+            "endLine": 232,
+            "excerpt": "빠른 llm 추론 및 서빙을 위해 vllm을 사용하는 모델입니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/reference/tools.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/reference/tools.md",
+      "blobSha": "1b638792f70b161deed45c4c6374a7d7e48f6eff",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/reference/tools.md",
+      "counts": {
+        "agent": {
+          "에이전트": 4
+        },
+        "model": {
+          "모델": 1
+        },
+        "MCP client": {
+          "MCP 클라이언트": 1
+        },
+        "kernel": {
+          "커널": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": " 언제든지 변경될 수 있는 실험적인 api입니다. api나 사용되는 모델이 변경될 수 있기 때문에 에이전트가 반환하는 결과도 달라질 수 있습니다."
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 5,
+            "endLine": 5,
+            "excerpt": "smolagents는 언제든지 변경될 수 있는 실험적인 api입니다. api나 사용되는 모델이 변경될 수 있기 때문에 에이전트가 반환하는 결과도 달라질 수 있습니다."
+          }
+        },
+        "MCP client": {
+          "MCP 클라이언트": {
+            "line": 33,
+            "endLine": 33,
+            "excerpt": "mcp 클라이언트"
+          }
+        },
+        "kernel": {
+          "커널": {
+            "line": 47,
+            "endLine": 47,
+            "excerpt": "ipython 커널에 표시할 때 객체가 올바르게 표시되어야 합니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/tutorials/building_good_agents.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/tutorials/building_good_agents.md",
+      "blobSha": "5090dbf84d552200763c45ed794943e62210b618",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/tutorials/building_good_agents.md",
+      "counts": {
+        "agent": {
+          "에이전트": 29
+        },
+        "workflow": {
+          "워크플로우": 4
+        },
+        "feature": {
+          "기능": 1,
+          "함수": 2,
+          "변수": 7,
+          "속성": 1
+        },
+        "exploitation": {
+          "이용": 1,
+          "활용": 2
+        },
+        "prompt": {
+          "프롬프트": 10
+        },
+        "tool calling": {
+          "도구 호출": 1,
+          "도구 사용": 1
+        },
+        "parameter": {
+          "매개변수": 6
+        },
+        "inference": {
+          "추론": 1
+        },
+        "model": {
+          "모델": 3
+        },
+        "segmentation": {
+          "분할": 1
+        },
+        "system prompt": {
+          "시스템 프롬프트": 5
+        },
+        "initialization": {
+          "초기화": 3
+        },
+        "zero-shot learning": {
+          "제로샷": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "좋은 에이전트 구축하기"
+          }
+        },
+        "workflow": {
+          "워크플로우": {
+            "line": 12,
+            "endLine": 12,
+            "excerpt": "최고의 에이전트 시스템은 가장 단순합니다: 워크플로우를 최대한 단순하게 만드세요"
+          }
+        },
+        "feature": {
+          "기능": {
+            "line": 16,
+            "endLine": 16,
+            "excerpt": "잘 설계된 에이전트 시스템은 오류를 기록하고 다시 시도하는 기능을 통해 llm이 자신의 실수를 교정할 수 있게 해줍니다. 그렇다고 해도 처음부터 llm이 실수하지 않도록 워크플로우를 간단하게 만드는 것이 훨씬 효과적"
+          },
+          "함수": {
+            "line": 18,
+            "endLine": 19,
+            "excerpt": " 다른 호출을 하도록 하는 대신, 두 api를 한 번에 호출하고 연결된 출력을 사용자에게 반환하는 함수인 \"return_spot_information\"이라는 하나의 통합된 도구를 만들 수 있습니다."
+          },
+          "변수": {
+            "line": 103,
+            "endLine": 103,
+            "excerpt": "에이전트에 더 많은 매개변수 제공"
+          },
+          "속성": {
+            "line": 169,
+            "endLine": 169,
+            "excerpt": "속성에 포함시키세요."
+          }
+        },
+        "exploitation": {
+          "이용": {
+            "line": 18,
+            "endLine": 19,
+            "excerpt": "에이전트 소개의 예시를 다시 살펴보겠습니다: 서핑 여행사 이용자들의 문의에 대응하는 봇입니다. 새로운 서핑 스팟에 대해 질문을 받을 때마다 에이전트가 \"여행 거리 api\"와 \"날씨 api\"에 각각 2번의 서로 다른"
+          },
+          "활용": {
+            "line": 119,
+            "endLine": 119,
+            "excerpt": "매개변수를 통해 에이전트가 활용할 수 있도록 원하는 이미지나 문자열을 전달할 수 있습니다."
+          }
+        },
+        "prompt": {
+          "프롬프트": {
+            "line": 33,
+            "endLine": 33,
+            "excerpt": "프롬프트에 명시하지 않으면 무슨 일이 일어났는지 전혀 알 수 없습니다."
+          }
+        },
+        "tool calling": {
+          "도구 호출": {
+            "line": 79,
+            "endLine": 79,
+            "excerpt": "도구 호출이 실패하면 메모리에 로깅된 오류 추적이 llm이 도구를 역설계하여 오류를 수정하는 데 도움이 될 수 있습니다. 하지만 왜 그렇게 많은 무거운 작업을 맡"
+          },
+          "도구 사용": {
+            "line": 169,
+            "endLine": 169,
+            "excerpt": "특정 도구 사용 방법에 관한 것이라면: 해당 도구의"
+          }
+        },
+        "parameter": {
+          "매개변수": {
+            "line": 103,
+            "endLine": 103,
+            "excerpt": "에이전트에 더 많은 매개변수 제공"
+          }
+        },
+        "inference": {
+          "추론": {
+            "line": 125,
+            "endLine": 126,
+            "excerpt": "에이전트 워크플로우에서 발생하는 오류 중 일부는 실제 오류이고, 다른 일부는 llm 엔진이 제대로 추론하지 못한 탓입니다. 예를 들어, 자동차 그림을 만들어 달라고 요청한"
+          }
+        },
+        "model": {
+          "모델": {
+            "line": 161,
+            "endLine": 161,
+            "excerpt": "더 자세하게 안내해준다면 성능이 낮은 모델도 충분히 사용할 수 있습니다."
+          }
+        },
+        "segmentation": {
+          "분할": {
+            "line": 163,
+            "endLine": 163,
+            "excerpt": "작업을 해결해야 한다면, 지금 주어진 정보(시스템 프롬프트 + 작업 설명 + 도구 설명)만으로도 충분할까요?"
+          }
+        },
+        "system prompt": {
+          "시스템 프롬프트": {
+            "line": 163,
+            "endLine": 163,
+            "excerpt": "모델의 관점에서 생각해보세요: 내가 모델이 되어서 이 작업을 해결해야 한다면, 지금 주어진 정보(시스템 프롬프트 + 작업 설명 + 도구 설명)만으로도 충분할까요?"
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 167,
+            "endLine": 167,
+            "excerpt": "이전트에게 주어져야 하는 경우(일반적으로 시스템 프롬프트가 작동한다고 이해하는 것처럼): 에이전트 초기화 시"
+          }
+        },
+        "zero-shot learning": {
+          "제로샷": {
+            "line": 175,
+            "endLine": 175,
+            "excerpt": "작동 원리를 살펴보겠습니다. [codeagent]의 기본 프롬프트 템플릿을 예로 들어보겠습니다(제로샷 예제는 생략하고 간단히 정리했습니다)."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/tutorials/inspect_runs.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/tutorials/inspect_runs.md",
+      "blobSha": "bee0bb59ea42aab0c4c3a51c1448c29438cb4f40",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/tutorials/inspect_runs.md",
+      "counts": {
+        "agent": {
+          "에이전트": 17
+        },
+        "inference": {
+          "예측": 2
+        },
+        "workflow": {
+          "워크플로우": 1
+        },
+        "tool calling": {
+          "도구 호출": 1
+        },
+        "environment": {
+          "환경": 5
+        },
+        "exploitation": {
+          "활용": 2
+        },
+        "feature": {
+          "기능": 1,
+          "변수": 4
+        },
+        "token": {
+          "토큰": 1
+        },
+        "initialization": {
+          "초기화": 4
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 5,
+            "endLine": 6,
+            "excerpt": "[!tip] 에이전트 구축이 처음이라면 먼저 에이전트 소개와 안내서를 읽어보세요."
+          }
+        },
+        "inference": {
+          "예측": {
+            "line": 12,
+            "endLine": 12,
+            "excerpt": "실행이 제대로 진행되었는지 확인하기 어렵습니다. 에이전트 워크플로우는 설계상 예측 불가능하기 때문입니다(만약 예측 가능했다면 일반적인 코드를 사용했을 것입니다)."
+          }
+        },
+        "workflow": {
+          "워크플로우": {
+            "line": 12,
+            "endLine": 12,
+            "excerpt": "실행이 제대로 진행되었는지 확인하기 어렵습니다. 에이전트 워크플로우는 설계상 예측 불가능하기 때문입니다(만약 예측 가능했다면 일반적인 코드를 사용했을 것입니다)."
+          }
+        },
+        "tool calling": {
+          "도구 호출": {
+            "line": 14,
+            "endLine": 14,
+            "excerpt": "으며, 대부분의 오류는 단순한 \"llm의 실수\" 유형으로, llm이 다음 단계에서 더 나은 코드나 도구 호출을 작성하여 스스로 교정합니다."
+          }
+        },
+        "environment": {
+          "환경": {
+            "line": 16,
+            "endLine": 16,
+            "excerpt": "따라서 나중에 검사하고 모니터링할 수 있도록 계측을 통해 에이전트 실행을 기록하는 것이 프로덕션 환경에서는 필수입니다!"
+          }
+        },
+        "exploitation": {
+          "활용": {
+            "line": 30,
+            "endLine": 30,
+            "excerpt": "ze ai의 phoenix를 설치하지만, 이 과정에는 다른 opentelemetry 호환 플랫폼을 활용할 수도 있습니다."
+          }
+        },
+        "feature": {
+          "기능": {
+            "line": 91,
+            "endLine": 91,
+            "excerpt": "fuse는 llm 엔지니어링을 위한 오픈소스 플랫폼입니다. ai 에이전트를 위한 추적 및 모니터링 기능을 제공하여 개발자가 제품을 디버깅하고, 분석하고, 최적화할 수 있도록 도와줍니다. langfuse는 네이티브 통합, opentelemetry, sdk를"
+          },
+          "변수": {
+            "line": 99,
+            "endLine": 99,
+            "excerpt": "2단계: 환경 변수 설정"
+          }
+        },
+        "token": {
+          "토큰": {
+            "line": 103,
+            "endLine": 103,
+            "excerpt": "또한 hugging face 토큰 ("
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 117,
+            "endLine": 117,
+            "excerpt": "환경 변수가 설정되면 이제 langfuse 클라이언트를 초기화할 수 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    },
+    "smolagents:docs/source/ko/tutorials/memory.md": {
+      "source": "smolagents",
+      "path": "docs/source/ko/tutorials/memory.md",
+      "blobSha": "2b7c3a43d6134925cb92164b62dfb20d77e69ff8",
+      "eligible": true,
+      "reason": "paired-translation",
+      "enPath": "docs/source/en/tutorials/memory.md",
+      "counts": {
+        "agent": {
+          "에이전트": 15
+        },
+        "agent memory": {
+          "에이전트 메모리": 3
+        },
+        "prompt": {
+          "프롬프트": 1
+        },
+        "feature": {
+          "기능": 2,
+          "함수": 1
+        },
+        "token": {
+          "토큰": 1
+        },
+        "attention": {
+          "주의": 1
+        },
+        "initialization": {
+          "초기화": 1
+        },
+        "tool calling": {
+          "도구 호출": 1
+        }
+      },
+      "evidence": {
+        "agent": {
+          "에이전트": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "📚 에이전트 메모리 관리"
+          }
+        },
+        "agent memory": {
+          "에이전트 메모리": {
+            "line": 1,
+            "endLine": 1,
+            "excerpt": "📚 에이전트 메모리 관리"
+          }
+        },
+        "prompt": {
+          "프롬프트": {
+            "line": 5,
+            "endLine": 6,
+            "excerpt": "결국 에이전트는 도구와 프롬프트로 이루어진 단순한 구성요소로 정의됩니다. 그리고 무엇보다 중요한 것은 에이전트가 과거 단계의 메모리를 가지고 있어 계획, 실행, 오류의 이력을 추적한다"
+          }
+        },
+        "feature": {
+          "기능": {
+            "line": 10,
+            "endLine": 10,
+            "excerpt": "과거 실행된 에이전트를 확인하기 위한 몇 가지 기능을 제공합니다."
+          },
+          "함수": {
+            "line": 83,
+            "endLine": 83,
+            "excerpt": "그 다음 에이전트를 초기화할 때 이 함수를 다음과 같이"
+          }
+        },
+        "token": {
+          "토큰": {
+            "line": 60,
+            "endLine": 60,
+            "excerpt": "하는 각 단계의 스크린샷을 관찰하고 있다고 가정해 보겠습니다. 이 경우 최신 스크린샷은 유지하면서 토큰 비용을 절약하기 위해 이전 단계의 이미지를 메모리에서 제거할 수 있습니다."
+          }
+        },
+        "attention": {
+          "주의": {
+            "line": 62,
+            "endLine": 63,
+            "excerpt": "이 경우 다음과 같은 코드를 사용할 수 있습니다. 주의: 이 코드는 간결함을 위해 일부 임포트 및 객체 정의가 생략된 불완전한 예시입니다. 전체 작동 버전의 코드는 원본 스크립트에서 확인하세요."
+          }
+        },
+        "initialization": {
+          "초기화": {
+            "line": 83,
+            "endLine": 83,
+            "excerpt": "그 다음 에이전트를 초기화할 때 이 함수를 다음과 같이"
+          }
+        },
+        "tool calling": {
+          "도구 호출": {
+            "line": 100,
+            "endLine": 101,
+            "excerpt": "이 기능은 도구 호출에 오랜 시간이 걸리는 경우에 유용합니다. 에이전트를 한 단계씩 실행하면서 각 단계에서 메모리를 업데이트할 수 있습니다."
+          }
+        }
+      },
+      "countedAt": "2026-09-13T10:53:20+00:00"
+    }
+  },
+  "snapshotId": "ad5a2a8ca0f01ed4b8edebda29c3e777adae1230ce54cb972af5173bcdb49a58"
+}
